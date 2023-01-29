@@ -6,7 +6,7 @@ from PIL import Image
 """
 """
 
-image = Image.open('VividHealth_Logo.png')
+image = Image.open('Web_App/VividHealth_Logo.png')
 st.image(image)
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "About Us", "Risk Assessment", "Find A Provider", "Sign In"])
@@ -16,7 +16,7 @@ with tab1:
 
 with tab2:
     st.header("About Us")
-    image_M = Image.open('Mona.png')
+    image_M = Image.open('Web_App/Mona.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_M, width=90)
@@ -25,7 +25,7 @@ with tab2:
                  "She is an accomplished academic researcher with over 40 PubMed indexed peer reviewed articles. "
                  "She brings her medical expertise and prior experience with machine learning applications using healthcare data to cervical cancer image detection. "
                  "She seeks projects that intersect her passions for medicine and analytics.")
-    image_J = Image.open('Julia.png')
+    image_J = Image.open('Web_App/Julia.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_J, width=90)
@@ -33,7 +33,7 @@ with tab2:
         st.write("Julia Ma is a software engineer with two years of professional experience in the government sector. "
                  "She has a diverse skill set including hardware simulation, signal processing, data engineering, data visualization, and NLP. "
                  "Her work with the government has given her an interest in data privacy and explainable AI.")
-    image_E = Image.open('Erin.png')
+    image_E = Image.open('Web_App/Erin.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_E, width=90)
@@ -42,7 +42,7 @@ with tab2:
                  "She is able to combine her knowledge of healthcare to her more recent work as a Project Manager and Data Scientist to address cervical cancer risk assessment. "
                  "As someone who has been able to beat cervical cancer due to successful preventative measures, screenings, and early treatment, she is passionate about assisting others to have a similar or better experience.")
 
-    image_S = Image.open('Sarah.png')
+    image_S = Image.open('Web_App/Sarah.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_S, width=90)
@@ -52,7 +52,7 @@ with tab2:
             "Leveraging her technical background in computer science with years of professional experience in data science, she supports the full lifecycle of analytics projects from algorithmic design all the way through deployment. "
             "Sarah also brings expertise in AI ethics, governance, and privacy, and is passionate about human- and privacy-first designs that support positive changes in communities.")
 
-    image_R = Image.open('Rachel.png')
+    image_R = Image.open('Web_App/Rachel.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_R, width=90)
