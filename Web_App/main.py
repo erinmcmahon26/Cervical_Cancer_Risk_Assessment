@@ -1,20 +1,32 @@
+import streamlit as st
+from PIL import Image
 from collections import namedtuple
 import altair as alt
 import pandas as pd
-import streamlit as st
-from PIL import Image
-"""
-"""
 
-image = Image.open('Web_App/VividHealth_Logo.png')
+st.set_page_config(
+    page_title="VividHealth",
+    page_icon="🧊",
+    layout="wide",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
+
+image = Image.open('VividHealth_Logo.png')
 st.image(image)
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Home", "About Us", "Risk Assessment", "Find A Provider", "Image Upload", "Sign In"])
 
 with tab1:
-    st.header("Welcome")
-    st.markdown("Hundreds of thousands of women are diagnosed with cervical cancer in the United States every year. Even when not fatal, 88% of patients experience potentially debilitating long-term effects including fertility problems, fatigue, and urinary/bowel issues (Health Europa 2018). This adds up to billions in healthcare costs annually, despite advances in detection and prevention which have made cervical cancer one of the most preventable forms of cancer (National Cancer Institute 2022). While incidence rates in the United States initially plummeted with the introduction of vaccinations and screenings, rates have stagnated in the past decade (Figure 1). This stagnation is avoidable – the CDC estimates that even today 93% of cervical cancer cases are preventable (CDC 2020). This speaks to a need to decrease mortality by improving diagnosis, screening rates, and screening accessibility. VividHealth proposes to address this gap by introducing an algorithmic risk assessment tool that can be integrated into electronic medical record (EMR) software. The tool will serve three types of users: medical providers, current patients, and prospective/new patients. The provider view will allow medical professionals to upload images from cervical cancer screenings into our trained models to help diagnose precancerous or cancerous cells. We will display these results in conjunction with demographic risk factors from a patient’s chart in an intuitive cervical cancer risk analysis dashboard. The patient view will show the risk assessment results, guidelines, and any messages added by their providers. Finally, the tool will also have a public-facing feature so anyone can find providers near them who can perform cervical cancer screenings. Our tool will first be focused on the United States with the intention of expanding it to other countries. We believe that it is necessary to provide the healthcare community with more tools to efficiently and successfully perform their jobs and provide the public with easily accessible information in one place.")
-
+    image = Image.open('banner.png')
+    st.image(image)
+    st.markdown("According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. "
+                "Of these new cases, there were an estimated 342,000 deaths in 2020 alone (WHO, 2022). "
+                "Yet, cervical cancer is one of the most preventable cancers, when healthcare guidelines are followed. ")
 with tab2:
     st.header("About Us")
     st.markdown("VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. "
@@ -22,7 +34,7 @@ with tab2:
                 "We are passionate about delivering diagnostic information to assist clinical judgment and building interactive tools to enable patients to take control of their health. "
                 "We created VividHealth out of our desire to make healthcare more accessible and cost effective. "
                 "Having a positive impact in our community and helping others obtain necessary care motivates us to continue our current work. ")
-    image_M = Image.open('Web_App/Mona.png')
+    image_M = Image.open('Mona.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_M, width=90)
@@ -31,7 +43,7 @@ with tab2:
                  "She is an accomplished academic researcher with over 40 PubMed indexed peer reviewed articles. "
                  "She brings her medical expertise and prior experience with machine learning applications using healthcare data to cervical cancer image detection. "
                  "She seeks projects that intersect her passions for medicine and analytics.")
-    image_J = Image.open('Web_App/Julia.png')
+    image_J = Image.open('Julia.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_J, width=90)
@@ -39,7 +51,7 @@ with tab2:
         st.write("Julia Ma is a software engineer with two years of professional experience in the government sector. "
                  "She has a diverse skill set including hardware simulation, signal processing, data engineering, data visualization, and NLP. "
                  "Her work with the government has given her an interest in data privacy and explainable AI.")
-    image_E = Image.open('Web_App/Erin.png')
+    image_E = Image.open('Erin.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_E, width=90)
@@ -48,7 +60,7 @@ with tab2:
                  "She is able to combine her knowledge of healthcare to her more recent work as a Project Manager and Data Scientist to address cervical cancer risk assessment. "
                  "As someone who has been able to beat cervical cancer due to successful preventative measures, screenings, and early treatment, she is passionate about assisting others to have a similar or better experience.")
 
-    image_S = Image.open('Web_App/Sarah.png')
+    image_S = Image.open('Sarah.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_S, width=90)
@@ -58,7 +70,7 @@ with tab2:
             "Leveraging her technical background in computer science with years of professional experience in data science, she supports the full lifecycle of analytics projects from algorithmic design all the way through deployment. "
             "Sarah also brings expertise in AI ethics, governance, and privacy, and is passionate about human- and privacy-first designs that support positive changes in communities.")
 
-    image_R = Image.open('Web_App/Rachel.png')
+    image_R = Image.open('Rachel.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
         st.image(image_R, width=90)
@@ -68,24 +80,6 @@ with tab2:
             "She has four years of experience as a technical business analyst eliciting, confirming and documenting requirements, seven years of experience architecting and administering data pipelines and databases and has been building software for four years. "
             "Rachel brings experience working in health insurance, collaborating with state and federal agencies to ensure affordable coverage for patients in Vermont. "
             "Her work in public safety is what drives her passion for data privacy and using AI to improve society.")
-
-    # can't figure out how to get the markdown to work but the columns did so that's cool!
-    # st.markdown("""
-    # <style>
-    # .container {
-    #     display: flex;
-    # }
-    # .logo-text {
-    #     font-weight:700 !important;
-    #     font-size:50px !important;
-    #     color: #f9a01b !important;
-    #     padding-top: 75px !important;
-    # }
-    # .logo-img {
-    #     float:right;
-    # }
-    # </style>
-    # """, unsafe_allow_html=True)
 
 with tab3:
     st.header("Assess Your Cervical Cancer Risk")
