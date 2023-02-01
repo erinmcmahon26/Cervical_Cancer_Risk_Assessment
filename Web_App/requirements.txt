@@ -1,7 +1,7 @@
 pandas
 altair
 streamlit
-streamlit_authenticator
+streamlit-authenticator
 Image
 Pillow
-yaml
+watchdog
