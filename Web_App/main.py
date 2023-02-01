@@ -222,37 +222,58 @@ with tab4:
 
 with tab5:
     st.header("Patient and Healthcare Sign In")
-    with open('config.yaml') as file:
-        config = yaml.load(file, Loader=SafeLoader)
-    authenticator = stauth.Authenticate(
-        config['credentials'],
-        config['cookie']['name'],
-        config['cookie']['key'],
-        config['cookie']['expiry_days']
-    )
-    name, authentication_status, username = authenticator.login('Login', 'main')
 
-    if authentication_status:
-        authenticator.logout('Logout', 'main')
-        st.write(f'Welcome *{name}*') # won't go to this page when you enter the correct information...
-        st.header("Upload an Image to Assess Cervical Cancer Risk")
-        # uploaded_file = st.file_uploader("Choose a file",
-        #                                  type=None,
-        #                                  accept_multiple_files=False,  # only accept one file at a time
-        #                                  key=None,
-        #                                  help=None,
-        #                                  on_change=None,
-        #                                  disabled=False,
-        #                                  label_visibility="visible")
-        # if uploaded_file is not None:
-        #     bytes_data = uploaded_file.getvalue()
-        #     # To read file as bytes:
-        #     st.write("filename:", uploaded_file.name)
-        #     st.write(bytes_data)
-        #     # Can be used wherever a "file-like" object is accepted:
-        #     dataframe = pd.read_csv(uploaded_file)
-        #     st.write(dataframe)
-    elif authentication_status is False:
-        st.error('Username/password is incorrect')
-    elif authentication_status is None:
-        st.warning('Please enter your username and password')
+    def check_password():
+        """Returns `True` if the user had a correct password."""
+
+        def password_entered():
+            """Checks whether a password entered by the user is correct."""
+            if (
+                    st.session_state["username"] in st.secrets["passwords"]
+                    and st.session_state["password"]
+                    == st.secrets["passwords"][st.session_state["username"]]
+            ):
+                st.session_state["password_correct"] = True
+                del st.session_state["password"]  # don't store username + password
+                del st.session_state["username"]
+            else:
+                st.session_state["password_correct"] = False
+
+        if "password_correct" not in st.session_state:
+            # First run, show inputs for username + password.
+            st.text_input("Username", on_change=password_entered, key="username")
+            st.text_input(
+                "Password", type="password", on_change=password_entered, key="password"
+            )
+            return False
+        elif not st.session_state["password_correct"]:
+            # Password not correct, show input + error.
+            st.text_input("Username", on_change=password_entered, key="username")
+            st.text_input(
+                "Password", type="password", on_change=password_entered, key="password"
+            )
+            st.error("😕 User not known or password incorrect")
+            return False
+        else:
+            # Password correct.
+            return True
+
+
+    if check_password():
+        st.write("Upload image below")
+        uploaded_file = st.file_uploader("Choose a file",
+                                         type=None,
+                                         accept_multiple_files=False,  # only accept one file at a time
+                                         key=None,
+                                         help=None,
+                                         on_change=None,
+                                         disabled=False,
+                                         label_visibility="visible")
+        if uploaded_file is not None:
+            bytes_data = uploaded_file.getvalue()
+            # To read file as bytes:
+            st.write("filename:", uploaded_file.name)
+            st.write(bytes_data)
+            # Can be used wherever a "file-like" object is accepted:
+            dataframe = pd.read_csv(uploaded_file)
+            st.write(dataframe)
