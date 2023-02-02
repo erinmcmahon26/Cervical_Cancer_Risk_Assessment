@@ -1,11 +1,8 @@
 import streamlit as st
-import streamlit_authenticator as stauth
-import yaml
 from PIL import Image
 # from collections import namedtuple
 # import altair as alt
 # import pandas as pd
-from yaml import SafeLoader
 
 im = Image.open('favicon.png')
 st.set_page_config(
@@ -16,7 +13,7 @@ st.set_page_config(
 
 
 image = Image.open('VividHealth_Logo.png')
-st.image(image)
+st.image(image, width = 600)
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "About Us", "Risk Assessment", "Find A Provider", "Sign In"])
 
@@ -34,63 +31,6 @@ with tab2:
                 "We created VividHealth out of our desire to make healthcare more accessible and cost effective. "
                 "Having a positive impact in our community and helping others obtain necessary care motivates us to continue our current work. ")
 
-    # col1, col2 = st.columns(2, gap="small") #gap doesn't seem to be registering and when I use [1,7] to adjust column sizes, the images/words don't line up with change in browser size....
-    # with col1:
-    #     image_M = Image.open('Mona.png')
-    #     st.image(image_M, width=90)
-    #
-    #     image_J = Image.open('Julia.png')
-    #     st.image(image_J, width=90)
-    #
-    #     image_E = Image.open('Erin.png')
-    #     st.image(image_E, width=90)
-    #
-    #     image_S = Image.open('Sarah.png')
-    #     st.image(image_S, width=90)
-    #
-    #     image_R = Image.open('Rachel.png')
-    #     st.image(image_R, width=90)
-    #
-    # with col2:
-    #     st.write("Mona Ascha is a doctor and working surgeon with six years of postgraduate clinical training in surgery. "
-    #              "She is an accomplished academic researcher with over 40 PubMed indexed peer reviewed articles. "
-    #              "She brings her medical expertise and prior experience with machine learning applications using healthcare data to cervical cancer image detection. "
-    #              "She seeks projects that intersect her passions for medicine and analytics.")
-    #     # st.write('') #can't get each input in the column to line up with each other - so far it looks like streamlit does not have this functionality, might have to hack it using html/css
-    #     # st.write('') # these don't work when the size of the browser changes either...
-    #     # st.write('')
-    #     st.write("Julia Ma is a software engineer with two years of professional experience in the government sector. "
-    #              "She has a diverse skill set including hardware simulation, signal processing, data engineering, data visualization, and NLP. "
-    #              "Her work with the government has given her an interest in data privacy and explainable AI.")
-    #     # st.write('')
-    #     # st.write('')
-    #     # st.write('')
-    #     # st.write('')
-    #     # st.write('')
-    #     st.write("Erin McMahon brings seven years of healthcare experience working in various hospital settings and in the community as a 911 EMT. "
-    #              "She is able to combine her knowledge of healthcare to her more recent work as a Project Manager and Data Scientist to address cervical cancer risk assessment. "
-    #              "As someone who has been able to beat cervical cancer due to successful preventative measures, screenings, and early treatment, she is passionate about assisting others to have a similar or better experience.")
-    #
-    #     st.write("Sarah Rodenbeck is an AI professional specializing in natural language processing, AI-aided engineering, and responsible AI with experience in both industry and academia. "
-    #              "Leveraging her technical background in computer science with years of professional experience in data science, she supports the full lifecycle of analytics projects from algorithmic design all the way through deployment. "
-    #              "Sarah also brings expertise in AI ethics, governance, and privacy, and is passionate about human- and privacy-first designs that support positive changes in communities.")
-    #
-    #     st.write("Rachel Sickler is an ML engineer specializing in systems design and administration. "
-    #              "She has four years of experience as a technical business analyst eliciting, confirming and documenting requirements, seven years of experience architecting and administering data pipelines and databases and has been building software for four years. "
-    #              "Rachel brings experience working in health insurance, collaborating with state and federal agencies to ensure affordable coverage for patients in Vermont. "
-    #              "Her work in public safety is what drives her passion for data privacy and using AI to improve society.")
-
-        # st.write(
-        #     """<style>
-        #     [data-testid="stHorizontalBlock"] {
-        #         align-items: center;
-        #     }
-        #     </style>
-        #     """,
-        #     unsafe_allow_html=True
-        # )
-
-    # initially used this and right now it's the best option but there is a little issue when changing size of browser/screen but not as bad as code commented out above
     image_M = Image.open('Mona.png')
     col1, mid, col2 = st.columns([1, 3, 20])
     with col1:
