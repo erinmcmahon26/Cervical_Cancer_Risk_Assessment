@@ -1,6 +1,9 @@
+Web_App/.venv
+.DS_Store
 FindProviderFeature/npidata_pfile_20050523-20230108_fileheader.csv
 FindProviderFeature/npidata_pfile_20050523-20230108.csv
 FindProviderFeature/npi.db
 FindProviderFeature/NPPES_Data_Dissemination_CodeValues.pdf
 FindProviderFeature/NPPES_Data_Dissemination_Readme.pdf
 FindProviderFeature/.ipynb_checkpoints
+FindProviderFeature/geocodingResults
