@@ -4,8 +4,10 @@ import yaml
 #from PIL import Image
 # from collections import namedtuple
 # import altair as alt
-import pandas as pd
 from yaml import SafeLoader
+
+#imports needed for find provider feature
+import pandas as pd
 import requests
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
@@ -14,7 +16,8 @@ from streamlit_folium import folium_static
 import folium
 import numpy as np
 from streamlit_js_eval import get_geolocation
-import streamlit.components.v1 as components
+from st_aggrid import GridOptionsBuilder, AgGrid, ColumnsAutoSizeMode, GridUpdateMode, DataReturnMode
+
 
 st.set_page_config(
     page_title="VividHealth",
@@ -27,7 +30,6 @@ engine = create_engine(url)
 tab1,tab4 = st.tabs(["Find A Provider","Home"])
 
 with tab1:
-    
     def searchAddr(addr_in):
         addr_input.replace(" ","+")
         addr_input.replace(",","")
@@ -48,27 +50,26 @@ with tab1:
         else: raise TypeError("Location Blocked")
 
     def findProviders(lon_search,lat_search):
-        query = f'SELECT *\
+        query = f'SELECT *, ST_DISTANCE(ST_MakePoint({lon_search},{lat_search})::geography,"geom")/1609.344 as Distance\
                 FROM npi_registry \
-                ORDER BY "geom" <-> ST_MakePoint({lon_search},{lat_search})::geography\
+                ORDER BY Distance \
                 limit 20;'
+            # "geom" <-> ST_MakePoint({lon_search},{lat_search})::geography\
+
         return pd.read_sql(query,engine)
 
     def populateMarkers(df,m):
         for i in df['geom'].unique():
             temp = df[df['geom']==i]
             li = temp.iloc[0].values.tolist()
-            lon,lat = li[31],li[32]
-            street_addr = li[7]+" "+li[8]
-            city_state = li[9]+", "+li[10]+" "+str(li[11]//10000)
-            phone = str(li[13])
-            phone = phone[:3]+"-"+phone[3:6]+"-"+phone[6:]
-            providers = f"Provider(s):<ul><li>{li[2]} {li[3]} {li[1]} {li[5]}, {li[6]} </li>"
+            lon,lat = li[1],li[2]
+            street_addr = li[3]
+            phone = str(li[7])     
+            providers = f"Provider(s):<ul><li>{li[5]}</lu>"
             for i in range(1,len(temp)):
                 li = temp.iloc[i].values.tolist()
-                providers+=f"<li>{li[2]} {li[3]} {li[1]} {li[5]}, {li[6]} </li>"
-            providers = providers.replace(",  ","").replace("  ", " ").replace(" ,",",")
-            popuptext = f"<div style=\"font-family:verdana\">{street_addr}<br>{city_state}<br><br>Phone Number: {phone}<br><br>{providers}</ul></div>"
+                providers+=f"<li>{li[5]}</li>"    
+            popuptext = f"<div style=\"font-family:verdana\">{street_addr}<br><br>Phone Number: {phone}<br><br>{providers}</ul></div>"
             popup = folium.Popup(folium.IFrame(popuptext),min_width=300,max_width=300)
             folium.Marker([lat, lon], popup=popup,icon=folium.Icon(color='red',prefix='fa',icon='stethoscope'),tooltip=tooltip).add_to(m)
         
@@ -81,23 +82,28 @@ with tab1:
         ne = [max(lats),max(lons)]
         return sw,ne
 
+    def toggle_addr():
+        st.session_state.loc = False        
+    def toggle_loc():
+        if not check:
+            st.session_state.loc = True 
+        if check:
+            st.session_state.loc = False  
+
     st.header("Healthcare Near You")
     st.markdown("This page allows you to find healthcare providers in your area who are can provide cervical cancer screenings. ")
     col1,col2 = st.columns(2)
-    flag = False
     with col1:
         st.write('')
         st.write('')
-        check = st.checkbox("Use My Current Location",value=True) #False)
-        if check: flag=True    
+        check = st.checkbox("Use My Current Location",value=False,key='loc',on_change=toggle_loc)
     with col2:
-        addr_input = st.text_input(label="Or, Enter an Address Here:",value="633 Clark St, Evanston, IL 60208")
-    
+        addr_input = st.text_input(label="Or, Enter an Address Here:",key='addr',value="633 Clark St, Evanston, IL 60208",on_change=toggle_addr)
     if addr_input =="":
         st.error("Please enter a valid address")
     else:
         try: 
-            if flag:
+            if st.session_state.loc==True:
                 lon_search,lat_search = getLocation()
             else:
                 lon_search,lat_search= searchAddr(addr_input)
@@ -111,34 +117,12 @@ with tab1:
             sw,ne = bounds(df)
             m.fit_bounds([sw, ne]) 
             folium_static(m)
-
+            df_show = df[['distance','ProviderName','PrimarySpecialty','PracticePhoneNum','AddressFound','ProviderGender']]
+            df_show['distance'] = df_show['distance'].round(2)
+            df_show.columns = ['Distance (Miles)','Provider Name','Primary Specialty','Phone Number','Address','Provider Gender']
+            st.markdown('#### Explore Providers Near You')
+            st.dataframe(df_show)
         except ValueError as err:
             st.error("Address not found! Please try another address.")
         except TypeError as err:
             st.error('You must enable location services to use this feature')
-
-#TODO also display table with all providers?        
-#TODO finish custom component
-components.html("""
-<script>
-const doc = window.parent.document 
-const textbox = doc.querySelector('[aria-label="Or, Enter an Address Here:"]');
-const checkbox = doc.querySelector(.st-e0); 
-const check = doc.querySelector('[aria-label="Use My Current Location"]'); 
-console.log(textbox)
-console.log(checkbox)
-console.log(check)
-textbox.addEventListener('keypress', function (event) {
-    if (event.key === 'Enter') {
-        console.log("Enter pressed")
-        checkbox.classList.toggle('class');
-        check.setAttribute("aria-checked","false")
-    }
-});
-</script>
-""", height=0, width=0)
-
-
-        
-    
-        
