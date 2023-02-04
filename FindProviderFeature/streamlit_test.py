@@ -16,7 +16,6 @@ from streamlit_folium import folium_static
 import folium
 import numpy as np
 from streamlit_js_eval import get_geolocation
-from st_aggrid import GridOptionsBuilder, AgGrid, ColumnsAutoSizeMode, GridUpdateMode, DataReturnMode
 
 
 st.set_page_config(
@@ -55,7 +54,6 @@ with tab1:
                 ORDER BY Distance \
                 limit 20;'
             # "geom" <-> ST_MakePoint({lon_search},{lat_search})::geography\
-
         return pd.read_sql(query,engine)
 
     def populateMarkers(df,m):
