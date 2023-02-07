@@ -13,23 +13,67 @@ st.set_page_config(
 
 
 image = Image.open('VividHealth_Logo.png')
-st.image(image, width = 600)
+st.image(image, width=407)
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "About Us", "Risk Assessment", "Find A Provider", "Sign In"])
 
 with tab1:
     image = Image.open('banner.png')
-    st.image(image)
+    with st.container():
+        st.image(image)
     st.markdown("According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. "
                 "Of these new cases, there were an estimated 342,000 deaths in 2020 alone (WHO, 2022). "
-                "Yet, cervical cancer is one of the most preventable cancers, when healthcare guidelines are followed. ")
+                "Yet, the CDC estimates that even today 93% of cervical cancer cases are preventable, when healthcare guidelines are followed (CDC 2020). "
+                "To address this discrepancy between cervical cancer incidence and effectiveness of preventative measures, VividHealth has created this multifunction and easy to use website.")
+    st.write("")
+
+    image_rib = Image.open('ribbon.png')
+    col1, mid, col2 = st.columns([1, 2, 20])
+    with col1:
+        st.image(image_rib, width=150)
+    with col2:
+        st.write("")
+        st.write("")
+        risk_assessment = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Personal Risk Assessment'
+        st.markdown(risk_assessment, unsafe_allow_html=True)
+        st.write("Check your own cervical cancer risk on the Risk Assessment tab. Our easy to use platform will ask a series of questions that can be significant predictors for assessing if you "
+                 "are at risk of developing cervical cancer.")
+    st.write("")
+
+    image_map = Image.open('map.png')
+    col1, mid, col2 = st.columns([20, 0.5, 4.5])
+    with col1:
+        st.write("")
+        st.write("")
+        risk_assessment = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Find A Healthcare Provider Near You'
+        st.markdown(risk_assessment, unsafe_allow_html=True)
+        st.write("Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment. ")
+    with col2:
+        st.image(image_map, width=250)
+    st.write("")
+
+    image_health = Image.open('healthcare.png')
+    col1, mid, col2 = st.columns([1, 2, 20])
+    with col1:
+        st.image(image_health, width=150)
+    with col2:
+        st.write("")
+        st.write("")
+        risk_assessment = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Patient and Provider Portal'
+        st.markdown(risk_assessment, unsafe_allow_html=True)
+        st.write(
+            "Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, "
+            "or any concerns.")
+
 with tab2:
-    st.header("About Us")
+    #still waiting on pngs from everyone before updating this page
+    st.header("VividHealth Team")
     st.markdown("VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. "
                 "We have partnered with Epic, an EMR company, to add new diagnostic capabilities into Epic’s Comprehensive Health Record software. "
                 "We are passionate about delivering diagnostic information to assist clinical judgment and building interactive tools to enable patients to take control of their health. "
                 "We created VividHealth out of our desire to make healthcare more accessible and cost effective. "
                 "Having a positive impact in our community and helping others obtain necessary care motivates us to continue our current work. ")
+    st.write("")
 
     image_M = Image.open('Mona.png')
     col1, mid, col2 = st.columns([1, 3, 20])
@@ -80,7 +124,9 @@ with tab2:
 
 with tab3:
     st.header("Assess Your Cervical Cancer Risk")
-    st.markdown("Explain what this tool is here!")
+    st.markdown("This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently."
+                "While some of these questions may seem very personal, they are necessary to accuretly determine your risk. If you are wondering why we are asking specific questions"
+                "or if you do not understand, just click on the ")
     # Risk factor tool
     st.subheader("Risk Factor Calculator")
 
@@ -115,8 +161,16 @@ with tab3:
                     disabled=True) #User can't change it
 
     #HPV
-    selected_class = st.radio("History of HPV", ['Yes', 'No'])
-    st.write("History of HPV:", selected_class)
+    # this is really the only way I could get a little icon but it looks a bit tacky.... I would say maybe just do a
+    # sentence under each question instead but I'll let you see what you think
+    col1, mid, col2 = st.columns([2, 1, 10])
+    with col1:
+        selected_class = st.radio("History of HPV", ['Yes', 'No'])
+        st.write("History of HPV:", selected_class)
+    with col2:
+        info = st.button("ℹ️")
+        if info:
+            st.write("We are asking this because")
 
     #IUD
     selected_class = st.radio("IUD Present", ['Yes', 'No'])
@@ -161,7 +215,8 @@ with tab4:
     st.map()
 
 with tab5:
-    st.header("Patient and Healthcare Sign In")
+    st.header("Hello! Welcome to your patient portal!")
+    st.subheader("The results of your cervical cancer risk assessment and pap smear are provided below:")
 
     def check_password():
         """Returns `True` if the user had a correct password."""
