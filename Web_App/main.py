@@ -22,7 +22,7 @@ with tab1:
     with st.container():
         st.image(image)
     st.markdown("According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. "
-                "Of these new cases, there were an estimated 342,000 deaths in 2020 alone (WHO, 2022). "
+                "Of these new cases, there were an estimated 342,000 deaths in 2020 alone. "
                 "Yet, the CDC estimates that even today 93% of cervical cancer cases are preventable, when healthcare guidelines are followed (CDC 2020). "
                 "To address this discrepancy between cervical cancer incidence and effectiveness of preventative measures, VividHealth has created this multifunction and easy to use website.")
     st.write("")
@@ -131,80 +131,104 @@ with tab3:
     st.subheader("Risk Factor Calculator")
 
     #Age
-    age_min = st.number_input("Age")
-    if age_min < 21:
-        st.error("You are too young to use this tool!")
-    else:
-        st.success("You are old enough to use this tool!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        age_min = st.number_input("Age")
+        if age_min < 21:
+            st.error("You are too young to use this tool!")
+        else:
+            st.success("You are old enough to use this tool!")
+    with col2:
+        st.info("\n We are asking this because you must be at least 21 years of age to use this tool.", icon="ℹ️")
 
     #Smoking status
-    selected_class = st.radio("Smoking Status", ['Current smoker', 'Former Smoker', 'Never Smoker'])
-    st.write("Smoking Status:", selected_class)
+    #selected_class = st.radio("Smoking Status", ['Current smoker', 'Former Smoker', 'Never Smoker'])
+    #st.write("Smoking Status:", selected_class)
     # st.write("Smoking Status Type:", type(selected_class))
 
     #Number of Years Smoked
     #The following should only appear if smoking status is current smoker or former smoker...need to write if statement
-    smoke_years = st.number_input("Number of Years Smoking")
-    if smoke_years < 0:
-        st.error("Cannot be a negative number!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        smoke_years = st.number_input("Number of Years Smoking")
+        if smoke_years < 0:
+            st.error("Cannot be a negative number!")
+    with col2:
+        st.info("\n This will be used to calculate your smoking pack years.", icon="ℹ️")
 
     #Number of Packs Smoked per day
-    ppd = st.number_input("Number of Packs Smoked Per Day")
-    if ppd < 0:
-        st.error("Cannot be a negative number!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        ppd = st.number_input("Number of Packs Smoked Per Day")
+        if ppd < 0:
+            st.error("Cannot be a negative number!")
+    with col2:
+        st.info("\n This will be used to calculate your smoking pack years.", icon="ℹ️")
 
     #Pack Years calculator
     #Pack years = number of packs of cigarettes smoked per day multiplied by the number of years the person has smoked
-    pack_years = ppd*smoke_years
-    st.number_input("Pack Years",
-                    value=pack_years, #Defaults to pack years
-                    disabled=True) #User can't change it
-
-    #HPV
-    # this is really the only way I could get a little icon but it looks a bit tacky.... I would say maybe just do a
-    # sentence under each question instead but I'll let you see what you think
-    col1, mid, col2 = st.columns([2, 1, 10])
+    col1, mid, col2 = st.columns([5, 0.1, 5])
     with col1:
-        selected_class = st.radio("History of HPV", ['Yes', 'No'])
-        st.write("History of HPV:", selected_class)
+        pack_years = ppd*smoke_years
+        st.number_input("Pack Years",
+                        value=pack_years, #Defaults to pack years
+                        disabled=True) #User can't change it
     with col2:
-        info = st.button("ℹ️")
-        if info:
-            st.write("We are asking this because")
-
-    #IUD
-    selected_class = st.radio("IUD Present", ['Yes', 'No'])
-    st.write("IUD Present:", selected_class)
+        st.info("\n We are calculating this because smoking increases your risk of cervical cancer.", icon="ℹ️")
 
     #IUD Years
-    iud_years = st.number_input("Number of Years with IUD", step=1)
-    if iud_years < 0:
-        st.error("Cannot be a negative number!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        iud_years = st.number_input("Number of Years with IUD", step=1)
+        if iud_years < 0:
+            st.error("Cannot be a negative number!")
+    with col2:
+        st.info("If you never had an IUD, write 0. Having an IUD can decrease your cervical cancer risk.", icon="ℹ️")
 
     #Age at first sexual intercourse
-    age_first_sex = st.number_input("Age at First Sexual Intercourse", step=1)
-    if age_first_sex < 0:
-        st.error("Cannot be a negative number!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        age_first_sex = st.number_input("Age at First Sexual Intercourse", step=1)
+        if age_first_sex < 0:
+            st.error("Cannot be a negative number!")
+    with col2:
+        st.info("We are asking this because earlier age at first intercourse can increase your cervical cancer risk.", icon="ℹ️")
 
     #Contraception years
-    contracept_years = st.number_input("Number of Years with Contraception", step=1)
-    if contracept_years < 0:
-        st.error("Cannot be a negative number!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        contracept_years = st.number_input("Number of Years with Contraception", step=1)
+        if contracept_years < 0:
+            st.error("Cannot be a negative number!")
+    with col2:
+        st.info("If you never had contraception, write 0. Having contraception can decrease your cervical cancer risk.", icon="ℹ️")
 
     #Number of sexual partners
-    num_sex_partners = st.number_input("Number of Lifetime Sexual Partners", step=1)
-    if num_sex_partners < 0:
-        st.error("Cannot be a negative number!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        num_sex_partners = st.number_input("Number of Lifetime Sexual Partners", step=1)
+        if num_sex_partners < 0:
+            st.error("Cannot be a negative number!")
+    with col2:
+        st.info("We are asking this because greater number of sexual partners can increase your cervical cancer risk.", icon="ℹ️")
 
     #Number of pregnancies
-    num_pregnancies = st.number_input("Number of Lifetime Pregnancies", step=1)
-    if num_pregnancies < 0:
-        st.error("Cannot be a negative number!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        num_pregnancies = st.number_input("Number of Lifetime Pregnancies", step=1)
+        if num_pregnancies < 0:
+            st.error("Cannot be a negative number!")
+    with col2:
+        st.info("We are asking this because greater number of pregnancies can increase your cervical cancer risk.", icon="ℹ️")
 
     #Number of STDs
-    num_stds = st.number_input("Number of Lifetime STDs", step=1)
-    if num_stds < 0:
-        st.error("Cannot be a negative number!")
+    col1, mid, col2 = st.columns([5, 0.1, 5])
+    with col1:
+        num_stds = st.number_input("Number of Lifetime STDs", step=1)
+        if num_stds < 0:
+            st.error("Cannot be a negative number!")
+    with col2:
+        st.info("We are asking this because greater number of STDs can increase your cervical cancer risk.", icon="ℹ️")
 
 with tab4:
     st.header("Healthcare Near You")
