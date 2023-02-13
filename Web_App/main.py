@@ -11,20 +11,27 @@ st.set_page_config(
     layout="wide"
 )
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-image = Image.open('VividHealth_Logo.png')
-st.image(image, width=407)
+image_logo = Image.open('VividHealth_Logo.png')
+st.image(image_logo, width=407)
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "About Us", "Risk Assessment", "Find A Provider", "Sign In"])
 
 with tab1:
-    image = Image.open('banner.png')
-    with st.container():
-        st.image(image)
+    image_banner = Image.open('banner.png')
+    st.image(image_banner, use_column_width=True)
     st.markdown("According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. "
                 "Of these new cases, there were an estimated 342,000 deaths in 2020 alone. "
-                "Yet, the CDC estimates that even today 93% of cervical cancer cases are preventable, when healthcare guidelines are followed (CDC 2020). "
-                "To address this discrepancy between cervical cancer incidence and effectiveness of preventative measures, VividHealth has created this multifunction and easy to use website.")
+                "Yet, the CDC estimates that even today 93% of cervical cancer cases are preventable, when healthcare guidelines are followed <sup>1</sup>. "
+                "To address this discrepancy between cervical cancer incidence and effectiveness of preventative measures, VividHealth has created this multifunction and easy to use website.",
+                unsafe_allow_html=True)
     st.write("")
 
     image_rib = Image.open('ribbon.png')
@@ -41,15 +48,15 @@ with tab1:
     st.write("")
 
     image_map = Image.open('map.png')
-    col1, mid, col2 = st.columns([20, 0.5, 4.5])
+    col1, mid, col2 = st.columns([20, 0.5, 4])
     with col1:
         st.write("")
         st.write("")
-        risk_assessment = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Find A Healthcare Provider Near You'
-        st.markdown(risk_assessment, unsafe_allow_html=True)
+        provider = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Find A Healthcare Provider Near You'
+        st.markdown(provider, unsafe_allow_html=True)
         st.write("Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment. ")
     with col2:
-        st.image(image_map, width=250)
+        st.image(image_map, use_column_width=True)
     st.write("")
 
     image_health = Image.open('healthcare.png')
@@ -59,14 +66,19 @@ with tab1:
     with col2:
         st.write("")
         st.write("")
-        risk_assessment = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Patient and Provider Portal'
-        st.markdown(risk_assessment, unsafe_allow_html=True)
-        st.write(
-            "Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, "
-            "or any concerns.")
+        portal = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Patient and Provider Portal'
+        st.markdown(portal, unsafe_allow_html=True)
+        st.write("Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, "
+                 "or any concerns.")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    citation1 = '<p style="font-family:sans serif; font-size: 14px;"> <sup>1</sup>https://www.cdc.gov/vitalsigns/cervical-cancer/index.html'
+    st.markdown(citation1, unsafe_allow_html=True)
 
 with tab2:
-    #still waiting on pngs from everyone before updating this page
     st.header("VividHealth Team")
     st.markdown("VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. "
                 "We have partnered with Epic, an EMR company, to add new diagnostic capabilities into Epic’s Comprehensive Health Record software. "
@@ -74,47 +86,49 @@ with tab2:
                 "We created VividHealth out of our desire to make healthcare more accessible and cost effective. "
                 "Having a positive impact in our community and helping others obtain necessary care motivates us to continue our current work. ")
     st.write("")
-
-    image_M = Image.open('Mona.png')
-    col1, mid, col2 = st.columns([1, 3, 20])
+    st.write("")
+    image_M = Image.open('Mona.jpg')
+    col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
-        st.image(image_M, width=90)
+        st.image(image_M, use_column_width=True)
     with col2:
         st.write("Mona Ascha is a doctor and working surgeon with six years of postgraduate clinical training in surgery. "
                  "She is an accomplished academic researcher with over 40 PubMed indexed peer reviewed articles. "
                  "She brings her medical expertise and prior experience with machine learning applications using healthcare data to cervical cancer image detection. "
                  "She seeks projects that intersect her passions for medicine and analytics.")
-    image_J = Image.open('Julia.png')
-    col1, mid, col2 = st.columns([1, 3, 20])
+    st.write("___________________")
+    image_J = Image.open('Julia.jpg')
+    col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
-        st.image(image_J, width=90)
+        st.image(image_J, use_column_width=True)
     with col2:
         st.write("Julia Ma is a software engineer with two years of professional experience in the government sector. "
                  "She has a diverse skill set including hardware simulation, signal processing, data engineering, data visualization, and NLP. "
                  "Her work with the government has given her an interest in data privacy and explainable AI.")
-    image_E = Image.open('Erin.png')
-    col1, mid, col2 = st.columns([1, 3, 20])
+    st.write("___________________")
+    image_E = Image.open('Erin.JPG')
+    col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
-        st.image(image_E, width=90)
+        st.image(image_E, use_column_width=True)
     with col2:
         st.write("Erin McMahon brings seven years of healthcare experience working in various hospital settings and in the community as a 911 EMT. "
                  "She is able to combine her knowledge of healthcare to her more recent work as a Project Manager and Data Scientist to address cervical cancer risk assessment. "
                  "As someone who has been able to beat cervical cancer due to successful preventative measures, screenings, and early treatment, she is passionate about assisting others to have a similar or better experience.")
-
-    image_S = Image.open('Sarah.png')
-    col1, mid, col2 = st.columns([1, 3, 20])
+    st.write("___________________")
+    image_S = Image.open('Sarah.jpeg')
+    col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
-        st.image(image_S, width=90)
+        st.image(image_S, use_column_width=True)
     with col2:
         st.write(
             "Sarah Rodenbeck is an AI professional specializing in natural language processing, AI-aided engineering, and responsible AI with experience in both industry and academia. "
             "Leveraging her technical background in computer science with years of professional experience in data science, she supports the full lifecycle of analytics projects from algorithmic design all the way through deployment. "
             "Sarah also brings expertise in AI ethics, governance, and privacy, and is passionate about human- and privacy-first designs that support positive changes in communities.")
-
-    image_R = Image.open('Rachel.png')
-    col1, mid, col2 = st.columns([1, 3, 20])
+    st.write("___________________")
+    image_R = Image.open('Rachel.jpg')
+    col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
-        st.image(image_R, width=90)
+        st.image(image_R, use_column_width=True)
     with col2:
         st.write(
             "Rachel Sickler is an ML engineer specializing in systems design and administration. "
@@ -126,20 +140,18 @@ with tab3:
     st.header("Assess Your Cervical Cancer Risk")
     st.markdown("This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently."
                 "While some of these questions may seem very personal, they are necessary to accuretly determine your risk. If you are wondering why we are asking specific questions"
-                "or if you do not understand, just click on the ")
+                "or if you do not understand, just take a look at the information icon below each question! ")
     # Risk factor tool
     st.subheader("Risk Factor Calculator")
 
     #Age
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        age_min = st.number_input("Age")
-        if age_min < 21:
-            st.error("You are too young to use this tool!")
-        else:
-            st.success("You are old enough to use this tool!")
-    with col2:
-        st.info("\n We are asking this because you must be at least 21 years of age to use this tool.", icon="ℹ️")
+    age_min = st.number_input("Age")
+    # if age_min < 21:
+    #     st.error("You are too young to use this tool!")
+    # else:
+    #     st.success("You are old enough to use this tool!")
+    # not sure if this is needed since we have the info button now
+    st.info("\n We are asking this because you must be at least 21 years of age to use this tool.", icon="ℹ️")
 
     #Smoking status
     #selected_class = st.radio("Smoking Status", ['Current smoker', 'Former Smoker', 'Never Smoker'])
@@ -148,87 +160,60 @@ with tab3:
 
     #Number of Years Smoked
     #The following should only appear if smoking status is current smoker or former smoker...need to write if statement
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        smoke_years = st.number_input("Number of Years Smoking")
-        if smoke_years < 0:
-            st.error("Cannot be a negative number!")
-    with col2:
-        st.info("\n This will be used to calculate your smoking pack years.", icon="ℹ️")
+    smoke_years = st.number_input("Number of Years Smoking")
+    if smoke_years < 0:
+        st.error("Cannot be a negative number!")
+    st.info("\n This will be used to calculate your smoking pack years.", icon="ℹ️")
 
     #Number of Packs Smoked per day
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        ppd = st.number_input("Number of Packs Smoked Per Day")
-        if ppd < 0:
-            st.error("Cannot be a negative number!")
-    with col2:
-        st.info("\n This will be used to calculate your smoking pack years.", icon="ℹ️")
+    ppd = st.number_input("Number of Packs Smoked Per Day")
+    if ppd < 0:
+        st.error("Cannot be a negative number!")
+    st.info("\n This will be used to calculate your smoking pack years.", icon="ℹ️")
 
     #Pack Years calculator
     #Pack years = number of packs of cigarettes smoked per day multiplied by the number of years the person has smoked
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        pack_years = ppd*smoke_years
-        st.number_input("Pack Years",
-                        value=pack_years, #Defaults to pack years
-                        disabled=True) #User can't change it
-    with col2:
-        st.info("\n We are calculating this because smoking increases your risk of cervical cancer.", icon="ℹ️")
+    pack_years = ppd*smoke_years
+    st.number_input("Pack Years",
+                    value=pack_years, #Defaults to pack years
+                    disabled=True) #User can't change it
+    st.info("\n We are calculating this because smoking increases your risk of cervical cancer.", icon="ℹ️")
 
     #IUD Years
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        iud_years = st.number_input("Number of Years with IUD", step=1)
-        if iud_years < 0:
-            st.error("Cannot be a negative number!")
-    with col2:
-        st.info("If you never had an IUD, write 0. Having an IUD can decrease your cervical cancer risk.", icon="ℹ️")
+    iud_years = st.number_input("Number of Years with IUD", step=1)
+    if iud_years < 0:
+        st.error("Cannot be a negative number!")
+    st.info("If you never had an IUD, write 0. Having an IUD can decrease your cervical cancer risk.", icon="ℹ️")
 
     #Age at first sexual intercourse
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        age_first_sex = st.number_input("Age at First Sexual Intercourse", step=1)
-        if age_first_sex < 0:
-            st.error("Cannot be a negative number!")
-    with col2:
-        st.info("We are asking this because earlier age at first intercourse can increase your cervical cancer risk.", icon="ℹ️")
+    age_first_sex = st.number_input("Age at First Sexual Intercourse", step=1)
+    if age_first_sex < 0:
+        st.error("Cannot be a negative number!")
+    st.info("We are asking this because earlier age at first intercourse can increase your cervical cancer risk.", icon="ℹ️")
 
     #Contraception years
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        contracept_years = st.number_input("Number of Years with Contraception", step=1)
-        if contracept_years < 0:
-            st.error("Cannot be a negative number!")
-    with col2:
-        st.info("If you never had contraception, write 0. Having contraception can decrease your cervical cancer risk.", icon="ℹ️")
+    contracept_years = st.number_input("Number of Years with Contraception", step=1)
+    if contracept_years < 0:
+        st.error("Cannot be a negative number!")
+    st.info("If you never had contraception, write 0. Having contraception can decrease your cervical cancer risk.", icon="ℹ️")
 
     #Number of sexual partners
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        num_sex_partners = st.number_input("Number of Lifetime Sexual Partners", step=1)
-        if num_sex_partners < 0:
-            st.error("Cannot be a negative number!")
-    with col2:
-        st.info("We are asking this because greater number of sexual partners can increase your cervical cancer risk.", icon="ℹ️")
+    num_sex_partners = st.number_input("Number of Lifetime Sexual Partners", step=1)
+    if num_sex_partners < 0:
+        st.error("Cannot be a negative number!")
+    st.info("We are asking this because greater number of sexual partners can increase your cervical cancer risk.", icon="ℹ️")
 
     #Number of pregnancies
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        num_pregnancies = st.number_input("Number of Lifetime Pregnancies", step=1)
-        if num_pregnancies < 0:
-            st.error("Cannot be a negative number!")
-    with col2:
-        st.info("We are asking this because greater number of pregnancies can increase your cervical cancer risk.", icon="ℹ️")
+    num_pregnancies = st.number_input("Number of Lifetime Pregnancies", step=1)
+    if num_pregnancies < 0:
+        st.error("Cannot be a negative number!")
+    st.info("We are asking this because greater number of pregnancies can increase your cervical cancer risk.", icon="ℹ️")
 
     #Number of STDs
-    col1, mid, col2 = st.columns([5, 0.1, 5])
-    with col1:
-        num_stds = st.number_input("Number of Lifetime STDs", step=1)
-        if num_stds < 0:
-            st.error("Cannot be a negative number!")
-    with col2:
-        st.info("We are asking this because greater number of STDs can increase your cervical cancer risk.", icon="ℹ️")
+    num_stds = st.number_input("Number of Lifetime STDs", step=1)
+    if num_stds < 0:
+        st.error("Cannot be a negative number!")
+    st.info("We are asking this because greater number of STDs can increase your cervical cancer risk.", icon="ℹ️")
 
 with tab4:
     st.header("Healthcare Near You")
