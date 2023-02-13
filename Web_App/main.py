@@ -27,10 +27,10 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "About Us", "Risk Assessment", "
 with tab1:
     image_banner = Image.open('banner.png')
     st.image(image_banner, use_column_width=True)
-    st.markdown("According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. "
-                "Of these new cases, there were an estimated 342,000 deaths in 2020 alone. "
-                "Yet, the CDC estimates that even today 93% of cervical cancer cases are preventable, when healthcare guidelines are followed <sup>1</sup>. "
-                "To address this discrepancy between cervical cancer incidence and effectiveness of preventative measures, VividHealth has created this multifunction and easy to use website.",
+    st.markdown('<p style="font-family:sans serif; font-size: 22px;"> According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. '
+                'Of these new cases, there were an estimated 342,000 deaths in 2020 alone. '
+                'Yet, the CDC estimates that even today 93% of cervical cancer cases are preventable, when healthcare guidelines are followed <sup>1</sup>. '
+                'To address this discrepancy between cervical cancer incidence and effectiveness of preventative measures, VividHealth has created this multifunction and easy to use website.',
                 unsafe_allow_html=True)
     st.write("")
 
@@ -41,10 +41,10 @@ with tab1:
     with col2:
         st.write("")
         st.write("")
-        risk_assessment = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Personal Risk Assessment'
+        risk_assessment = '<p style="font-family:sans serif; font-size: 28px;"> <strong>Personal Risk Assessment'
         st.markdown(risk_assessment, unsafe_allow_html=True)
-        st.write("Check your own cervical cancer risk on the Risk Assessment tab. Our easy to use platform will ask a series of questions that can be significant predictors for assessing if you "
-                 "are at risk of developing cervical cancer.")
+        st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Check your own cervical cancer risk on the Risk Assessment tab. Our easy to use platform will ask a series of questions that can be significant predictors for assessing if you '
+                    'are at risk of developing cervical cancer.', unsafe_allow_html=True)
     st.write("")
 
     image_map = Image.open('map.png')
@@ -52,9 +52,10 @@ with tab1:
     with col1:
         st.write("")
         st.write("")
-        provider = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Find A Healthcare Provider Near You'
+        provider = '<p style="font-family:sans serif; font-size: 28px;"> <strong>Find A Healthcare Provider Near You'
         st.markdown(provider, unsafe_allow_html=True)
-        st.write("Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment. ")
+        st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment. ',
+                 unsafe_allow_html=True)
     with col2:
         st.image(image_map, use_column_width=True)
     st.write("")
@@ -66,10 +67,10 @@ with tab1:
     with col2:
         st.write("")
         st.write("")
-        portal = '<p style="font-family:sans serif; font-size: 24px;"> <strong>Patient and Provider Portal'
+        portal = '<p style="font-family:sans serif; font-size: 28px;"> <strong>Patient and Provider Portal'
         st.markdown(portal, unsafe_allow_html=True)
-        st.write("Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, "
-                 "or any concerns.")
+        st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, '
+                 'or any concerns.', unsafe_allow_html=True)
     st.write("")
     st.write("")
     st.write("")
@@ -80,11 +81,12 @@ with tab1:
 
 with tab2:
     st.header("VividHealth Team")
-    st.markdown("VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. "
-                "We have partnered with Epic, an EMR company, to add new diagnostic capabilities into Epic’s Comprehensive Health Record software. "
-                "We are passionate about delivering diagnostic information to assist clinical judgment and building interactive tools to enable patients to take control of their health. "
-                "We created VividHealth out of our desire to make healthcare more accessible and cost effective. "
-                "Having a positive impact in our community and helping others obtain necessary care motivates us to continue our current work. ")
+    st.markdown('<p style="font-family:sans serif; font-size: 20px;"> VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. '
+                'We have partnered with Epic, an EMR company, to add new diagnostic capabilities into Epic’s Comprehensive Health Record software. '
+                'We are passionate about delivering diagnostic information to assist clinical judgment and building interactive tools to enable patients to take control of their health. '
+                'We created VividHealth out of our desire to make healthcare more accessible and cost effective. '
+                'Having a positive impact in our community and helping others obtain necessary care motivates us to continue our current work. ',
+                unsafe_allow_html=True)
     st.write("")
     st.write("")
     image_M = Image.open('Mona.jpg')
@@ -92,55 +94,59 @@ with tab2:
     with col1:
         st.image(image_M, use_column_width=True)
     with col2:
-        st.write("Mona Ascha is a doctor and working surgeon with six years of postgraduate clinical training in surgery. "
-                 "She is an accomplished academic researcher with over 40 PubMed indexed peer reviewed articles. "
-                 "She brings her medical expertise and prior experience with machine learning applications using healthcare data to cervical cancer image detection. "
-                 "She seeks projects that intersect her passions for medicine and analytics.")
+        st.markdown('<p style="font-family:sans serif; font-size: 20px;"> <u><strong>Mona Ascha</strong></u> is a doctor and working surgeon with six years of postgraduate clinical training in surgery. '
+                    'She is an accomplished academic researcher with over 40 PubMed indexed peer reviewed articles. '
+                    'She brings her medical expertise and prior experience with machine learning applications using healthcare data to cervical cancer image detection. '
+                    'She seeks projects that intersect her passions for medicine and analytics.',
+                    unsafe_allow_html=True)
     st.write("___________________")
     image_J = Image.open('Julia.jpg')
     col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
         st.image(image_J, use_column_width=True)
     with col2:
-        st.write("Julia Ma is a software engineer with two years of professional experience in the government sector. "
-                 "She has a diverse skill set including hardware simulation, signal processing, data engineering, data visualization, and NLP. "
-                 "Her work with the government has given her an interest in data privacy and explainable AI.")
+        st.markdown('<p style="font-family:sans serif; font-size: 20px;"> <u><strong>Julia Ma</strong></u> is a software engineer with two years of professional experience in the government sector. '
+                    'She has a diverse skill set including hardware simulation, signal processing, data engineering, data visualization, and NLP. '
+                    'Her work with the government has given her an interest in data privacy and explainable AI.',
+                    unsafe_allow_html=True)
     st.write("___________________")
     image_E = Image.open('Erin.JPG')
     col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
         st.image(image_E, use_column_width=True)
     with col2:
-        st.write("Erin McMahon brings seven years of healthcare experience working in various hospital settings and in the community as a 911 EMT. "
-                 "She is able to combine her knowledge of healthcare to her more recent work as a Project Manager and Data Scientist to address cervical cancer risk assessment. "
-                 "As someone who has been able to beat cervical cancer due to successful preventative measures, screenings, and early treatment, she is passionate about assisting others to have a similar or better experience.")
+        st.markdown('<p style="font-family:sans serif; font-size: 20px;"> <u><strong>Erin McMahon</strong></u> brings seven years of healthcare experience working in various hospital settings and in the community as a 911 EMT. '
+                    'She is able to combine her knowledge of healthcare to her more recent work as a Project Manager and Data Scientist to address cervical cancer risk assessment. '
+                    'As someone who has been able to beat cervical cancer due to successful preventative measures, screenings, and early treatment, she is passionate about assisting others to have a similar or better experience.',
+                     unsafe_allow_html=True)
     st.write("___________________")
     image_S = Image.open('Sarah.jpeg')
     col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
         st.image(image_S, use_column_width=True)
     with col2:
-        st.write(
-            "Sarah Rodenbeck is an AI professional specializing in natural language processing, AI-aided engineering, and responsible AI with experience in both industry and academia. "
-            "Leveraging her technical background in computer science with years of professional experience in data science, she supports the full lifecycle of analytics projects from algorithmic design all the way through deployment. "
-            "Sarah also brings expertise in AI ethics, governance, and privacy, and is passionate about human- and privacy-first designs that support positive changes in communities.")
+        st.markdown('<p style="font-family:sans serif; font-size: 20px;"> <u><strong>Sarah Rodenbeck</strong></u> is an AI professional specializing in natural language processing, AI-aided engineering, and responsible AI with experience in both industry and academia. '
+                    'Leveraging her technical background in computer science with years of professional experience in data science, she supports the full lifecycle of analytics projects from algorithmic design all the way through deployment. '
+                    'Sarah also brings expertise in AI ethics, governance, and privacy, and is passionate about human- and privacy-first designs that support positive changes in communities.',
+                    unsafe_allow_html=True)
     st.write("___________________")
     image_R = Image.open('Rachel.jpg')
     col1, mid, col2 = st.columns([3, 1, 15])
     with col1:
         st.image(image_R, use_column_width=True)
     with col2:
-        st.write(
-            "Rachel Sickler is an ML engineer specializing in systems design and administration. "
-            "She has four years of experience as a technical business analyst eliciting, confirming and documenting requirements, seven years of experience architecting and administering data pipelines and databases and has been building software for four years. "
-            "Rachel brings experience working in health insurance, collaborating with state and federal agencies to ensure affordable coverage for patients in Vermont. "
-            "Her work in public safety is what drives her passion for data privacy and using AI to improve society.")
+        st.markdown('<p style="font-family:sans serif; font-size: 20px;"> <u><strong>Rachel Sickler</strong></u> is an ML engineer specializing in systems design and administration. '
+                    'She has four years of experience as a technical business analyst eliciting, confirming and documenting requirements, seven years of experience architecting and administering data pipelines and databases and has been building software for four years. '
+                    'Rachel brings experience working in health insurance, collaborating with state and federal agencies to ensure affordable coverage for patients in Vermont. '
+                    'Her work in public safety is what drives her passion for data privacy and using AI to improve society.',
+                    unsafe_allow_html=True)
 
 with tab3:
     st.header("Assess Your Cervical Cancer Risk")
-    st.markdown("This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently."
-                "While some of these questions may seem very personal, they are necessary to accuretly determine your risk. If you are wondering why we are asking specific questions"
-                "or if you do not understand, just take a look at the information icon below each question! ")
+    st.markdown('<p style="font-family:sans serif; font-size: 20px;"> This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently. '
+                'While some of these questions may seem very personal, they are necessary to accuretly determine your risk. If you are wondering why we are asking specific questions'
+                'or if you do not understand, just take a look at the information icon below each question!',
+                unsafe_allow_html=True)
     # Risk factor tool
     st.subheader("Risk Factor Calculator")
 
@@ -224,8 +230,7 @@ with tab4:
     st.map()
 
 with tab5:
-    st.header("Hello! Welcome to your patient portal!")
-    st.subheader("The results of your cervical cancer risk assessment and pap smear are provided below:")
+    st.header("Patient and Provider Portal")
 
     def check_password():
         """Returns `True` if the user had a correct password."""
@@ -264,6 +269,8 @@ with tab5:
 
 
     if check_password():
+        st.subheader("The results of your cervical cancer risk assessment and pap smear are provided below:")
+        st.write("waiting for categorization results from Mona and Julia to fill this one out :)")
         st.write("Upload image below")
         uploaded_file = st.file_uploader("Choose a file",
                                          type=None,
