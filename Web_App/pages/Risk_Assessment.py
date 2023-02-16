@@ -27,7 +27,7 @@ st.markdown('<p style="font-family:sans serif; font-size: 20px;"> This page allo
 
 st.subheader("Risk Factor Calculator")
 
-col1, mid, col2 = st.columns([3,1,3])
+col1, mid, col2 = st.columns([3,0.1,3])
 with col1:
     # Age
     age_min = st.number_input("Age", help="You must be at least 21 years of age to use this tool.")
