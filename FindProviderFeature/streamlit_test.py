@@ -48,11 +48,15 @@ with tab1:
             return lon_search,lat_search
         else: raise TypeError("Location Blocked")
 
-    def findProviders(lon_search,lat_search):
+    def findProviders(lon_search,lat_search,gender):
+        if gender != 'Any':
+            where_clause = f"WHERE \"ProviderGender\"=\'{gender[:1]}\'"
+        else: where_clause = ""
         query = f'SELECT *, ST_DISTANCE(ST_MakePoint({lon_search},{lat_search})::geography,"geom")/1609.344 as Distance\
-                FROM npi_registry \
-                ORDER BY Distance \
-                limit 20;'
+                FROM npi_registry\
+                {where_clause} \
+                ORDER BY Distance\
+                LIMIT 20;'
             # "geom" <-> ST_MakePoint({lon_search},{lat_search})::geography\
         return pd.read_sql(query,engine)
 
@@ -92,11 +96,11 @@ with tab1:
     st.markdown("This page allows you to find healthcare providers in your area who are can provide cervical cancer screenings. ")
     col1,col2 = st.columns(2)
     with col1:
-        st.write('')
-        st.write('')
-        check = st.checkbox("Use My Current Location",value=False,key='loc',on_change=toggle_loc)
+        addr_input = st.text_input(label="Enter an Address Here:",key='addr',value="633 Clark St, Evanston, IL 60208",on_change=toggle_addr)
+        check = st.checkbox("Or, Use My Current Location",value=False,key='loc',on_change=toggle_loc)
     with col2:
-        addr_input = st.text_input(label="Or, Enter an Address Here:",key='addr',value="633 Clark St, Evanston, IL 60208",on_change=toggle_addr)
+        gender = st.selectbox('Preferred Provider Gender',('Any','Female','Male'))
+
     if addr_input =="":
         st.error("Please enter a valid address")
     else:
@@ -105,8 +109,9 @@ with tab1:
                 lon_search,lat_search = getLocation()
             else:
                 lon_search,lat_search= searchAddr(addr_input)
-            df = findProviders(lon_search,lat_search)
-            f = folium.Figure(width=2000, height=500)
+            df = findProviders(lon_search,lat_search,gender)
+
+            f = folium.Figure()
             m = folium.Map(location=[lat_search,lon_search]).add_to(f)
             folium.Marker([lat_search, lon_search],icon=folium.Icon(color='blue',prefix='fa',icon='home')).add_to(m)
             tooltip = "Click for Provider Information"
@@ -114,12 +119,13 @@ with tab1:
             populateMarkers(df,m)
             sw,ne = bounds(df)
             m.fit_bounds([sw, ne]) 
-            folium_static(m)
+            folium_static(m,width=1400, height=700)
             df_show = df[['distance','ProviderName','PrimarySpecialty','PracticePhoneNum','AddressFound','ProviderGender']]
             df_show['distance'] = df_show['distance'].round(2)
             df_show.columns = ['Distance (Miles)','Provider Name','Primary Specialty','Phone Number','Address','Provider Gender']
             st.markdown('#### Explore Providers Near You')
-            st.dataframe(df_show)
+            st.write("Providers who have registered a specialty as a OB/GYN, Family Medicine, or Internal Medicine physician are shown below, however, this may not be their primary specialty. Always contact the physician's office to confirm services offered.")
+            st.dataframe(df_show,width=1400,height=700)
         except ValueError as err:
             st.error("Address not found! Please try another address.")
         except TypeError as err:
