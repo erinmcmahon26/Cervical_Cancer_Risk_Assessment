@@ -33,14 +33,13 @@ st.markdown('<p style="font-family:sans serif; font-size: 22px;"> According to t
 st.write("")
 
 image_rib = Image.open('images/ribbon.png')
-col1, mid, col2 = st.columns([1, 2, 20])
+col1, mid, col2 = st.columns([3, 2, 20])
 with col1:
-    st.image(image_rib, width=150)
+    st.image(image_rib, use_column_width=True)
 with col2:
     st.write("")
     st.write("")
-    risk_assessment = '<p style="font-family:sans serif; font-size: 28px;"> <strong>Personal Risk Assessment'
-    st.markdown(risk_assessment, unsafe_allow_html=True)
+    st.markdown('<a target ="_self" href="http://localhost:8501/Risk_Assessment"><p style="font-family:sans serif; font-size: 28px;"> <strong>Personal Risk Assessment</a>', unsafe_allow_html=True)
     st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Check your own cervical cancer risk on the Risk Assessment tab. Our easy to use platform will ask a series of questions that can be significant predictors for assessing if you '
                 'are at risk of developing cervical cancer.', unsafe_allow_html=True)
 st.write("")
@@ -50,23 +49,22 @@ col1, mid, col2 = st.columns([20, 0.5, 4])
 with col1:
     st.write("")
     st.write("")
-    provider = '<p style="font-family:sans serif; font-size: 28px;"> <strong>Find A Healthcare Provider Near You'
-    st.markdown(provider, unsafe_allow_html=True)
+    st.markdown('<a target ="_self" href="http://localhost:8501/Find_A_Provider"><p style="font-family:sans serif; font-size: 28px;"> <strong>Find A Provider Near You</a>', unsafe_allow_html=True)
     st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment. ',
                  unsafe_allow_html=True)
 with col2:
     st.image(image_map, use_column_width=True)
 st.write("")
+st.write("")
 
 image_health = Image.open('images/healthcare.png')
-col1, mid, col2 = st.columns([1, 2, 20])
+col1, mid, col2 = st.columns([3, 2, 20])
 with col1:
-    st.image(image_health, width=150)
+    st.image(image_health, use_column_width=True)
 with col2:
     st.write("")
     st.write("")
-    portal = '<p style="font-family:sans serif; font-size: 28px;"> <strong>Patient and Provider Portal'
-    st.markdown(portal, unsafe_allow_html=True)
+    st.markdown('<a target ="_self" href="http://localhost:8501/Sign_In"><p style="font-family:sans serif; font-size: 28px;"> <strong>Patient and Provider Portal</a>',unsafe_allow_html=True)
     st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, '
                  'or any concerns.', unsafe_allow_html=True)
 st.write("")
