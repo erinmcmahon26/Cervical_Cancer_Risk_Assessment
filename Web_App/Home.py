@@ -4,14 +4,14 @@ from PIL import Image
 # import altair as alt
 # import pandas as pd
 
-im = Image.open('favicon.png')
+im = Image.open('images/favicon.png')
 st.set_page_config(
     page_title="VividHealth",
     page_icon=im, #not actually working for some reason...
     layout="wide"
 )
 
-hide_streamlit_style = """
+hide_streamlit_style = """ 
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
@@ -19,11 +19,11 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-image_logo = Image.open('VividHealth_Logo.png')
+image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
 
 
-image_banner = Image.open('banner.png')
+image_banner = Image.open('images/banner.png')
 st.image(image_banner, use_column_width=True)
 st.markdown('<p style="font-family:sans serif; font-size: 22px;"> According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. '
             'Of these new cases, there were an estimated 342,000 deaths in 2020 alone. '
@@ -32,7 +32,7 @@ st.markdown('<p style="font-family:sans serif; font-size: 22px;"> According to t
             unsafe_allow_html=True)
 st.write("")
 
-image_rib = Image.open('ribbon.png')
+image_rib = Image.open('images/ribbon.png')
 col1, mid, col2 = st.columns([1, 2, 20])
 with col1:
     st.image(image_rib, width=150)
@@ -45,7 +45,7 @@ with col2:
                 'are at risk of developing cervical cancer.', unsafe_allow_html=True)
 st.write("")
 
-image_map = Image.open('map.png')
+image_map = Image.open('images/map.png')
 col1, mid, col2 = st.columns([20, 0.5, 4])
 with col1:
     st.write("")
@@ -58,7 +58,7 @@ with col2:
     st.image(image_map, use_column_width=True)
 st.write("")
 
-image_health = Image.open('healthcare.png')
+image_health = Image.open('images/healthcare.png')
 col1, mid, col2 = st.columns([1, 2, 20])
 with col1:
     st.image(image_health, width=150)

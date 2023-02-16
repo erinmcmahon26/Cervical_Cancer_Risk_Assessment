@@ -1,6 +1,24 @@
 import streamlit as st
 from PIL import Image
 
+im = Image.open('images/favicon.png')
+st.set_page_config(
+    page_title="VividHealth",
+    page_icon=im, #not actually working for some reason...
+    layout="wide"
+)
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+image_logo = Image.open('images/VividHealth_Logo.png')
+st.image(image_logo, width=407)
+
 st.header("VividHealth Team")
 st.markdown('<p style="font-family:sans serif; font-size: 20px;"> VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. '
             'We have partnered with Epic, an EMR company, to add new diagnostic capabilities into Epic’s Comprehensive Health Record software. '
@@ -10,7 +28,7 @@ st.markdown('<p style="font-family:sans serif; font-size: 20px;"> VividHealth is
              unsafe_allow_html=True)
 st.write("")
 st.write("")
-image_M = Image.open('Mona.jpg')
+image_M = Image.open('images/Mona.jpg')
 col1, mid, col2 = st.columns([3, 1, 15])
 with col1:
     st.image(image_M, use_column_width=True)
@@ -21,7 +39,7 @@ with col2:
                 'She seeks projects that intersect her passions for medicine and analytics.',
                  unsafe_allow_html=True)
 st.write("___________________")
-image_J = Image.open('Julia.jpg')
+image_J = Image.open('images/Julia.jpg')
 col1, mid, col2 = st.columns([3, 1, 15])
 with col1:
     st.image(image_J, use_column_width=True)
@@ -31,7 +49,7 @@ with col2:
                 'Her work with the government has given her an interest in data privacy and explainable AI.',
                 unsafe_allow_html=True)
 st.write("___________________")
-image_E = Image.open('Erin.JPG')
+image_E = Image.open('images/Erin.JPG')
 col1, mid, col2 = st.columns([3, 1, 15])
 with col1:
     st.image(image_E, use_column_width=True)
@@ -41,7 +59,7 @@ with col2:
                 'As someone who has been able to beat cervical cancer due to successful preventative measures, screenings, and early treatment, she is passionate about assisting others to have a similar or better experience.',
                 unsafe_allow_html=True)
 st.write("___________________")
-image_S = Image.open('Sarah.jpeg')
+image_S = Image.open('images/Sarah.jpeg')
 col1, mid, col2 = st.columns([3, 1, 15])
 with col1:
     st.image(image_S, use_column_width=True)
@@ -51,7 +69,7 @@ with col2:
                 'Sarah also brings expertise in AI ethics, governance, and privacy, and is passionate about human- and privacy-first designs that support positive changes in communities.',
                 unsafe_allow_html=True)
 st.write("___________________")
-image_R = Image.open('Rachel.jpg')
+image_R = Image.open('images/Rachel.jpg')
 col1, mid, col2 = st.columns([3, 1, 15])
 with col1:
     st.image(image_R, use_column_width=True)
