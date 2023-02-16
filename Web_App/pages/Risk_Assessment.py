@@ -5,7 +5,8 @@ im = Image.open('images/favicon.png')
 st.set_page_config(
     page_title="VividHealth",
     page_icon=im, #not actually working for some reason...
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 hide_streamlit_style = """
