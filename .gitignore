@@ -5,3 +5,4 @@ FindProviderFeature/*.pdf
 FindProviderFeature/npi.db
 FindProviderFeature/.ipynb_checkpoints
 FindProviderFeature/geocodingResults
+FindProviderFeature/osmGeocodingResults

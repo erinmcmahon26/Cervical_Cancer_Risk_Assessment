@@ -9,13 +9,14 @@ from yaml import SafeLoader
 #imports needed for find provider feature
 import pandas as pd
 import requests
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine,text
 from sqlalchemy.engine import URL
 import json
 from streamlit_folium import folium_static
 import folium
 import numpy as np
 from streamlit_js_eval import get_geolocation
+import geocoder
 
 
 st.set_page_config(
@@ -30,15 +31,19 @@ tab1,tab4 = st.tabs(["Find A Provider","Home"])
 
 with tab1:
     def searchAddr(addr_in):
-        addr_input.replace(" ","+")
-        addr_input.replace(",","")
-        r = requests.get(f"https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address={addr_input}&benchmark=public_AR_Current&format=json")
-        response = json.loads(r.text)
-        if len(response['result']['addressMatches']) >0:
-            lon_search = response["result"]["addressMatches"][0]["coordinates"]["x"]
-            lat_search = response["result"]["addressMatches"][0]["coordinates"]["y"]
-            return lon_search,lat_search
+        res = geocoder.osm(addr_in).osm
+        if res != None:
+            return res['x'],res['y']
         else: raise ValueError("No address Found")
+
+        ##Alternate geocoding using census.  Does not handle inexact matches
+        # addr_input.replace(" ","+")
+        # addr_input.replace(",","")
+        # r = requests.get(f"https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address={addr_input}&benchmark=public_AR_Current&format=json")
+        # response = json.loads(r.text)
+        # if len(response['result']['addressMatches']) >0:
+        #     lon_search = response["result"]["addressMatches"][0]["coordinates"]["x"]
+        #     lat_search = response["result"]["addressMatches"][0]["coordinates"]["y"]
 
     def getLocation():
         loc = get_geolocation()
@@ -52,13 +57,13 @@ with tab1:
         if gender != 'Any':
             where_clause = f"WHERE \"ProviderGender\"=\'{gender[:1]}\'"
         else: where_clause = ""
-        query = f'SELECT *, ST_DISTANCE(ST_MakePoint({lon_search},{lat_search})::geography,"geom")/1609.344 as Distance\
+        query = text(f'SELECT *, ST_DISTANCE(ST_MakePoint({lon_search},{lat_search})::geography,"geom")/1609.344 as Distance\
                 FROM npi_registry\
                 {where_clause} \
                 ORDER BY Distance\
-                LIMIT 20;'
+                LIMIT 20;')
             # "geom" <-> ST_MakePoint({lon_search},{lat_search})::geography\
-        return pd.read_sql(query,engine)
+        return pd.DataFrame(engine.connect().execute(query))
 
     def populateMarkers(df,m):
         for i in df['geom'].unique():
@@ -129,4 +134,4 @@ with tab1:
         except ValueError as err:
             st.error("Address not found! Please try another address.")
         except TypeError as err:
-            st.error('You must enable location services to use this feature')
+           st.error('You must enable location services to use this feature')
