@@ -150,5 +150,5 @@ def predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,
         print('High Risk')
 
 if st.button('Predict Risk'):
-    risk = predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num)
-    st.success(f'The predicted risk category for developing cervical cancer is ${risk[0]:.2f}')
+    category = predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num)
+    st.success('The predicted risk category for developing cervical cancer is {}'.format(category))
