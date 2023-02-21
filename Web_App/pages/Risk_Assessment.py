@@ -1,5 +1,20 @@
 import streamlit as st
 from PIL import Image
+import pandas as pd
+import pickle
+import os
+
+current_path = os.getcwd()
+
+# getting the current path
+model_path = os.path.join(current_path, 'final_risk_model.pkl')
+
+# loading model
+with open(model_path, 'rb') as handle:
+    model = pickle.load('final_risk_model.pkl')
+
+#Caching the model for faster loading
+@st.cache
 
 im = Image.open('images/favicon.png')
 st.set_page_config(
@@ -31,7 +46,7 @@ st.subheader("Risk Factor Calculator")
 col1, mid, col2 = st.columns([3,0.1,3])
 with col1:
     # Age
-    age_min = st.number_input("Age", help="You must be at least 21 years of age to use this tool.")
+    age = st.number_input("Age", help="You must be at least 21 years of age to use this tool.")
 
     st.write("")
     st.write("")
@@ -71,8 +86,8 @@ with col1:
 
 with col2:
     # Age at first sexual intercourse
-    age_first_sex = st.number_input("Age at First Sexual Intercourse", step=1, help="Earlier age for first intercourse can increase your cervical cancer risk.")
-    if age_first_sex < 0:
+    first_sex = st.number_input("Age at First Sexual Intercourse", step=1, help="Earlier age for first intercourse can increase your cervical cancer risk.")
+    if first_sex < 0:
         st.error("Cannot be a negative number!")
 
     st.write("")
@@ -95,14 +110,32 @@ with col2:
     st.write("")
 
     # Number of pregnancies
-    num_pregnancies = st.number_input("Number of Lifetime Pregnancies", step=1, help="Greater number of pregnancies can increase your risk.")
-    if num_pregnancies < 0:
+    num_preg = st.number_input("Number of Lifetime Pregnancies", step=1, help="Greater number of pregnancies can increase your risk.")
+    if num_preg < 0:
         st.error("Cannot be a negative number!")
 
     st.write("")
     st.write("")
 
     # Number of STDs
-    num_stds = st.number_input("Number of Lifetime STDs", step=1, help="Greater number of STDs can increase your risk.")
-    if num_stds < 0:
+    stds_num = st.number_input("Number of Lifetime STDs", step=1, help="Greater number of STDs can increase your risk.")
+    if stds_num < 0:
         st.error("Cannot be a negative number!")
+
+
+# Define the prediction function
+def predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num):
+    #Predicting the price of the carat
+    prediction_prob = model.predict_proba(pd.DataFrame([[age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num]]))
+    if prediction_prob < 0.25:
+        print('Low Risk')
+    elif (0.25 <= prediction_prob < 0.5):
+        print('Low Moderate Risk')
+    elif (0.5 <= prediction_prob < 0.75):
+        print('High Moderate Risk')
+    else:
+        print('High Risk')
+
+if st.button('Predict Risk'):
+    risk = predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num)
+    st.success(f'The predicted risk category for developing cervical cancer is ${risk[0]:.2f}')
