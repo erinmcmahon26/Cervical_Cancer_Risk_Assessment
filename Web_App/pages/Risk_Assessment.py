@@ -3,6 +3,8 @@ from PIL import Image
 import pandas as pd
 import pickle
 import os
+import warnings
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import SGDClassifier
 from sklearn.ensemble import VotingClassifier
@@ -132,14 +134,17 @@ with col2:
 
 
 # Define the prediction function
+warnings.filterwarnings("ignore")
 def predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num):
     #Predicting the price of the carat
     prediction_prob = model.predict_proba(pd.DataFrame([[age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num]]))
-    if prediction_prob < 0.25:
+    risk_array = prediction_prob[:, 1]
+    risk = risk_array.astype(float)
+    if risk < 0.25:
         print('Low Risk')
-    elif (0.25 <= prediction_prob < 0.5):
+    elif (0.25 <= risk < 0.5):
         print('Low Moderate Risk')
-    elif (0.5 <= prediction_prob < 0.75):
+    elif (0.5 <= risk < 0.75):
         print('High Moderate Risk')
     else:
         print('High Risk')

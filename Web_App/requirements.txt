@@ -5,3 +5,7 @@ streamlit-authenticator
 Image
 Pillow
 watchdog
+pickle
+os
+sklearn
+warnings
