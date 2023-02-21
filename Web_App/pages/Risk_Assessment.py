@@ -3,6 +3,12 @@ from PIL import Image
 import pandas as pd
 import pickle
 import os
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import SGDClassifier
+from sklearn.ensemble import VotingClassifier
+from sklearn import svm
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
 
 current_path = os.getcwd()
 
@@ -11,10 +17,12 @@ model_path = os.path.join(current_path, 'final_risk_model.pkl')
 
 # loading model
 with open(model_path, 'rb') as handle:
-    model = pickle.load('final_risk_model.pkl')
+    model = pickle.load(handle)
+
+#model = pickle.load(open('final_risk_model.pkl', 'rb'))
 
 #Caching the model for faster loading
-@st.cache
+#@st.cache
 
 im = Image.open('images/favicon.png')
 st.set_page_config(
