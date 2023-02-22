@@ -168,7 +168,6 @@ with tab1:
         <style> 
         .riskcat{{
             background: rgba({color},0.2);
-            opacity:.8;
             text-align: center;
             font-size:20px;
             padding: 25px;
