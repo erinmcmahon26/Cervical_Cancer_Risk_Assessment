@@ -111,7 +111,7 @@ with tab1:
         st.write("")
 
         # Contraception years
-        contracept_years = st.number_input("Number of Years with Contraception", step=1, help="Never used contraception, write 0. Using contraception can decrease your risk.")
+        contracept_years = st.number_input("Number of Years with Contraception Other Than IUD", step=1, help="Never used contraception, write 0. Using contraception can decrease your risk.")
         if contracept_years < 0:
             st.error("Cannot be a negative number!")
 
@@ -158,8 +158,10 @@ with tab1:
 
     if st.button('Predict Risk'):
         category = predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num)
-        st.success('The predicted risk category for developing cervical cancer is {}'.format(category))
+        st.success("The predicted risk category for developing cervical cancer is {}".format(category))
 
+#Someone else had the exact same problem but the answer was not helpful
+#https://stackoverflow.com/questions/75127342/streamlit-app-showing-the-result-as-none-but-in-the-terminal-appears
 
 with tab2: 
     st.header("Cervical Cancer Risk Dashboard")
