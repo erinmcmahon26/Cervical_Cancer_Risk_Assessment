@@ -3,6 +3,8 @@ from PIL import Image
 # from collections import namedtuple
 # import altair as alt
 # import pandas as pd
+import base64
+from pathlib import Path
 
 im = Image.open('images/favicon.png')
 st.set_page_config(
@@ -57,44 +59,46 @@ st.markdown('<p style= font-size: 22px;"> According to the World Health Organiza
             unsafe_allow_html=True)
 st.write("")
 
-image_rib = Image.open('images/ribbon_transparent.png')
-col1, mid, col2 = st.columns([3, 2, 20])
+image_rib = Image.open('images/ribbon_icon.png')
+col1, mid, col2 = st.columns([4, .5, 20])
 with col1:
-    st.write("")
+    # st.write("")
     st.write("")
     st.image(image_rib, use_column_width=True)
 with col2:
-    st.write("")
+    # st.write("")
     st.write("")
     st.markdown(f'''<div class=featcategory1><a target ="_self" href="http://localhost:8501/Risk_Assessment">Personal Risk Assessment<p>Check your own cervical cancer risk on the Risk Assessment tab. Our easy-to-use platform will ask a series of questions that can be significant predictors for assessing if your risk of developing cervical cancer.</p></a></div>''', unsafe_allow_html=True)
     # st.markdown('<a target ="_self" href="http://localhost:8501/Risk_Assessment"><p style="font-size: 28px;"> <strong>Personal Risk Assessment</a>', unsafe_allow_html=True)
     # st.markdown('<p> Check your own cervical cancer risk on the Risk Assessment tab. Our easy to use platform will ask a series of questions that can be significant predictors for assessing if you '
     #             'are at risk of developing cervical cancer.', unsafe_allow_html=True)
+st.write("")
+st.write("")
 
-image_map = Image.open('images/map.png')
+image_map = Image.open('images/map2.png')
 col1, mid, col2 = st.columns([20, 0.5, 4])
 with col1:
-    st.write("")
-    st.write("")
+    # st.write("")
+    # st.write("")
     st.markdown(f'''<div class=featcategory2><a target ="_self" href="http://localhost:8501/Find_A_Provider"> Find A Provider Near You<p>Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment.</p></a></div>''', unsafe_allow_html=True)
     #st.markdown('<a target ="_self" href="http://localhost:8501/Find_A_Provider"><p style="font-size: 28px;"> <strong>Find A Provider Near You</a>', unsafe_allow_html=True)
     #st.markdown('<p class=featcategory> Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment. ',
    #              unsafe_allow_html=True)
 with col2:
-    st.write("")
+    # st.write("")
     st.write("")
     st.image(image_map, use_column_width=True)
 st.write("")
 st.write("")
 
 image_health = Image.open('images/healthcare.png')
-col1, mid, col2 = st.columns([3, 2, 20])
+col1, mid, col2 = st.columns([4, .5, 20])
 with col1:
-    st.write("")
+    # st.write("")
     st.write("")
     st.image(image_health, use_column_width=True)
 with col2:
-    st.write("")
+    # st.write("")
     st.write("")
     st.markdown(f'''<div class=featcategory1><a target ="_self" href="http://localhost:8501/Sign_In">Patient and Provider Portal<p>Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, or any concerns.</p></a></div>''', unsafe_allow_html=True)
     # st.markdown('<a target ="_self" href="http://localhost:8501/Sign_In"><p style="font-size: 28px;"> <strong>Patient and Provider Portal</a>',unsafe_allow_html=True)
