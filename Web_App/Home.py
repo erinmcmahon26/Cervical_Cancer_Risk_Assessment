@@ -13,11 +13,14 @@ st.set_page_config(
 
 hide_streamlit_style = """ 
             <style>
+            body {font-family: "Gill Sans", sans-serif;}
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+st.markdown("<style>p {font-family: \"Gill Sans\", sans-serif; font-size:20px}</style>",unsafe_allow_html=True)
 
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
@@ -25,22 +28,22 @@ st.image(image_logo, width=407)
 
 image_banner = Image.open('images/banner.png')
 st.image(image_banner, use_column_width=True)
-st.markdown('<p style="font-family:sans serif; font-size: 22px;"> According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. '
+st.markdown('<p style= font-size: 22px;"> According to the World Health Organization, cervical cancer is the fourth most common cancer among women globally with about 600,000 new cases documented in 2020. '
             'Of these new cases, there were an estimated 342,000 deaths in 2020 alone. '
             'Yet, the CDC estimates that even today 93% of cervical cancer cases are preventable, when healthcare guidelines are followed <sup>1</sup>. '
             'To address this discrepancy between cervical cancer incidence and effectiveness of preventative measures, VividHealth has created this multifunction and easy to use website.',
             unsafe_allow_html=True)
 st.write("")
 
-image_rib = Image.open('images/ribbon.png')
+image_rib = Image.open('images/ribbon_transparent.png')
 col1, mid, col2 = st.columns([3, 2, 20])
 with col1:
     st.image(image_rib, use_column_width=True)
 with col2:
     st.write("")
     st.write("")
-    st.markdown('<a target ="_self" href="http://localhost:8501/Risk_Assessment"><p style="font-family:sans serif; font-size: 28px;"> <strong>Personal Risk Assessment</a>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Check your own cervical cancer risk on the Risk Assessment tab. Our easy to use platform will ask a series of questions that can be significant predictors for assessing if you '
+    st.markdown('<a target ="_self" href="http://localhost:8501/Risk_Assessment"><p style="font-size: 28px;"> <strong>Personal Risk Assessment</a>', unsafe_allow_html=True)
+    st.markdown('<p> Check your own cervical cancer risk on the Risk Assessment tab. Our easy to use platform will ask a series of questions that can be significant predictors for assessing if you '
                 'are at risk of developing cervical cancer.', unsafe_allow_html=True)
 st.write("")
 
@@ -49,8 +52,8 @@ col1, mid, col2 = st.columns([20, 0.5, 4])
 with col1:
     st.write("")
     st.write("")
-    st.markdown('<a target ="_self" href="http://localhost:8501/Find_A_Provider"><p style="font-family:sans serif; font-size: 28px;"> <strong>Find A Provider Near You</a>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment. ',
+    st.markdown('<a target ="_self" href="http://localhost:8501/Find_A_Provider"><p style="font-size: 28px;"> <strong>Find A Provider Near You</a>', unsafe_allow_html=True)
+    st.markdown('<p> Use our Find A Provider tab to locate a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment. ',
                  unsafe_allow_html=True)
 with col2:
     st.image(image_map, use_column_width=True)
@@ -64,13 +67,13 @@ with col1:
 with col2:
     st.write("")
     st.write("")
-    st.markdown('<a target ="_self" href="http://localhost:8501/Sign_In"><p style="font-family:sans serif; font-size: 28px;"> <strong>Patient and Provider Portal</a>',unsafe_allow_html=True)
-    st.markdown('<p style="font-family:sans serif; font-size: 20px;"> Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, '
+    st.markdown('<a target ="_self" href="http://localhost:8501/Sign_In"><p style="font-size: 28px;"> <strong>Patient and Provider Portal</a>',unsafe_allow_html=True)
+    st.markdown('<p> Use our Sign In tab to access the patient and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, '
                  'or any concerns.', unsafe_allow_html=True)
 st.write("")
 st.write("")
 st.write("")
 st.write("")
 st.write("")
-citation1 = '<p style="font-family:sans serif; font-size: 14px;"> <sup>1</sup>https://www.cdc.gov/vitalsigns/cervical-cancer/index.html'
+citation1 = '<p style="font-size: 14px;"> <sup>1</sup>https://www.cdc.gov/vitalsigns/cervical-cancer/index.html'
 st.markdown(citation1, unsafe_allow_html=True)

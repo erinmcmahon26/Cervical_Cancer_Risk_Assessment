@@ -22,11 +22,13 @@ st.set_page_config(
 
 hide_streamlit_style = """
             <style>
+            body {font-family: "Gill Sans", sans-serif;}
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.markdown(""" <style>*{font-family: "Gill Sans", sans-serif;}</style>""",unsafe_allow_html=True)
 
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
@@ -80,7 +82,7 @@ def populateMarkers(df,m):
         for i in range(1,len(temp)):
             li = temp.iloc[i].values.tolist()
             providers+=f"<li>{li[5]}</li>"    
-        popuptext = f"<div style=\"font-family:verdana\">{street_addr}<br><br>Phone Number: {phone}<br><br>{providers}</ul></div>"
+        popuptext = f"<div style=\"font-family:Gill Sans, sans-serif\">{street_addr}<br><br>Phone Number: {phone}<br><br>{providers}</ul></div>"
         popup = folium.Popup(folium.IFrame(popuptext),min_width=300,max_width=300)
         folium.Marker([lat, lon], popup=popup,icon=folium.Icon(color='red',prefix='fa',icon='stethoscope'),tooltip=tooltip).add_to(m)
     
