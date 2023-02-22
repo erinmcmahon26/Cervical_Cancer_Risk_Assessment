@@ -25,18 +25,20 @@ st.set_page_config(
 tab1, tab2 = st.tabs(["Risk Assessment", "Dashboard"])
 
 with tab1: 
-    st.header("Risk Assessment Tab")
     current_path = os.getcwd()
 
     # getting the current path
     model_path = os.path.join(current_path, 'final_risk_model.pkl')
 
     # loading model
-    with open(model_path, 'rb') as handle:
-        model = pickle.load(handle)
+    # with open(model_path, 'rb') as handle:
+    #     model = pickle.load(handle)
 
-    #model = pickle.load(open('final_risk_model.pkl', 'rb'))
+    @st.cache_resource
+    def load_model():
+        return pickle.load(open(model_path, 'rb'))
 
+    model = load_model()
     #Caching the model for faster loading
     #@st.cache
 
@@ -53,10 +55,11 @@ with tab1:
     st.image(image_logo, width=407)
 
     st.header("Assess Your Cervical Cancer Risk")
-    st.markdown('<p style="font-family:sans serif; font-size: 20px;"> This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently. '
-                'While some of these questions may seem very personal, they are necessary to accuretly determine your risk. If you are wondering why we are asking specific questions'
-                'or if you do not understand, just take a look at the information icon below each question!',
-                unsafe_allow_html=True)
+    # st.markdown('<p style="font-family:sans serif; font-size: 20px;"> This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently. '
+    #             'While some of these questions may seem very personal, they are necessary to accuretly determine your risk. If you are wondering why we are asking specific questions'
+    #             'or if you do not understand, just take a look at the information icon below each question!',
+    #             unsafe_allow_html=True)
+    st.write("This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently. While some of these questions may seem very personal, they are necessary to accuretly determine your risk.")
 
     st.subheader("Risk Factor Calculator")
 
@@ -148,20 +151,29 @@ with tab1:
         risk_array = prediction_prob[:, 1]
         risk = risk_array.astype(float)
         if risk < 0.25:
-            print('Low Risk')
+            return 'LOW RISK','0,255,0'
         elif (0.25 <= risk < 0.5):
-            print('Low Moderate Risk')
+            return 'LOW MODERATE RISK','255,255,51'
         elif (0.5 <= risk < 0.75):
-            print('High Moderate Risk')
+            return 'HIGH MODERATE RISK','255,128,0'
         else:
-            print('High Risk')
+            return 'HIGH RISK','255,0,0'
 
     if st.button('Predict Risk'):
-        category = predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num)
-        st.success("The predicted risk category for developing cervical cancer is {}".format(category))
 
-#Someone else had the exact same problem but the answer was not helpful
-#https://stackoverflow.com/questions/75127342/streamlit-app-showing-the-result-as-none-but-in-the-terminal-appears
+        category,color = predict(age,num_sex_partners,first_sex,num_preg,pack_years,contracept_years,iud_years,stds_num)
+        st.markdown(f'''
+        <style> 
+        .riskcat{{
+            background: rgba({color},0.2);
+            opacity:.8;
+            text-align: center;
+            font-size:20px;
+            padding: 25px;
+            color: black;
+        }}
+        </style><div class=riskcat>You are predicted to be at <strong>{category}</strong> for developing cervical cancer </div>
+        ''', unsafe_allow_html=True)
 
 with tab2: 
     st.header("Cervical Cancer Risk Dashboard")
