@@ -6,6 +6,7 @@ import pickle
 import os
 import warnings
 import altair as alt
+import matplotlib.pyplot as plt
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import SGDClassifier
@@ -215,17 +216,39 @@ with tab2:
     kpi1, kpi2, kpi3 = st.columns(3)
 
     kpi1.metric(
-        label = "Hormonal Contraception",
-        value = round(df.loc[:,'contracept_years'].astype(np.float16).mean(axis=0),1)
+        label = "Hormonal Contraception (years)",
+        value = round(float(df.loc[:,'contracept_years'].astype(np.float16).mean(axis=0)),1)
     )
     kpi2.metric(
-        label = "Smoking",
-        value = round(df.loc[:,'pack_years'].astype(np.float16).mean(axis=0),1)
+        label = "Smoking (packs/year)",
+        value = round(float(df.loc[:,'pack_years'].astype(np.float16).mean(axis=0)),1)
     )
     kpi3.metric(
         label = "IUD Years",
-        value = round(df.loc[:,'iud_years'].astype(np.float16).mean(axis=0),1)
+        value = round(float(df.loc[:,'iud_years'].astype(np.float16).mean(axis=0)),1)
     )
+
+    chart1, chart2 = st.columns(2)
+    colors = {1:'red',0:'blue'}
+
+    with chart1:
+        fig, ax = plt.subplots()
+
+        ax.set_title("Age of First Sex vs. Current Age; Size is # of Sexual Partners")
+        ax.set_xlabel("Age")
+        ax.set_ylabel("Age of First Sex")
+        scatter = ax.scatter(df['age'], df['first_sex'], s=df['num_sex_partners'], c=df['cancer'].map(colors))
+        plt.legend((0,1),("No Cancer","Cancer"))
+        st.pyplot(fig)
+
+    with chart2:
+        fig1, ax1 = plt.subplots()
+        ax1.set_title("Age vs. IUD Years")
+        ax1.set_xlabel("Age")
+        ax1.set_ylabel("IUD Years")
+        scatter1 = ax1.scatter(df['age'],df['iud_years'], c=df['cancer'].map(colors))
+        ax1.legend(*scatter1.legend_elements())
+        st.pyplot(fig1)
 
 
     
