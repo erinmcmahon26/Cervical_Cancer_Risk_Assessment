@@ -179,6 +179,7 @@ with tab1:
 
 with tab2: 
     st.header("Cervical Cancer Risk Dashboard")
+    st.subheader("Risk assessment model explanation")
     def get_data() -> pd.DataFrame: 
         return pd.read_csv('../cleaned.csv')
     
@@ -186,7 +187,9 @@ with tab2:
     shap_bar = alt.Chart(shap).mark_bar().encode(
         x='Importance:Q',y='Feature:O')
     st.altair_chart(shap_bar, use_container_width=False)
+    st.caption("These are the risk factors that contribute to the risk calculator.")
 
+    st.subheader("See how you compare to other patients in your age range")
     df = get_data()
     age_filter = st.selectbox("Select your age",['<18','18-25','26-35','36-45','46-55','56+'])
     if age_filter == '<18':
@@ -212,9 +215,9 @@ with tab2:
     placeholder = st.empty()
     df = df[df["age"].between(min,max)]
 
-
+    st.text("On average, other patients in your age range exhibit the following traits")
     kpi1, kpi2, kpi3 = st.columns(3)
-
+    
     kpi1.metric(
         label = "Hormonal Contraception (years)",
         value = round(float(df.loc[:,'contracept_years'].astype(np.float16).mean(axis=0)),1)
