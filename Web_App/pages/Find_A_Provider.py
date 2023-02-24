@@ -32,6 +32,7 @@ st.markdown(""" <style>*{font-family: "Gill Sans", sans-serif;}</style>""",unsaf
 
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
+st.write("______________________")
 
 url = 'postgresql+psycopg2://postgres:password@localhost/npiProviders'
 engine = create_engine(url)

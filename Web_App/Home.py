@@ -48,7 +48,7 @@ st.markdown('''<style>
 
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
-
+st.write("______________________")
 
 image_banner = Image.open('images/banner.png')
 st.image(image_banner, use_column_width=True)

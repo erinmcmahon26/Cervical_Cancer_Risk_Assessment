@@ -29,6 +29,7 @@ st.markdown(""" <style>*{font-family: "Gill Sans", sans-serif;}</style>""",unsaf
 
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
+st.write("______________________")
 
 st.header("Patient and Provider Portal")
 def check_password():
