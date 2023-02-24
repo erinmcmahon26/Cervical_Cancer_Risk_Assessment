@@ -1,4 +1,5 @@
 pandas
+numpy
 altair
 streamlit
 streamlit-authenticator
@@ -9,3 +10,6 @@ pickle
 os
 sklearn
 warnings
+joblib
+opencv-python
+tensorflow
