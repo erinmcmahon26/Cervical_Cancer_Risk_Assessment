@@ -23,6 +23,19 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+image_logo = Image.open('images/VividHealth_Logo.png')
+st.image(image_logo, width=407)
+
+hide_streamlit_style = """
+            <style>
+            body {font-family: "Gill Sans", sans-serif;}
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.markdown(""" <style>*{font-family: "Gill Sans", sans-serif;}</style>""", unsafe_allow_html=True)
+
 tab1, tab2 = st.tabs(["Risk Assessment", "Dashboard"])
 
 with tab1: 
@@ -42,20 +55,6 @@ with tab1:
     model = load_model()
     #Caching the model for faster loading
     #@st.cache
-
-
-    hide_streamlit_style = """
-                <style>
-                body {font-family: "Gill Sans", sans-serif;}
-                #MainMenu {visibility: hidden;}
-                footer {visibility: hidden;}
-                </style>
-                """
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-    st.markdown(""" <style>*{font-family: "Gill Sans", sans-serif;}</style>""",unsafe_allow_html=True)
-
-    image_logo = Image.open('images/VividHealth_Logo.png')
-    st.image(image_logo, width=407)
 
     st.header("Assess Your Cervical Cancer Risk")
     # st.markdown('<p style="font-family:sans serif; font-size: 20px;"> This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently. '
