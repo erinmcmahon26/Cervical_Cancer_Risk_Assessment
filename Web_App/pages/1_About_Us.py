@@ -15,7 +15,7 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-st.markdown(""" <style>*{font-family: Optima;}</style>""", unsafe_allow_html=True)
+st.markdown(""" <style>*{font-family: "Optima", Optima;}</style>""", unsafe_allow_html=True)
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
 st.write("______________________")
