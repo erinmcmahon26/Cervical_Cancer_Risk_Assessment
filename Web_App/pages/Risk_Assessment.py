@@ -221,7 +221,7 @@ with tab2:
     df = df[df["age"].between(min,max)]
 
     st.caption("On average, other patients in your age range exhibit the following traits")
-    kpi1, kpi2, kpi3 = st.columns(3)
+    kpi1, kpi2, kpi3, kpi4 = st.columns(4)
     
     kpi1.metric(
         label = "Hormonal Contraception (years)",
@@ -234,6 +234,10 @@ with tab2:
     kpi3.metric(
         label = "IUD Years",
         value = round(float(df.loc[:,'iud_years'].astype(np.float16).mean(axis=0)),1)
+    )
+    kpi4.metric(
+        label = "Pregnancies",
+        value = round(float(df.loc[:,'num_preg'].astype(np.float16).mean(axis=0)),1)
     )
 
     chart1, chart2 = st.columns(2)
