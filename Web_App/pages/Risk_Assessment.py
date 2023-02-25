@@ -181,6 +181,8 @@ with tab1:
 
 with tab2: 
     st.header("Cervical Cancer Risk Dashboard")
+    st.write("")
+    st.write("")
     st.subheader("Risk assessment model explanation")
     def get_data() -> pd.DataFrame: 
         return pd.read_csv('../cleaned.csv')
@@ -189,8 +191,9 @@ with tab2:
     shap_bar = alt.Chart(shap).mark_bar().encode(
         x='Importance:Q',y='Feature:O')
     st.altair_chart(shap_bar, use_container_width=False)
-    st.caption("These are the risk factors that contribute to the risk calculator.")
-
+    st.caption("These are the risk factors that contribute to the risk assessment calculation. The more important a feature is, the more 'weight' that factor has in predicting your risk for cervical cancer, according to our model. These importance factors are simply for transparency into our model, and do not necessarily indicate that having a higher or lower age/# of pregnancies/etc. will directly lead to a higher risk for developing cancer.")
+    st.write("")
+    st.write("")
     st.subheader("See how you compare to other patients in your age range")
     df = get_data()
     age_filter = st.selectbox("Select your age",['<18','18-25','26-35','36-45','46-55','56+'])
@@ -217,7 +220,7 @@ with tab2:
     placeholder = st.empty()
     df = df[df["age"].between(min,max)]
 
-    st.text("On average, other patients in your age range exhibit the following traits")
+    st.caption("On average, other patients in your age range exhibit the following traits")
     kpi1, kpi2, kpi3 = st.columns(3)
     
     kpi1.metric(
@@ -255,5 +258,6 @@ with tab2:
         ax1.legend(*scatter1.legend_elements())
         st.pyplot(fig1)
 
+    st.caption('Visualizations depicting trends among patients in the same age range. Marks in blue are non-cancerous, and marks in red are patients who have had a cervical cancer diagnosis.')
 
     
