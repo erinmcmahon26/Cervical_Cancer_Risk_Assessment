@@ -37,9 +37,6 @@ st.markdown('''<style>
 
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
-st.write("______________________")
-
-st.header("Patient and Provider Portal")
 
 config_file = 'config.yaml'
 with open(config_file) as file:
@@ -55,7 +52,7 @@ authenticator = stauth.Authenticate(
 
 hashed_passwords = stauth.Hasher(['abc', 'def']).generate()
 
-name, authentication_status, username = authenticator.login('Login', 'main')
+name, authentication_status, username = authenticator.login('Patient and Provider Portal', 'main')
 
 if st.session_state["authentication_status"]:
     tab1, tab2 = st.tabs(["Results", "Messages"])
