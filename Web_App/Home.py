@@ -24,23 +24,23 @@ st.markdown('''<style>
             background: rgba(22,203,198, 0.5);
             border-radius: 15px 50px;
             text-align: left;
-            font-size:28px;
-            font-size:calc(28px + 0.3vw);
+            font-size:20px;
+            font-size:calc(20px + 0.3vw);
             padding: 25px;
             color:black;
         }
         .featcategory2{
-            background: rgba(22,203,198, 0.5);
+            background: rgba(22,203,198, 0.3);
             border-radius: 50px 15px;
             text-align: left;
-            font-size:28px;
-            font-size:calc(28px + 0.3vw);
+            font-size:20px;
+            font-size:calc(20px + 0.3vw);
             padding: 25px;
             color:black;
         }
         .dynamicfont{
-            font-size:16px;
-            font-size:calc(16px + 0.3vw);
+            font-size:14px;
+            font-size:calc(14px + 0.3vw);
         }
         a, a:link, a:hover, a:visited, a:active {
             color: inherit;
@@ -103,7 +103,7 @@ st.write("")
 st.write("")
 st.write("")
 st.write("")
-citation1 = '<p style="font-size: 14px; font-size:calc(14px + 0.3vw);"> <sup>1</sup>https://www.cdc.gov/vitalsigns/cervical-cancer/index.html'
+citation1 = '<p style="font-size: 10px; font-size:calc(10px + 0.3vw);"> <sup>1</sup>https://www.cdc.gov/vitalsigns/cervical-cancer/index.html'
 st.markdown(citation1, unsafe_allow_html=True)
 
 st.write("")

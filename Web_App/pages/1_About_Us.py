@@ -15,7 +15,14 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-st.markdown(""" <style>*{font-family: "Optima", Optima;}</style>""", unsafe_allow_html=True)
+st.markdown('''<style>
+        * {font-family: Optima;}
+        .dynamicfont{
+            font-size:14px;
+            font-size:calc(14px + 0.3vw);
+        }
+        </style>''', unsafe_allow_html=True)
+
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)
 st.write("______________________")
@@ -35,7 +42,7 @@ image_M, image_S, image_J, image_E, image_R = load_images()
 
 st.header("VividHealth Team")
 st.markdown(
-    '<p style="font-size: 20px;"> VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. '
+    '<p class = "dynamicfont"> VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. '
     'We have partnered with Epic, an EMR company, to add new diagnostic capabilities into Epic’s Comprehensive Health Record software. '
     'We are passionate about delivering diagnostic information to assist clinical judgment and building interactive tools to enable patients to take control of their health. '
     'We created VividHealth out of our desire to make healthcare more accessible and cost effective. '
