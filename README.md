@@ -4,7 +4,7 @@
 * <b>CervicalCancerImages_EDA.ipynb</b>:  
 
 ## Cervical Cancer Risk Factors Model
-* <b>RiskFactorEDA.ipynb</b>: Julia's initial work with the tabluar dataset from Kaggle. Plan to continue working with it on Wednesday. Data sourced from the kaggle dataset linked in project goals: https://www.kaggle.com/code/mlalasa2170277/rf-cervical-cancer-classification-99-acc 
+* <b>RiskFactorEDA.ipynb</b>: Julia's initial work with the tabular dataset from Kaggle. Plan to continue working with it on Wednesday. Data sourced from the kaggle dataset linked in project goals: https://www.kaggle.com/code/mlalasa2170277/rf-cervical-cancer-classification-99-acc 
 
 ## Find a Provider Near You
 * <b>npi_filtering.ipynb</b>: Initial exploration and filtering of raw NPI data.  Data is filtered from 7.6 million entries down to ~400k and from 330 columns down to 32.  Resulting data includes only physicians actively practicing in the US who could be reasonably expected to perform pap smears (i.e. OB/GYNs, Family, and Internal Medicine). Note: Raw data for the NPI Registry can be found here: https://download.cms.gov/nppes/NPI_Files.html
