@@ -16,19 +16,18 @@ import geocoder
 im = Image.open('images/favicon.png')
 st.set_page_config(
     page_title="VividHealth",
-    page_icon=im, #not actually working for some reason...
+    page_icon=im,
     layout="wide"
 )
 
 hide_streamlit_style = """
             <style>
-            body {font-family: "Gill Sans", sans-serif;}
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-st.markdown(""" <style>*{font-family: "Gill Sans", sans-serif;}</style>""",unsafe_allow_html=True)
+st.markdown(""" <style>*{font-family: Optima;}</style>""",unsafe_allow_html=True)
 
 image_logo = Image.open('images/VividHealth_Logo.png')
 st.image(image_logo, width=407)

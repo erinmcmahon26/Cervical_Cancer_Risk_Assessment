@@ -7,6 +7,7 @@ import os
 import warnings
 import altair as alt
 import matplotlib.pyplot as plt
+import sklearn
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import SGDClassifier
@@ -18,7 +19,7 @@ from sklearn.linear_model import LogisticRegression
 im = Image.open('images/favicon.png')
 st.set_page_config(
     page_title="VividHealth",
-    page_icon=im, #not actually working for some reason...
+    page_icon=im,
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -28,13 +29,12 @@ st.image(image_logo, width=407)
 
 hide_streamlit_style = """
             <style>
-            body {font-family: "Gill Sans", sans-serif;}
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-st.markdown(""" <style>*{font-family: "Gill Sans", sans-serif;}</style>""", unsafe_allow_html=True)
+st.markdown(""" <style>*{font-family: Optima;}</style>""", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["Risk Assessment", "Dashboard"])
 
@@ -57,48 +57,51 @@ with tab1:
     #@st.cache
 
     st.header("Assess Your Cervical Cancer Risk")
-    # st.markdown('<p style="font-family:sans serif; font-size: 20px;"> This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently. '
-    #             'While some of these questions may seem very personal, they are necessary to accuretly determine your risk. If you are wondering why we are asking specific questions'
-    #             'or if you do not understand, just take a look at the information icon below each question!',
-    #             unsafe_allow_html=True)
-    st.write("This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently. While some of these questions may seem very personal, they are necessary to accuretly determine your risk.")
+    st.write("This page allows you to enter information about yourself in order to see what your overall risk for cervical cancer is currently. "
+             "While some of these questions may seem very personal, they are necessary to accuretly determine your risk.")
 
     st.subheader("Risk Factor Calculator")
 
     col1, mid, col2 = st.columns([3,0.1,3])
     with col1:
         # Age
-        age = st.number_input("Age", help="You must be at least 21 years of age to use this tool.")
+        age = st.number_input("Age", help="You must be at least 21 years of age to use this tool because current guidelines state that anyone under the age of 21 does not "
+                                          "need routine cervical cancer screening due to very low risk.")
 
         st.write("")
         st.write("")
+        # smoker
+        smoker = st.radio("Current or Former Smoker?", options=('Yes', 'No'), help="Tabacco by-produces can be found in the cervical mucus which are believed to damage the DNA "
+                                                                                   "of the cervix cells which can contribute to cervical cancer development. Smoking also "
+                                                                                   "decreases the ability of the immune system to fight off a HPV infection.")
+        if smoker == 'Yes':
+            # Number of Years Smoked
+            # The following should only appear if smoking status is current smoker or former smoker...need to write if statement
+            smoke_years = st.number_input("Number of Years Smoking", help="This will be used to calculate your smoking pack years.")
+            if smoke_years < 0:
+                st.error("Cannot be a negative number!")
 
-        # Number of Years Smoked
-        # The following should only appear if smoking status is current smoker or former smoker...need to write if statement
-        smoke_years = st.number_input("Number of Years Smoking", help="This will be used to calculate your smoking pack years.")
-        if smoke_years < 0:
-            st.error("Cannot be a negative number!")
+            st.write("")
+            st.write("")
 
-        st.write("")
-        st.write("")
+            # Number of Packs Smoked per day
+            ppd = st.number_input("Number of Packs Smoked Per Day", help="This will be used to calculate your smoking pack years.")
+            if ppd < 0:
+                st.error("Cannot be a negative number!")
 
-        # Number of Packs Smoked per day
-        ppd = st.number_input("Number of Packs Smoked Per Day", help="This will be used to calculate your smoking pack years.")
-        if ppd < 0:
-            st.error("Cannot be a negative number!")
+            st.write("")
+            st.write("")
 
-        st.write("")
-        st.write("")
+            # Pack Years calculator
+            # Pack years = number of packs of cigarettes smoked per day multiplied by the number of years the person has smoked
+            pack_years = ppd * smoke_years
+            st.number_input("Pack Years",
+                            value=pack_years,  # Defaults to pack years
+                            disabled=True,  # User can't change it
+                            help="We are calculating this because smoking increases your risk of cervical cancer.")
+        else:
+            st.write("")
 
-        # Pack Years calculator
-        # Pack years = number of packs of cigarettes smoked per day multiplied by the number of years the person has smoked
-        pack_years = ppd * smoke_years
-        st.number_input("Pack Years",
-                        value=pack_years,  # Defaults to pack years
-                        disabled=True,  # User can't change it
-                        help="We are calculating this because smoking increases your risk of cervical cancer.")
-
-        st.write("")
         st.write("")
 
         # IUD Years
