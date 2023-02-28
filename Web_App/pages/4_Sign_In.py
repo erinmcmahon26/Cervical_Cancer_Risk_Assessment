@@ -205,15 +205,15 @@ if st.session_state["authentication_status"]:
         predictions = predict_imgs(images)
         for pred in predictions:
             if pred == 0:
-                container.write('Abnormal Pap Smear')
+                container.write('Dyskeratotic Cells Present - Abnormal Pap Smear')
             elif pred == 1:
-                st.write('Abnormal Pap Smear')
+                st.write('Koilocytotic Cells Present - Abnormal Pap Smear')
             elif pred == 2:
-                st.write('Not Normal Pap Smear')
+                st.write('Metaplastic Cells Present - Not Normal Pap Smear')
             elif pred == 3:
-                st.write('Not Normal Pap Smear')
+                st.write('Parabasal Cells Present - Not Normal Pap Smear')
             else:
-                st.write('Normal Pap Smear')
+                st.write('Superficial-Intermediate Cells Present - Normal Pap Smear')
     st.write("")
     st.markdown("")
     st.write("________________")
