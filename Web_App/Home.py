@@ -70,7 +70,7 @@ with col1:
 with col2:
     st.write("")
     st.markdown(f'''<div class="featcategory1"><a target ="_self" href="http://localhost:8501/Risk_Assessment">Personal Risk Assessment<p class="dynamicfont">Check your own cervical cancer risk 
-                on the Risk Assessment tab. Our easy-to-use platform will ask a series of questions that can be significant predictors for assessing if your risk of developing 
+                on the Risk Assessment page. Our easy-to-use platform will ask a series of questions that can be significant predictors for assessing if your risk of developing 
                 cervical cancer.</p></a></div>''', unsafe_allow_html=True)
 
 st.write("")
@@ -79,8 +79,8 @@ st.write("")
 image_map = Image.open('images/map2.png')
 col1, mid, col2 = st.columns([20, 0.5, 4])
 with col1:
-    st.markdown(f'''<div class=featcategory2><a target ="_self" href="http://localhost:8501/Find_A_Provider"> Find A Provider Near You<p class="dynamicfont">Use our Find A Provider tab to locate 
-                a healthcare professional near you who is qualified to work with you through your cervical cancer screenings and treatment.</p></a></div>''', unsafe_allow_html=True)
+    st.markdown(f'''<div class=featcategory2><a target ="_self" href="http://localhost:8501/Find_A_Provider"> Find A Provider Near You<p class="dynamicfont">Use our Find A Provider page to locate 
+                a healthcare professional near you who can provide cervical cancer screening and treatment.</p></a></div>''', unsafe_allow_html=True)
 
 with col2:
     st.write("")
@@ -95,8 +95,8 @@ with col1:
     st.image(image_health, use_column_width=True)
 with col2:
     st.write("")
-    st.markdown(f'''<div class=featcategory1><a target ="_self" href="http://localhost:8501/Sign_In">Patient and Provider Portal<p class="dynamicfont">Use our Sign In tab to access the patient 
-                and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent test, questions, or any concerns.
+    st.markdown(f'''<div class=featcategory1><a target ="_self" href="http://localhost:8501/Sign_In">Patient and Provider Portal<p class="dynamicfont">Use our Sign In page to access the patient 
+                and healthcare provider portal. This portal is where you will be able to communicate with your provider about recent tests, questions, or any concerns.
                 </p></a></div>''', unsafe_allow_html=True)
 st.write("")
 st.write("")

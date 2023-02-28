@@ -43,7 +43,7 @@ image_M, image_S, image_J, image_E, image_R = load_images()
 st.header("VividHealth Team")
 st.markdown(
     '<p class = "dynamicfont"> VividHealth is a leading medical technology consulting firm that focuses on improving patient outcomes by incorporating new technologies into existing healthcare systems to aid with diagnosis, prevention, and outreach. '
-    'We have partnered with Epic, an EMR company, to add new diagnostic capabilities into Epic’s Comprehensive Health Record software. '
+    'We have partnered with Epic, an Electronic Medical Record (EMR) company, to add new diagnostic capabilities into Epic’s Comprehensive Health Record software. '
     'We are passionate about delivering diagnostic information to assist clinical judgment and building interactive tools to enable patients to take control of their health. '
     'We created VividHealth out of our desire to make healthcare more accessible and cost effective. '
     'Having a positive impact in our community and helping others obtain necessary care motivates us to continue our current work. ',

@@ -69,7 +69,7 @@ if st.session_state["authentication_status"]:
                 padding: 25px;
                 color: black;
             }}
-            </style><div class="riskcat"> You are at a LOW risk of developing cervical cancer. The main demographic of concern is that you have just recently started smoking. While you are currently at a low risk, continuing to smoke could increase your risk in the future. Based on the USPSTF guidelines and your last appointment, I suggest we continue with routine examinations every 3 years. </div>
+            </style><div class="riskcat"> You are at a LOW risk of developing cervical cancer. The risk factor of concern is that you have just recently started smoking. While you are currently at a low risk, continuing to smoke could increase your risk in the future. Based on the USPSTF guidelines and your last appointment, I suggest we continue with routine examinations every 3 years. </div>
             ''', unsafe_allow_html=True)
     st.write("")
     st.write("")
@@ -95,7 +95,7 @@ if st.session_state["authentication_status"]:
     # Returns: array of scaled features
     st. write("")
     st.write("________________")
-    st.subheader("Pap Smear Image Upload:")
+    st.subheader("Pap Smear Image Upload")
     uploaded_file = st.file_uploader("Upload File:",
                                      type=None,
                                      accept_multiple_files=True,
