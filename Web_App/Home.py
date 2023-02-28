@@ -70,7 +70,7 @@ with col1:
 with col2:
     st.write("")
     st.markdown(f'''<div class="featcategory1"><a target ="_self" href="http://localhost:8501/Risk_Assessment">Personal Risk Assessment<p class="dynamicfont">Check your own cervical cancer risk 
-                on the Risk Assessment page. Our easy-to-use platform will ask a series of questions that can be significant predictors for assessing if your risk of developing 
+                on the Risk Assessment page. Our easy-to-use platform will ask a series of questions that can be significant predictors for assessing if you are at risk of developing 
                 cervical cancer.</p></a></div>''', unsafe_allow_html=True)
 
 st.write("")
