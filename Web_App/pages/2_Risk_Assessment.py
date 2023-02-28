@@ -233,7 +233,7 @@ with tab1:
         with col1:
             st.write("")
         with col2:
-            st.image("images/recommendations.png")
+            st.image("images/recommendations2.png")
         with col3:
             st.write("")
         citation1 = '<p style="font-size: 10px; font-size:calc(10px + 0.3vw);text-align: center;"> https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening'
