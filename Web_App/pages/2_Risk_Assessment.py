@@ -244,14 +244,14 @@ with tab2:
     st.header("Learn More About Cervical Cancer Risk")
     st.write("Our risk category predictions are created by feeding your information into an algorithm.")
 
-    def get_data() -> pd.DataFrame:
-        return pd.read_csv('../cleaned.csv')
+    def get_data(file) -> pd.DataFrame:
+        return pd.read_csv(file)
 
     st.subheader("Cervical Cancer Risk by Age")
     st.write(
         "See how you compare to others in a similar or different age categories than you. For the age category you select, you will see others in that "
         "category exhibiting the following traits:")
-    df = get_data()
+    df = get_data('../cleaned.csv')
     age_filter = st.selectbox("Select your age:", ['<18', '18-25', '26-35', '36-45', '46-55', '56+'])
     if age_filter == '<18':
         min = 0
@@ -298,6 +298,8 @@ with tab2:
 
     with pie1:
         fig2, ax2 = plt.subplots()
+        fig2.set_figwidth(3)
+        fig2.set_figheight(3)
         no_smoke = len(df[df['smoker'] == False])
         smoke = len(df[df['smoker'] == True])
         ax2.pie([no_smoke, smoke], labels=['Non-Smokers', 'Smokers'], colors=['green', 'orange'])
@@ -306,6 +308,8 @@ with tab2:
 
     with pie2:
         fig3, ax3 = plt.subplots()
+        fig3.set_figwidth(3)
+        fig3.set_figheight(3)
         no_contraception = len(df[df['iud'] == False])
         contraception = len(df[df['iud'] == True])
         ax3.pie([no_contraception, contraception], labels=['IUD', 'No IUD'], colors=['green', 'orange'])
@@ -339,12 +343,8 @@ with tab2:
     st.subheader("Cervical Cancer Statistics Across the United States")
     st.write("Overall number of cervical cancer cases and deaths from 1999 to 2019:")
 
-    def get_cases_data() -> pd.DataFrame:
-        return pd.read_csv('data/casestrends.csv')
-    df_cases = get_cases_data()
-    def get_deaths_data() -> pd.DataFrame:
-        return pd.read_csv('data/deathtrends.csv')
-    df_deaths = get_deaths_data()
+    df_cases = get_data('data/casestrends.csv')
+    df_deaths = get_data('data/deathtrends.csv')
 
     rate_number_filter = st.selectbox("Assess cervical cancer by rate or number of cases:", ['rate', 'number of cases'])
 
@@ -380,4 +380,5 @@ with tab2:
             fig4.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Death Count", range=[0, 4500])
             fig4.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig4, theme=None, use_container_width=True)
+
 
