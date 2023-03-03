@@ -7,6 +7,7 @@ import os
 import warnings
 import altair as alt
 import matplotlib.pyplot as plt
+import plotly.express as px
 import sklearn
 
 from sklearn.ensemble import RandomForestClassifier
@@ -338,16 +339,31 @@ with tab2:
     st.subheader("Cervical Cancer Statistics Across the United States")
     st.write("Overall number of cervical cancer cases and deaths from 1999 to 2019:")
 
-    rate_number_filter = st.selectbox("Assess cervical cancer by rate or number of cases:", ['rate', 'number of cases'])
     def get_cases_data() -> pd.DataFrame:
         return pd.read_csv('data/casestrends.csv')
     df_cases = get_cases_data()
-    st.write(df_cases)
     def get_deaths_data() -> pd.DataFrame:
         return pd.read_csv('data/deathtrends.csv')
     df_deaths = get_deaths_data()
-    st.write(df_deaths)
-    # if rate_number_filter == 'rate':
-    #
-    # else:
+
+    rate_number_filter = st.selectbox("Assess cervical cancer by rate or number of cases:", ['rate', 'number of cases'])
+
+    if rate_number_filter == 'rate':
+        col1, col2 = st.columns([4, 4])
+        with col1:
+            fig = px.line(df_cases, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Cases", markers=True)
+            fig.update_traces(line_color="#16c6e0")
+            fig.update_xaxes(showgrid=False)
+            fig.update_yaxes(showgrid=True, gridcolor='LightGrey', range=[0, 11])
+            fig.update_layout(plot_bgcolor="white", title_x=0.5)
+            st.plotly_chart(fig, theme=None, use_container_width=True)
+        with col2:
+            fig = px.line(df_deaths, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Deaths", markers=True)
+            fig.update_traces(line_color="#22cbc7")
+            fig.update_xaxes(showgrid=False)
+            fig.update_yaxes(showgrid=True, gridcolor='LightGrey', range=[0, 11])
+            fig.update_layout(plot_bgcolor="white", title_x=0.5)
+            st.plotly_chart(fig, theme=None, use_container_width=True)
+    else:
+        st.write(df_deaths)
 

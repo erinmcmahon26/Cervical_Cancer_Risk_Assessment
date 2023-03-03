@@ -6,10 +6,9 @@ streamlit-authenticator
 Image
 Pillow
 watchdog
-pickle
-os
 scikit-learn
 matplotlib
+plotly
 warnings
 joblib
 opencv-python
