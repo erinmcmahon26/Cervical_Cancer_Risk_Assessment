@@ -298,48 +298,48 @@ with tab2:
     pie1, pie2 = st.columns(2)
 
     with pie1:
-        fig2, ax2 = plt.subplots()
-        fig2.set_figwidth(3)
-        fig2.set_figheight(3)
+        fig1, ax2 = plt.subplots()
+        fig1.set_figwidth(3)
+        fig1.set_figheight(3)
         no_smoke = len(df[df['smoker'] == False])
         smoke = len(df[df['smoker'] == True])
         ax2.pie([no_smoke, smoke], labels=['Non-Smokers', 'Smokers'], colors=['green', 'orange'])
         ax2.axis('equal')
-        st.pyplot(fig2)
+        st.pyplot(fig1)
 
     with pie2:
-        fig3, ax3 = plt.subplots()
-        fig3.set_figwidth(3)
-        fig3.set_figheight(3)
+        fig2, ax2 = plt.subplots()
+        fig2.set_figwidth(3)
+        fig2.set_figheight(3)
         no_contraception = len(df[df['iud'] == False])
         contraception = len(df[df['iud'] == True])
-        ax3.pie([no_contraception, contraception], labels=['IUD', 'No IUD'], colors=['green', 'orange'])
-        ax3.axis('equal')
-        st.pyplot(fig3)
+        ax2.pie([no_contraception, contraception], labels=['IUD', 'No IUD'], colors=['green', 'orange'])
+        ax2.axis('equal')
+        st.pyplot(fig2)
 
-    fig4, ax4 = plt.subplots()
+    # fig3, ax3 = plt.subplots()
 
-    chart1, chart2 = st.columns(2)
-    colors = {1: 'red', 0: 'blue'}
+    # chart1, chart2 = st.columns(2)
+    # colors = {1: 'red', 0: 'blue'}
 
-    with chart1:
-        fig, ax = plt.subplots()
-
-        ax.set_title("Age of First Sex vs. Current Age; Size is # of Sexual Partners")
-        ax.set_xlabel("Age")
-        ax.set_ylabel("Age of First Sex")
-        scatter = ax.scatter(df['age'], df['first_sex'], s=df['num_sex_partners'], c=df['cancer'].map(colors))
-        plt.legend((0, 1), ("No Cancer", "Cancer"))
-        st.pyplot(fig)
-
-    with chart2:
-        fig1, ax1 = plt.subplots()
-        ax1.set_title("Age vs. IUD Years")
-        ax1.set_xlabel("Age")
-        ax1.set_ylabel("IUD Years")
-        scatter1 = ax1.scatter(df['age'], df['iud_years'], c=df['cancer'].map(colors))
-        ax1.legend(*scatter1.legend_elements())
-        st.pyplot(fig1)
+    # with chart1:
+    #     fig3, ax3 = plt.subplots()
+    #
+    #     ax3.set_title("Age of First Sex vs. Current Age; Size is # of Sexual Partners")
+    #     ax3.set_xlabel("Age")
+    #     ax3.set_ylabel("Age of First Sex")
+    #     scatter = ax3.scatter(df['age'], df['first_sex'], s=df['num_sex_partners'], c=df['cancer'].map_fig(colors))
+    #     plt.legend((0, 1), ("No Cancer", "Cancer"))
+    #     st.pyplot(fig3)
+    #
+    # with chart2:
+    #     fig4, ax4 = plt.subplots()
+    #     ax4.set_title("Age vs. IUD Years")
+    #     ax4.set_xlabel("Age")
+    #     ax4.set_ylabel("IUD Years")
+    #     scatter1 = ax4.scatter(df['age'], df['iud_years'], c=df['cancer'].map_fig(colors))
+    #     ax4.legend(*scatter1.legend_elements())
+    #     st.pyplot(fig4)
 
     st.subheader("Cervical Cancer Statistics Across the United States")
     st.write("Overall number of cervical cancer cases and deaths from 1999 to 2019:")
@@ -352,50 +352,69 @@ with tab2:
     if rate_number_filter == 'rate':
         col1, col2 = st.columns([4, 4])
         with col1:
-            fig = px.line(df_cases, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Cases", markers=True)
-            fig.update_traces(line_color="#16c6e0")
-            fig.update_xaxes(showgrid=False)
-            fig.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
-            fig.update_layout(plot_bgcolor="white", title_x=0.5)
-            st.plotly_chart(fig, theme=None, use_container_width=True)
+            fig5 = px.line(df_cases, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Cases", markers=True)
+            fig5.update_traces(line_color="#16c6e0")
+            fig5.update_xaxes(showgrid=False)
+            fig5.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
+            fig5.update_layout(plot_bgcolor="white", title_x=0.5)
+            st.plotly_chart(fig5, theme=None, use_container_width=True)
         with col2:
-            fig = px.line(df_deaths, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Deaths", markers=True)
-            fig.update_traces(line_color="#22cbc7")
-            fig.update_xaxes(showgrid=False)
-            fig.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
-            fig.update_layout(plot_bgcolor="white", title_x=0.5)
-            st.plotly_chart(fig, theme=None, use_container_width=True)
+            fig6 = px.line(df_deaths, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Deaths", markers=True)
+            fig6.update_traces(line_color="#22cbc7")
+            fig6.update_xaxes(showgrid=False)
+            fig6.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
+            fig6.update_layout(plot_bgcolor="white", title_x=0.5)
+            st.plotly_chart(fig6, theme=None, use_container_width=True)
     else:
         col3, col4 = st.columns([4,4])
         with col3:
-            fig3 = px.bar(df_cases, x="Year", y="Case_Count", title="Annual Number of New Cervical Cancer Cases per Year")
-            fig3.update_traces(marker_color="#16c6e0")
-            fig3.update_xaxes(showgrid=False)
-            fig3.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Case Count", range=[0, 14000])
-            fig3.update_layout(plot_bgcolor="white", title_x=0.5)
-            st.plotly_chart(fig3, theme=None, use_container_width=True)
+            fig7 = px.bar(df_cases, x="Year", y="Case_Count", title="Annual Number of New Cervical Cancer Cases per Year")
+            fig7.update_traces(marker_color="#16c6e0")
+            fig7.update_xaxes(showgrid=False)
+            fig7.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Case Count", range=[0, 14000])
+            fig7.update_layout(plot_bgcolor="white", title_x=0.5)
+            st.plotly_chart(fig7, theme=None, use_container_width=True)
         with col4:
-            fig4 = px.bar(df_deaths, x="Year", y="Death_Count", title="Annual Number of Cervical Cancer Deaths per Year")
-            fig4.update_traces(marker_color="#22cbc7")
-            fig4.update_xaxes(showgrid=False)
-            fig4.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Death Count", range=[0, 4500])
-            fig4.update_layout(plot_bgcolor="white", title_x=0.5)
-            st.plotly_chart(fig4, theme=None, use_container_width=True)
+            fig8 = px.bar(df_deaths, x="Year", y="Death_Count", title="Annual Number of Cervical Cancer Deaths per Year")
+            fig8.update_traces(marker_color="#22cbc7")
+            fig8.update_xaxes(showgrid=False)
+            fig8.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Death Count", range=[0, 4500])
+            fig8.update_layout(plot_bgcolor="white", title_x=0.5)
+            st.plotly_chart(fig8, theme=None, use_container_width=True)
 
-    df_map = get_data('data/USCSTrendMap.csv')
+    df_map = get_data('data/statemap.csv')
 
-    map = go.Figure(data=go.Choropleth(
-        locations=df_map['Area'],  # Spatial coordinates
-        z=df_map['Case Count'],  # Data to be color-coded
-        locationmode='USA-states',  # set of locations match entries in `locations`
-        colorscale='Blues',
-        colorbar_title="Cervical Cancer Cases",
-    ))
+    year = 1999
+    data_slider = []
+    for year in df_map['Year'].unique():
+        df_segmented = df_map[(df_map['Year'] == year)]
 
-    map.update_layout(
-        title_text='Number of Cervical Cancer Cases by State, 2019',
-        geo_scope='usa',  # limite map scope to USA
-    )
-    st.plotly_chart(map, theme=None, use_container_width=True)
+        for col in df_segmented.columns:
+            df_segmented[col] = df_segmented[col].astype(str)
+
+        data_each_yr = dict(
+            type='choropleth',
+            locations=df_segmented['Code'],
+            z=df_segmented['per_100k'],
+            locationmode='USA-states',
+            colorscale='Blues',
+            colorbar={'title': 'Number of Cases'})
+
+        data_slider.append(data_each_yr)
+
+    steps = []
+    for i in range(len(data_slider)):
+        step = dict(method='restyle',
+                    args=['visible', [False] * len(data_slider)],
+                    label='{}'.format(i + 1999))
+        step['args'][1][i] = True
+        steps.append(step)
+
+    sliders = [dict(active=0, pad={"t": 1}, steps=steps)]
+
+    layout = dict(title='Nationwide Changes in Rates of New Cancers, 1999-2019', geo=dict(scope='usa', projection={'type': 'albers usa'}),sliders=sliders)
+
+    fig = dict(data=data_slider, layout=layout)
+    st.plotly_chart(fig, use_container_width=True)
 
 
