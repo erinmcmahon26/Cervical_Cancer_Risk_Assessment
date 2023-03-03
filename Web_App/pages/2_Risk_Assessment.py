@@ -243,20 +243,9 @@ with tab2:
     st.header("Learn More About Cervical Cancer Risk")
     st.write("Our risk category predictions are created by feeding your information into an algorithm.")
 
-
-    # st.subheader("Risk Assessment Model Explanation")
-    # st.write("")
     def get_data() -> pd.DataFrame:
         return pd.read_csv('../cleaned.csv')
 
-
-    # shap = pd.DataFrame(data={'Feature': ['IUD','Age','First Sex', 'Contraception Years','Pregnancies','Sexual Partners','Smoking Rate', 'STDs'],'Importance':[.15,.12,.12,.08,.05,.05,.03,.01]})
-    # shap_bar = alt.Chart(shap).mark_bar().encode(
-    #     x='Importance:Q',y='Feature:O')
-    # st.altair_chart(shap_bar, use_container_width=False)
-    # st.caption("These are the risk factors that contribute to the risk assessment calculation. The more important a feature is, the more 'weight' that factor has in predicting your risk for cervical cancer, according to our model. These importance factors are simply for transparency into our model, and do not necessarily indicate that having a higher or lower age/# of pregnancies/etc. will directly lead to a higher risk for developing cancer.")
-    # st.write("")
-    # st.write("")
     st.subheader("Cervical Cancer Risk by Age")
     st.write(
         "See how you compare to others in a similar or different age categories than you. For the age category you select, you will see others in that "
@@ -346,5 +335,19 @@ with tab2:
         ax1.legend(*scatter1.legend_elements())
         st.pyplot(fig1)
 
+    st.subheader("Cervical Cancer Statistics Across the United States")
+    st.write("Overall number of cervical cancer cases and deaths from 1999 to 2019:")
 
+    rate_number_filter = st.selectbox("Assess cervical cancer by rate or number of cases:", ['rate', 'number of cases'])
+    def get_cases_data() -> pd.DataFrame:
+        return pd.read_csv('data/casestrends.csv')
+    df_cases = get_cases_data()
+    st.write(df_cases)
+    def get_deaths_data() -> pd.DataFrame:
+        return pd.read_csv('data/deathtrends.csv')
+    df_deaths = get_deaths_data()
+    st.write(df_deaths)
+    # if rate_number_filter == 'rate':
+    #
+    # else:
 
