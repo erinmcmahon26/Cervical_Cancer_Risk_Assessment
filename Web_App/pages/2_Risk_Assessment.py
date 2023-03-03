@@ -8,6 +8,7 @@ import warnings
 import altair as alt
 import matplotlib.pyplot as plt
 import plotly.express as px
+import plotly.graph_objects as go
 import sklearn
 
 from sklearn.ensemble import RandomForestClassifier
@@ -380,5 +381,21 @@ with tab2:
             fig4.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Death Count", range=[0, 4500])
             fig4.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig4, theme=None, use_container_width=True)
+
+    df_map = get_data('data/USCSTrendMap.csv')
+
+    map = go.Figure(data=go.Choropleth(
+        locations=df_map['Area'],  # Spatial coordinates
+        z=df_map['Case Count'],  # Data to be color-coded
+        locationmode='USA-states',  # set of locations match entries in `locations`
+        colorscale='Blues',
+        colorbar_title="Cervical Cancer Cases",
+    ))
+
+    map.update_layout(
+        title_text='Number of Cervical Cancer Cases by State, 2019',
+        geo_scope='usa',  # limite map scope to USA
+    )
+    st.plotly_chart(map, theme=None, use_container_width=True)
 
 
