@@ -354,16 +354,30 @@ with tab2:
             fig = px.line(df_cases, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Cases", markers=True)
             fig.update_traces(line_color="#16c6e0")
             fig.update_xaxes(showgrid=False)
-            fig.update_yaxes(showgrid=True, gridcolor='LightGrey', range=[0, 11])
+            fig.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
             fig.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig, theme=None, use_container_width=True)
         with col2:
             fig = px.line(df_deaths, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Deaths", markers=True)
             fig.update_traces(line_color="#22cbc7")
             fig.update_xaxes(showgrid=False)
-            fig.update_yaxes(showgrid=True, gridcolor='LightGrey', range=[0, 11])
+            fig.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
             fig.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig, theme=None, use_container_width=True)
     else:
-        st.write(df_deaths)
+        col3, col4 = st.columns([4,4])
+        with col3:
+            fig3 = px.bar(df_cases, x="Year", y="Case_Count", title="Annual Number of New Cervical Cancer Cases per Year")
+            fig3.update_traces(marker_color="#16c6e0")
+            fig3.update_xaxes(showgrid=False)
+            fig3.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Case Count", range=[0, 14000])
+            fig3.update_layout(plot_bgcolor="white", title_x=0.5)
+            st.plotly_chart(fig3, theme=None, use_container_width=True)
+        with col4:
+            fig4 = px.bar(df_deaths, x="Year", y="Death_Count", title="Annual Number of Cervical Cancer Deaths per Year")
+            fig4.update_traces(marker_color="#22cbc7")
+            fig4.update_xaxes(showgrid=False)
+            fig4.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Death Count", range=[0, 4500])
+            fig4.update_layout(plot_bgcolor="white", title_x=0.5)
+            st.plotly_chart(fig4, theme=None, use_container_width=True)
 
