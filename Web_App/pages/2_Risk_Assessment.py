@@ -243,7 +243,7 @@ with tab1:
 
 with tab2:
     st.header("Learn More About Cervical Cancer Risk")
-    st.write('<p class = "dynamicfont"> Our risk category predictions are created by feeding your information into an algorithm.')
+    st.write('<p class = "dynamicfont"> Our risk category predictions are created by feeding your information into an algorithm.', unsafe_allow_html=True)
 
     def get_data(file) -> pd.DataFrame:
         return pd.read_csv(file)
@@ -251,7 +251,7 @@ with tab2:
     st.subheader("Cervical Cancer Risk by Age")
     st.write(
         '<p class = "dynamicfont">See how you compare to others in a similar or different age categories than you. For the age category you select, you will see others in that '
-        'category exhibiting the following traits:')
+        'category exhibiting the following traits:', unsafe_allow_html=True)
     df = get_data('../cleaned.csv')
     age_filter = st.selectbox("Select your age:", ['<18', '18-25', '26-35', '36-45', '46-55', '56+'])
     if age_filter == '<18':
@@ -295,50 +295,54 @@ with tab2:
         value=round(float(df.loc[:, 'num_preg'].astype(np.float16).mean(axis=0)), 1)
     )
 
-    pie1, pie2 = st.columns(2)
+    pie1, mid, pie2 = st.columns([3,1,3])
 
     with pie1:
         fig1, ax2 = plt.subplots()
         no_smoke = len(df[df['smoker'] == False])
         smoke = len(df[df['smoker'] == True])
-        ax2.pie([no_smoke, smoke], labels=['Non-Smokers', 'Smokers'], colors=['green', 'orange'])
+        ax2.pie([no_smoke, smoke], labels=['Non-Smokers', 'Smokers'], colors=['#0021fd','#16c6e0'])
         ax2.axis('equal')
         st.pyplot(fig1)
+        st.write('<p class = "dynamicfont">Tobacco by-products are believed to damage the DNA of the cervix cells which can contribute to cervical cancer development. '
+                 'Smoking also decreases the ability of the immune system to fight off a HPV infection.', unsafe_allow_html=True)
 
     with pie2:
         fig2, ax2 = plt.subplots()
         no_contraception = len(df[df['iud'] == False])
         contraception = len(df[df['iud'] == True])
-        ax2.pie([no_contraception, contraception], labels=['IUD', 'No IUD'], colors=['green', 'orange'])
+        ax2.pie([no_contraception, contraception], labels=['IUD', 'No IUD'], colors=['#0021fd','#16c6e0'])
         ax2.axis('equal')
         st.pyplot(fig2)
+        st.write("<p class = 'dynamicfont'> If you've never used an IUD, write 0. The number of years you have had an IUD can impact your cervical cancer risk.",
+                 unsafe_allow_html=True)
 
     #fig4, ax4 = plt.subplots()
 
-    chart1, chart2 = st.columns(2)
-    colors = {1: 'red', 0: 'blue'}
-
-    with chart1:
-        fig3, ax3 = plt.subplots()
-        ax3.set_title("Age of First Sex vs. Current Age; Size is # of Sexual Partners")
-        ax3.set_xlabel("Age")
-        ax3.set_ylabel("Age of First Sex")
-        scatter = ax3.scatter(df['age'], df['first_sex'], s=df['num_sex_partners'], c=df['cancer'].map(colors))
-        plt.legend((0, 1), ("No Cancer", "Cancer"))
-        st.pyplot(fig3)
-
-    with chart2:
-        fig4, ax4 = plt.subplots()
-        ax4.set_title("Age vs. IUD Years")
-        ax4.set_xlabel("Age")
-        ax4.set_ylabel("IUD Years")
-        scatter1 = ax4.scatter(df['age'], df['iud_years'], c=df['cancer'].map(colors))
-        ax4.legend(*scatter1.legend_elements())
-        st.pyplot(fig4)
+    # chart1, chart2 = st.columns(2)
+    # colors = {1: 'red', 0: 'blue'}
+    #
+    # with chart1:
+    #     fig3, ax3 = plt.subplots()
+    #     ax3.set_title("Age of First Sex vs. Current Age; Size is # of Sexual Partners")
+    #     ax3.set_xlabel("Age")
+    #     ax3.set_ylabel("Age of First Sex")
+    #     scatter = ax3.scatter(df['age'], df['first_sex'], s=df['num_sex_partners'], c=df['cancer'].map(colors))
+    #     plt.legend((0, 1), ("No Cancer", "Cancer"))
+    #     st.pyplot(fig3)
+    #
+    # with chart2:
+    #     fig4, ax4 = plt.subplots()
+    #     ax4.set_title("Age vs. IUD Years")
+    #     ax4.set_xlabel("Age")
+    #     ax4.set_ylabel("IUD Years")
+    #     scatter1 = ax4.scatter(df['age'], df['iud_years'], c=df['cancer'].map(colors))
+    #     ax4.legend(*scatter1.legend_elements())
+    #     st.pyplot(fig4)
 
     st.subheader("Cervical Cancer Statistics Across the United States")
     st.write('<p class = "dynamicfont">In this section, you can talk a look at the overall cervical cancer cases and deaths in the United States. The visualizations below show the change from year to year '
-             'starting in 1999 through 2019. The map visualization at the bottom shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.')
+             'starting in 1999 through 2019. The map visualization at the bottom shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.', unsafe_allow_html=True)
 
     df_cases = get_data('data/casestrends.csv')
     df_deaths = get_data('data/deathtrends.csv')
@@ -379,8 +383,8 @@ with tab2:
                 z=df_segmented['per_100k'],
                 locationmode='USA-states',
                 colorscale='Blues',
-                # text=df_map[['Area','per_100k']],
-                colorbar={'title': 'Number of Cases'})
+                colorbar={'title': 'Number of Cases'},
+            )
 
             data_slider.append(data_each_yr)
 
