@@ -337,8 +337,8 @@ with tab2:
         st.pyplot(fig4)
 
     st.subheader("Cervical Cancer Statistics Across the United States")
-    st.write("In this section, you can talk a look at the overall cervical cancer cases and deaths in the United States. The visualizations below show the change from year to year"
-             "starting in 1999 through 2019.")
+    st.write("In this section, you can talk a look at the overall cervical cancer cases and deaths in the United States. The visualizations below show the change from year to year "
+             "starting in 1999 through 2019. The map visualization at the bottom shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.")
 
     df_cases = get_data('data/casestrends.csv')
     df_deaths = get_data('data/deathtrends.csv')
@@ -394,8 +394,8 @@ with tab2:
 
         sliders = [dict(active=0, pad={"t": 1}, steps=steps)]
 
-        layout = dict(
-            geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
+        layout = dict(title='National Changes in Rates of Cervical Cases', title_x=0.25,
+                      geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
         fig9 = dict(data=data_slider, layout=layout)
         st.plotly_chart(fig9, use_container_width=True)
     else:
@@ -446,10 +446,9 @@ with tab2:
 
         sliders = [dict(active=0, pad={"t": 1}, steps=steps)]
 
-        layout = dict(
-            geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
-        fig9 = dict(data=data_slider, layout=layout)
-        st.plotly_chart(fig9, use_container_width=True)
-    # st.write("The visualization below shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.")
+        layout = dict(title='National Changes in Rates of Cervical Cancer Deaths', title_x=0.25,
+                      geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
+        fig10 = dict(data=data_slider, layout=layout)
+        st.plotly_chart(fig10, use_container_width=True)
 
 
