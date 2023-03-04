@@ -243,15 +243,15 @@ with tab1:
 
 with tab2:
     st.header("Learn More About Cervical Cancer Risk")
-    st.write("Our risk category predictions are created by feeding your information into an algorithm.")
+    st.write('<p class = "dynamicfont"> Our risk category predictions are created by feeding your information into an algorithm.')
 
     def get_data(file) -> pd.DataFrame:
         return pd.read_csv(file)
 
     st.subheader("Cervical Cancer Risk by Age")
     st.write(
-        "See how you compare to others in a similar or different age categories than you. For the age category you select, you will see others in that "
-        "category exhibiting the following traits:")
+        '<p class = "dynamicfont">See how you compare to others in a similar or different age categories than you. For the age category you select, you will see others in that '
+        'category exhibiting the following traits:')
     df = get_data('../cleaned.csv')
     age_filter = st.selectbox("Select your age:", ['<18', '18-25', '26-35', '36-45', '46-55', '56+'])
     if age_filter == '<18':
@@ -337,8 +337,8 @@ with tab2:
         st.pyplot(fig4)
 
     st.subheader("Cervical Cancer Statistics Across the United States")
-    st.write("In this section, you can talk a look at the overall cervical cancer cases and deaths in the United States. The visualizations below show the change from year to year "
-             "starting in 1999 through 2019. The map visualization at the bottom shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.")
+    st.write('<p class = "dynamicfont">In this section, you can talk a look at the overall cervical cancer cases and deaths in the United States. The visualizations below show the change from year to year '
+             'starting in 1999 through 2019. The map visualization at the bottom shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.')
 
     df_cases = get_data('data/casestrends.csv')
     df_deaths = get_data('data/deathtrends.csv')
