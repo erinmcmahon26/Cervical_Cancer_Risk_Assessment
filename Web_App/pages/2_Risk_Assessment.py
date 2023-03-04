@@ -299,8 +299,6 @@ with tab2:
 
     with pie1:
         fig1, ax2 = plt.subplots()
-        fig1.set_figwidth(3)
-        fig1.set_figheight(3)
         no_smoke = len(df[df['smoker'] == False])
         smoke = len(df[df['smoker'] == True])
         ax2.pie([no_smoke, smoke], labels=['Non-Smokers', 'Smokers'], colors=['green', 'orange'])
@@ -309,8 +307,6 @@ with tab2:
 
     with pie2:
         fig2, ax2 = plt.subplots()
-        fig2.set_figwidth(3)
-        fig2.set_figheight(3)
         no_contraception = len(df[df['iud'] == False])
         contraception = len(df[df['iud'] == True])
         ax2.pie([no_contraception, contraception], labels=['IUD', 'No IUD'], colors=['green', 'orange'])
@@ -367,60 +363,93 @@ with tab2:
             fig6.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig6, theme=None, use_container_width=True)
 
+        df_cases_map = get_data('data/casesstatemap.csv')
+        year = 1999
+
+        data_slider = []
+        for year in df_cases_map['Year'].unique():
+            df_segmented = df_cases_map[(df_cases_map['Year'] == year)]
+
+            for col in df_segmented.columns:
+                df_segmented[col] = df_segmented[col].astype(str)
+
+            data_each_yr = dict(
+                type='choropleth',
+                locations=df_segmented['Code'],
+                z=df_segmented['per_100k'],
+                locationmode='USA-states',
+                colorscale='Blues',
+                # text=df_map[['Area','per_100k']],
+                colorbar={'title': 'Number of Cases'})
+
+            data_slider.append(data_each_yr)
+
+        steps = []
+        for i in range(len(data_slider)):
+            step = dict(method='restyle',
+                        args=['visible', [False] * len(data_slider)],
+                        label='{}'.format(i + 1999))
+            step['args'][1][i] = True
+            steps.append(step)
+
+        sliders = [dict(active=0, pad={"t": 1}, steps=steps)]
+
+        layout = dict(
+            geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
+        fig9 = dict(data=data_slider, layout=layout)
+        st.plotly_chart(fig9, use_container_width=True)
     else:
         col3, col4 = st.columns([4,4])
         with col3:
             fig7 = px.line(df_deaths, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Deaths", markers=True)
-            fig7.update_traces(line_color="#22cbc7")
+            fig7.update_traces(line_color="#ffa72e")
             fig7.update_xaxes(showgrid=False)
             fig7.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
             fig7.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig7, theme=None, use_container_width=True)
         with col4:
             fig8 = px.bar(df_deaths, x="Year", y="Death_Count", title="Annual Number of Cervical Cancer Deaths per Year")
-            fig8.update_traces(marker_color="#22cbc7")
+            fig8.update_traces(marker_color="#ffa72e")
             fig8.update_xaxes(showgrid=False)
             fig8.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Death Count", range=[0, 4500])
             fig8.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig8, theme=None, use_container_width=True)
 
-    st.write("The visualization below shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.")
-    # need to add deaths
-    df_map = get_data('data/statemap.csv')
+        df_deaths_map = get_data('data/deathsstatemap.csv')
+        year = 1999
 
-    year = 1999
+        data_slider = []
+        for year in df_deaths_map['Year'].unique():
+            df_segmented = df_deaths_map[(df_deaths_map['Year'] == year)]
 
-    data_slider = []
-    for year in df_map['Year'].unique():
-        df_segmented = df_map[(df_map['Year'] == year)]
+            for col in df_segmented.columns:
+                df_segmented[col] = df_segmented[col].astype(str)
 
-        for col in df_segmented.columns:
-            df_segmented[col] = df_segmented[col].astype(str)
+            data_each_yr = dict(
+                type='choropleth',
+                locations=df_segmented['Code'],
+                z=df_segmented['per_100k'],
+                locationmode='USA-states',
+                colorscale='Oranges',
+                # text=df_map[['Area','per_100k']],
+                colorbar={'title': 'Number of Cases'})
 
-        data_each_yr = dict(
-            type='choropleth',
-            locations=df_segmented['Code'],
-            z=df_segmented['per_100k'],
-            locationmode='USA-states',
-            colorscale='Blues',
-            # text=df_map[['Area','per_100k']],
-            colorbar={'title': 'Number of Cases'})
+            data_slider.append(data_each_yr)
 
-        data_slider.append(data_each_yr)
+        steps = []
+        for i in range(len(data_slider)):
+            step = dict(method='restyle',
+                        args=['visible', [False] * len(data_slider)],
+                        label='{}'.format(i + 1999))
+            step['args'][1][i] = True
+            steps.append(step)
 
-    steps = []
-    for i in range(len(data_slider)):
-        step = dict(method='restyle',
-                    args=['visible', [False] * len(data_slider)],
-                    label='{}'.format(i + 1999))
-        step['args'][1][i] = True
-        steps.append(step)
+        sliders = [dict(active=0, pad={"t": 1}, steps=steps)]
 
-    sliders = [dict(active=0, pad={"t": 1}, steps=steps)]
-
-    layout = dict(
-                  geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
-    fig9 = dict(data=data_slider, layout=layout)
-    st.plotly_chart(fig9, use_container_width=True)
+        layout = dict(
+            geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
+        fig9 = dict(data=data_slider, layout=layout)
+        st.plotly_chart(fig9, use_container_width=True)
+    # st.write("The visualization below shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.")
 
 
