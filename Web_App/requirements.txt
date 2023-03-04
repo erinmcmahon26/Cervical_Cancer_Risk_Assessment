@@ -3,6 +3,10 @@ numpy
 altair
 streamlit
 streamlit-authenticator
+streamlit-folium
+streamlit_js_eval
+psycopg2-binary
+geocoder
 Image
 Pillow
 watchdog
@@ -13,3 +17,4 @@ warnings
 joblib
 opencv-python
 tensorflow
+SQLAlchemy
