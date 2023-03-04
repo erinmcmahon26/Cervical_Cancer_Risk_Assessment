@@ -1,0 +1,1108 @@
+Year,Code,Area,Cancer Type,Age-Adjusted Rate,Death Count,Population
+1999,AL,Alabama,Cervix,2.5,63,2293259
+1999,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,301266
+1999,AZ,Arizona,Cervix,2.2,55,2518299
+1999,AR,Arkansas,Cervix,3.1,46,1359445
+1999,CA,California,Cervix,2.8,459,16800161
+1999,CO,Colorado,Cervix,2.1,42,2101358
+1999,CT,Connecticut,Cervix,2.1,38,1747148
+1999,DE,Delaware,Cervix,4.9,21,398732
+1999,DC,District of Columbia,Cervix,5.8,18,301797
+1999,FL,Florida,Cervix,2.9,271,8073847
+1999,GA,Georgia,Cervix,3.2,125,4096031
+1999,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,601830
+1999,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,636798
+1999,IL,Illinois,Cervix,3.3,218,6313350
+1999,IN,Indiana,Cervix,2.6,85,3083351
+1999,IA,Iowa,Cervix,2.5,41,1488223
+1999,KS,Kansas,Cervix,1.9,27,1356044
+1999,KY,Kentucky,Cervix,4,88,2056401
+1999,LA,Louisiana,Cervix,3.1,70,2302744
+1999,ME,Maine,Cervix,2.5,19,650598
+1999,MD,Maryland,Cervix,2.7,76,2716928
+1999,MA,Massachusetts,Cervix,1.8,64,3274830
+1999,MI,Michigan,Cervix,2,107,5047770
+1999,MN,Minnesota,Cervix,1.9,48,2462931
+1999,MS,Mississippi,Cervix,4.6,69,1464581
+1999,MO,Missouri,Cervix,3.2,101,2860166
+1999,MT,Montana,Cervix,Data Suppressed,Data Suppressed,450543
+1999,NE,Nebraska,Cervix,2.7,25,865531
+1999,NV,Nevada,Cervix,2.4,23,949422
+1999,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,621409
+1999,NJ,New Jersey,Cervix,3.2,152,4304271
+1999,NM,New Mexico,Cervix,2.4,22,918661
+1999,NY,New York,Cervix,3.2,338,9777654
+1999,NC,North Carolina,Cervix,3.2,140,4062710
+1999,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,322617
+1999,OH,Ohio,Cervix,2.7,167,5835017
+1999,OK,Oklahoma,Cervix,3.5,66,1748783
+1999,OR,Oregon,Cervix,2,36,1712226
+1999,PA,Pennsylvania,Cervix,2.9,214,6347064
+1999,PR,Puerto Rico,,Data Suppressed,Data Suppressed,
+1999,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,540724
+1999,SC,South Carolina,Cervix,3.5,74,2045606
+1999,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,378500
+1999,TN,Tennessee,Cervix,3.5,108,2897466
+1999,TX,Texas,Cervix,3.1,302,10360202
+1999,United States,United States,Cervix,2.8,4204,142237295
+1999,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1100167
+1999,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,308398
+1999,VA,Virginia,Cervix,2.7,99,3569683
+1999,WA,Washington,Cervix,2,59,2934901
+1999,WV,West Virginia,Cervix,3.6,39,931809
+1999,WI,Wisconsin,Cervix,2.4,69,2701525
+1999,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,244518
+2000,AL,Alabama,Cervix,3.9,96,2302835
+2000,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,303213
+2000,AZ,Arizona,Cervix,3.1,81,2584579
+2000,AR,Arkansas,Cervix,3.3,51,1371015
+2000,CA,California,Cervix,2.9,473,17050415
+2000,CO,Colorado,Cervix,1.4,30,2147742
+2000,CT,Connecticut,Cervix,1.9,40,1759318
+2000,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,404447
+2000,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,302643
+2000,FL,Florida,Cervix,3.3,306,8217314
+2000,GA,Georgia,Cervix,2.7,110,4180233
+2000,HI,Hawaii,Cervix,3.5,22,603494
+2000,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,647984
+2000,IL,Illinois,Cervix,3.3,214,6345277
+2000,IN,Indiana,Cervix,3,97,3103169
+2000,IA,Iowa,Cervix,2.8,45,1491775
+2000,KS,Kansas,Cervix,2,30,1362500
+2000,KY,Kentucky,Cervix,3,66,2069716
+2000,LA,Louisiana,Cervix,3.1,70,2306978
+2000,ME,Maine,Cervix,Data Suppressed,Data Suppressed,655545
+2000,MD,Maryland,Cervix,2.3,66,2746031
+2000,MA,Massachusetts,Cervix,2,73,3296245
+2000,MI,Michigan,Cervix,2.5,132,5072182
+2000,MN,Minnesota,Cervix,1.5,42,2490622
+2000,MS,Mississippi,Cervix,3.5,54,1472553
+2000,MO,Missouri,Cervix,2.3,70,2879787
+2000,MT,Montana,Cervix,Data Suppressed,Data Suppressed,453425
+2000,NE,Nebraska,Cervix,1.9,17,868980
+2000,NV,Nevada,Cervix,3.4,33,990315
+2000,NH,New Hampshire,Cervix,2.6,18,630111
+2000,NJ,New Jersey,Cervix,2.8,132,4340112
+2000,NM,New Mexico,Cervix,1.7,16,925624
+2000,NY,New York,Cervix,2.8,302,9842061
+2000,NC,North Carolina,Cervix,2.9,128,4119034
+2000,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,321555
+2000,OH,Ohio,Cervix,2.7,172,5845425
+2000,OK,Oklahoma,Cervix,2.7,48,1756493
+2000,OR,Oregon,Cervix,2,36,1728647
+2000,PA,Pennsylvania,Cervix,2.6,195,6351999
+2000,PR,Puerto Rico,,Data Suppressed,Data Suppressed,
+2000,RI,Rhode Island,Cervix,3.2,20,545774
+2000,SC,South Carolina,Cervix,3,66,2068627
+2000,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,380681
+2000,TN,Tennessee,Cervix,3.6,114,2926133
+2000,TX,Texas,Cervix,3.7,371,10545156
+2000,United States,United States,Cervix,2.8,4200,143719004
+2000,UT,Utah,Cervix,2.2,20,1119827
+2000,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,310849
+2000,VA,Virginia,Cervix,2.4,92,3619742
+2000,WA,Washington,Cervix,2,61,2967734
+2000,WV,West Virginia,Cervix,3.6,40,928269
+2000,WI,Wisconsin,Cervix,1.9,54,2719235
+2000,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,245584
+2001,AL,Alabama,Cervix,3.3,84,2309496
+2001,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,305579
+2001,AZ,Arizona,Cervix,2.9,77,2641676
+2001,AR,Arkansas,Cervix,3.5,51,1376845
+2001,CA,California,Cervix,2.8,468,17294223
+2001,CO,Colorado,Cervix,2.3,50,2195705
+2001,CT,Connecticut,Cervix,1.8,36,1768959
+2001,DE,Delaware,Cervix,5.2,23,409349
+2001,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,303740
+2001,FL,Florida,Cervix,2.9,276,8372776
+2001,GA,Georgia,Cervix,2.8,116,4256162
+2001,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,609189
+2001,ID,Idaho,Cervix,2.8,18,658043
+2001,IL,Illinois,Cervix,2.8,183,6370443
+2001,IN,Indiana,Cervix,2.4,80,3120158
+2001,IA,Iowa,Cervix,2,33,1492287
+2001,KS,Kansas,Cervix,2.8,42,1365966
+2001,KY,Kentucky,Cervix,3,65,2076871
+2001,LA,Louisiana,Cervix,2.8,65,2308063
+2001,ME,Maine,Cervix,Data Suppressed,Data Suppressed,659657
+2001,MD,Maryland,Cervix,2.9,84,2779864
+2001,MA,Massachusetts,Cervix,1.6,61,3312567
+2001,MI,Michigan,Cervix,2.5,133,5089289
+2001,MN,Minnesota,Cervix,1.3,35,2514149
+2001,MS,Mississippi,Cervix,2.7,41,1473486
+2001,MO,Missouri,Cervix,2.4,77,2895476
+2001,MT,Montana,Cervix,Data Suppressed,Data Suppressed,454683
+2001,NE,Nebraska,Cervix,2.2,20,871208
+2001,NV,Nevada,Cervix,2.9,31,1030850
+2001,NH,New Hampshire,Cervix,2.5,17,637412
+2001,NJ,New Jersey,Cervix,3.1,150,4369932
+2001,NM,New Mexico,Cervix,3.1,29,930387
+2001,NY,New York,Cervix,2.6,286,9878713
+2001,NC,North Carolina,Cervix,2.8,125,4187317
+2001,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,319787
+2001,OH,Ohio,Cervix,2.5,158,5853691
+2001,OK,Oklahoma,Cervix,3.1,57,1760052
+2001,OR,Oregon,Cervix,2.7,51,1747889
+2001,PA,Pennsylvania,Cervix,2.5,184,6354395
+2001,PR,Puerto Rico,,Data Suppressed,Data Suppressed,
+2001,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,548974
+2001,SC,South Carolina,Cervix,3.1,69,2089963
+2001,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,381537
+2001,TN,Tennessee,Cervix,3.6,113,2948421
+2001,TX,Texas,Cervix,3.5,352,10731190
+2001,United States,United States,Cervix,2.7,4092,145077463
+2001,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1139182
+2001,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,311779
+2001,VA,Virginia,Cervix,2.5,97,3665386
+2001,WA,Washington,Cervix,1.8,55,3002080
+2001,WV,West Virginia,Cervix,4.1,43,923643
+2001,WI,Wisconsin,Cervix,1.8,54,2733647
+2001,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,245327
+2002,AL,Alabama,Cervix,3,77,2314370
+2002,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,309633
+2002,AZ,Arizona,Cervix,2.3,64,2704217
+2002,AR,Arkansas,Cervix,4.1,63,1383239
+2002,CA,California,Cervix,2.4,416,17498462
+2002,CO,Colorado,Cervix,1.8,39,2228665
+2002,CT,Connecticut,Cervix,1.7,35,1780500
+2002,DE,Delaware,Cervix,3.6,16,414652
+2002,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,303146
+2002,FL,Florida,Cervix,2.9,284,8541734
+2002,GA,Georgia,Cervix,3.1,129,4327934
+2002,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,616192
+2002,ID,Idaho,Cervix,2.7,18,668686
+2002,IL,Illinois,Cervix,3.1,206,6387897
+2002,IN,Indiana,Cervix,2.4,79,3133342
+2002,IA,Iowa,Cervix,2.3,39,1491450
+2002,KS,Kansas,Cervix,2.4,35,1371898
+2002,KY,Kentucky,Cervix,2.4,54,2087223
+2002,LA,Louisiana,Cervix,3,70,2315524
+2002,ME,Maine,Cervix,2.1,17,664226
+2002,MD,Maryland,Cervix,2.5,73,2815197
+2002,MA,Massachusetts,Cervix,1.5,56,3319436
+2002,MI,Michigan,Cervix,2.1,115,5100171
+2002,MN,Minnesota,Cervix,1.3,35,2531205
+2002,MS,Mississippi,Cervix,4.1,62,1475412
+2002,MO,Missouri,Cervix,2.6,85,2910476
+2002,MT,Montana,Cervix,Data Suppressed,Data Suppressed,456712
+2002,NE,Nebraska,Cervix,2.7,25,874803
+2002,NV,Nevada,Cervix,2.6,28,1069764
+2002,NH,New Hampshire,Cervix,2.3,16,643680
+2002,NJ,New Jersey,Cervix,2.4,116,4398801
+2002,NM,New Mexico,Cervix,2,20,941856
+2002,NY,New York,Cervix,2.7,294,9902927
+2002,NC,North Carolina,Cervix,2.5,112,4250179
+2002,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,319017
+2002,OH,Ohio,Cervix,2.9,183,5859385
+2002,OK,Oklahoma,Cervix,3,53,1769080
+2002,OR,Oregon,Cervix,2.4,45,1771126
+2002,PA,Pennsylvania,Cervix,2.6,185,6363832
+2002,PR,Puerto Rico,,Data Suppressed,Data Suppressed,
+2002,RI,Rhode Island,Cervix,2.9,18,553090
+2002,SC,South Carolina,Cervix,2.9,66,2111069
+2002,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,382328
+2002,TN,Tennessee,Cervix,3.1,97,2971873
+2002,TX,Texas,Cervix,3.2,329,10914653
+2002,United States,United States,Cervix,2.6,3952,146394634
+2002,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1158853
+2002,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,312959
+2002,VA,Virginia,Cervix,2.3,89,3713695
+2002,WA,Washington,Cervix,1.4,46,3036742
+2002,WV,West Virginia,Cervix,3.1,35,923841
+2002,WI,Wisconsin,Cervix,1.7,49,2751697
+2002,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,247785
+2003,AL,Alabama,Cervix,3,74,2324069
+2003,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,313034
+2003,AZ,Arizona,Cervix,2.3,64,2764077
+2003,AR,Arkansas,Cervix,3.3,50,1391523
+2003,CA,California,Cervix,2.3,396,17709509
+2003,CO,Colorado,Cervix,1.8,39,2253214
+2003,CT,Connecticut,Cervix,1.8,37,1793468
+2003,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,420802
+2003,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,300607
+2003,FL,Florida,Cervix,2.8,277,8697573
+2003,GA,Georgia,Cervix,2.7,116,4394952
+2003,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,623753
+2003,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,679877
+2003,IL,Illinois,Cervix,2.8,185,6402859
+2003,IN,Indiana,Cervix,2.8,93,3152366
+2003,IA,Iowa,Cervix,2.8,48,1493907
+2003,KS,Kansas,Cervix,2.4,36,1377415
+2003,KY,Kentucky,Cervix,3.9,88,2102308
+2003,LA,Louisiana,Cervix,2.8,66,2327153
+2003,ME,Maine,Cervix,Data Suppressed,Data Suppressed,668680
+2003,MD,Maryland,Cervix,2,63,2843847
+2003,MA,Massachusetts,Cervix,1.3,48,3320817
+2003,MI,Michigan,Cervix,1.9,104,5110521
+2003,MN,Minnesota,Cervix,1.8,48,2546999
+2003,MS,Mississippi,Cervix,3.7,57,1479611
+2003,MO,Missouri,Cervix,2.8,89,2926556
+2003,MT,Montana,Cervix,Data Suppressed,Data Suppressed,460116
+2003,NE,Nebraska,Cervix,Data Suppressed,Data Suppressed,879362
+2003,NV,Nevada,Cervix,2.2,25,1108135
+2003,NH,New Hampshire,Cervix,2.3,17,648513
+2003,NJ,New Jersey,Cervix,2.7,136,4421964
+2003,NM,New Mexico,Cervix,2.3,23,952303
+2003,NY,New York,Cervix,2.7,293,9917810
+2003,NC,North Carolina,Cervix,2.3,104,4313901
+2003,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,318896
+2003,OH,Ohio,Cervix,2.5,165,5868535
+2003,OK,Oklahoma,Cervix,3,55,1777723
+2003,OR,Oregon,Cervix,2.1,43,1788805
+2003,PA,Pennsylvania,Cervix,2.1,155,6377894
+2003,PR,Puerto Rico,,Data Suppressed,Data Suppressed,
+2003,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,555590
+2003,SC,South Carolina,Cervix,3.1,72,2133967
+2003,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,383633
+2003,TN,Tennessee,Cervix,2.9,93,3000983
+2003,TX,Texas,Cervix,3.2,341,11095953
+2003,United States,United States,Cervix,2.5,3919,147679036
+2003,UT,Utah,Cervix,2.1,20,1175867
+2003,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,314206
+2003,VA,Virginia,Cervix,2.5,101,3757780
+2003,WA,Washington,Cervix,2,63,3065739
+2003,WV,West Virginia,Cervix,4,43,925835
+2003,WI,Wisconsin,Cervix,1.8,57,2766901
+2003,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,249128
+2004,AL,Alabama,Cervix,3,76,2337857
+2004,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,317807
+2004,AZ,Arizona,Cervix,2.2,65,2835606
+2004,AR,Arkansas,Cervix,3.6,56,1403048
+2004,CA,California,Cervix,2.3,415,17871415
+2004,CO,Colorado,Cervix,1.6,36,2274511
+2004,CT,Connecticut,Cervix,1.7,37,1798078
+2004,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,427320
+2004,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,300284
+2004,FL,Florida,Cervix,2.4,251,8902447
+2004,GA,Georgia,Cervix,2.8,125,4463524
+2004,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,636864
+2004,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,693186
+2004,IL,Illinois,Cervix,2.9,196,6414209
+2004,IN,Indiana,Cervix,2.6,86,3168952
+2004,IA,Iowa,Cervix,2.2,36,1498888
+2004,KS,Kansas,Cervix,1.8,27,1382396
+2004,KY,Kentucky,Cervix,2,45,2112051
+2004,LA,Louisiana,Cervix,2.8,69,2338753
+2004,ME,Maine,Cervix,2,17,671862
+2004,MD,Maryland,Cervix,2.5,77,2870043
+2004,MA,Massachusetts,Cervix,1.7,64,3314634
+2004,MI,Michigan,Cervix,2.1,118,5117929
+2004,MN,Minnesota,Cervix,1.9,52,2564037
+2004,MS,Mississippi,Cervix,3.7,56,1490115
+2004,MO,Missouri,Cervix,2.7,85,2942685
+2004,MT,Montana,Cervix,Data Suppressed,Data Suppressed,465000
+2004,NE,Nebraska,Cervix,2.4,23,883984
+2004,NV,Nevada,Cervix,2.8,33,1156586
+2004,NH,New Hampshire,Cervix,2.3,17,653845
+2004,NJ,New Jersey,Cervix,2.6,131,4436964
+2004,NM,New Mexico,Cervix,2.6,27,964738
+2004,NY,New York,Cervix,2.5,270,9913527
+2004,NC,North Carolina,Cervix,2.3,111,4376070
+2004,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,321008
+2004,OH,Ohio,Cervix,2.3,148,5874411
+2004,OK,Oklahoma,Cervix,2.6,46,1784671
+2004,OR,Oregon,Cervix,1.5,29,1800377
+2004,PA,Pennsylvania,Cervix,2.3,169,6390749
+2004,PR,Puerto Rico,,Data Suppressed,Data Suppressed,
+2004,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,556375
+2004,SC,South Carolina,Cervix,2.3,54,2162305
+2004,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,386677
+2004,TN,Tennessee,Cervix,3,97,3027931
+2004,TX,Texas,Cervix,3.4,367,11278402
+2004,United States,United States,Cervix,2.4,3850,148977286
+2004,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1196749
+2004,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,315080
+2004,VA,Virginia,Cervix,1.9,76,3814310
+2004,WA,Washington,Cervix,1.7,57,3107815
+2004,WV,West Virginia,Cervix,2.8,33,927027
+2004,WI,Wisconsin,Cervix,2,63,2782678
+2004,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,251506
+2005,AL,Alabama,Cervix,3.5,92,2354514
+2005,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,320920
+2005,AZ,Arizona,Cervix,2.2,67,2930811
+2005,AR,Arkansas,Cervix,3.4,52,1418295
+2005,CA,California,Cervix,2.3,411,17996230
+2005,CO,Colorado,Cervix,1.8,42,2308238
+2005,CT,Connecticut,Cervix,1.7,36,1802068
+2005,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,435227
+2005,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,299613
+2005,FL,Florida,Cervix,2.8,294,9117950
+2005,GA,Georgia,Cervix,2.6,117,4555263
+2005,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,644813
+2005,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,711983
+2005,IL,Illinois,Cervix,2.7,183,6423831
+2005,IN,Indiana,Cervix,2.6,87,3191481
+2005,IA,Iowa,Cervix,1.9,33,1503019
+2005,KS,Kansas,Cervix,2.7,38,1387958
+2005,KY,Kentucky,Cervix,3,70,2129658
+2005,LA,Louisiana,Cervix,3.4,78,2263201
+2005,ME,Maine,Cervix,1.9,16,674104
+2005,MD,Maryland,Cervix,2,62,2891761
+2005,MA,Massachusetts,Cervix,1.6,61,3309010
+2005,MI,Michigan,Cervix,2.2,123,5114320
+2005,MN,Minnesota,Cervix,1.7,48,2579546
+2005,MS,Mississippi,Cervix,3.7,59,1482601
+2005,MO,Missouri,Cervix,2.3,79,2962870
+2005,MT,Montana,Cervix,Data Suppressed,Data Suppressed,469780
+2005,NE,Nebraska,Cervix,Data Suppressed,Data Suppressed,889468
+2005,NV,Nevada,Cervix,2.7,35,1198846
+2005,NH,New Hampshire,Cervix,2.3,17,657932
+2005,NJ,New Jersey,Cervix,2.6,132,4443545
+2005,NM,New Mexico,Cervix,2.9,29,978520
+2005,NY,New York,Cervix,2.5,284,9887467
+2005,NC,North Carolina,Cervix,2.9,138,4457189
+2005,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,321543
+2005,OH,Ohio,Cervix,2.1,135,5876703
+2005,OK,Oklahoma,Cervix,2.6,50,1796475
+2005,OR,Oregon,Cervix,2,40,1823447
+2005,PA,Pennsylvania,Cervix,2.1,158,6405053
+2005,PR,Puerto Rico,Cervix,2.5,50,1986644
+2005,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,552832
+2005,SC,South Carolina,Cervix,2.7,64,2192345
+2005,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,389021
+2005,TN,Tennessee,Cervix,3.3,108,3068439
+2005,TX,Texas,Cervix,2.9,321,11467895
+2005,United States,United States,Cervix,2.4,3924,150319521
+2005,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1224741
+2005,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,315422
+2005,VA,Virginia,Cervix,1.9,81,3863646
+2005,WA,Washington,Cervix,1.9,63,3145396
+2005,WV,West Virginia,Cervix,3.4,35,927690
+2005,WI,Wisconsin,Cervix,1.9,61,2797061
+2005,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,253726
+2006,AL,Alabama,Cervix,2.7,72,2385480
+2006,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,325121
+2006,AZ,Arizona,Cervix,1.8,56,3026134
+2006,AR,Arkansas,Cervix,3,47,1438428
+2006,CA,California,Cervix,2.5,460,18097471
+2006,CO,Colorado,Cervix,2.1,52,2352960
+2006,CT,Connecticut,Cervix,1.9,38,1807675
+2006,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,442766
+2006,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,301322
+2006,FL,Florida,Cervix,2.8,303,9280080
+2006,GA,Georgia,Cervix,2.6,123,4670606
+2006,HI,Hawaii,Cervix,2.5,18,652351
+2006,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,732104
+2006,IL,Illinois,Cervix,2.5,173,6440022
+2006,IN,Indiana,Cervix,2.5,85,3218203
+2006,IA,Iowa,Cervix,2.2,40,1511124
+2006,KS,Kansas,Cervix,2.3,34,1394092
+2006,KY,Kentucky,Cervix,2.2,53,2149096
+2006,LA,Louisiana,Cervix,3.4,79,2204072
+2006,ME,Maine,Cervix,Data Suppressed,Data Suppressed,676157
+2006,MD,Maryland,Cervix,2.2,69,2907963
+2006,MA,Massachusetts,Cervix,1.3,50,3311185
+2006,MI,Michigan,Cervix,1.8,101,5106621
+2006,MN,Minnesota,Cervix,1.6,45,2600951
+2006,MS,Mississippi,Cervix,4.7,73,1496313
+2006,MO,Missouri,Cervix,2.9,92,2987563
+2006,MT,Montana,Cervix,Data Suppressed,Data Suppressed,475341
+2006,NE,Nebraska,Cervix,1.6,16,894687
+2006,NV,Nevada,Cervix,3.3,41,1243993
+2006,NH,New Hampshire,Cervix,2.3,17,662773
+2006,NJ,New Jersey,Cervix,2.9,148,4448099
+2006,NM,New Mexico,Cervix,2.8,29,993969
+2006,NY,New York,Cervix,2.5,281,9871401
+2006,NC,North Carolina,Cervix,2.2,107,4563152
+2006,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,322583
+2006,OH,Ohio,Cervix,2.6,170,5883067
+2006,OK,Oklahoma,Cervix,2.8,56,1818693
+2006,OR,Oregon,Cervix,1.7,37,1853117
+2006,PA,Pennsylvania,Cervix,2.6,197,6429312
+2006,PR,Puerto Rico,Cervix,2.2,46,1979256
+2006,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,550134
+2006,SC,South Carolina,Cervix,2.6,62,2237655
+2006,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,392420
+2006,TN,Tennessee,Cervix,2.3,79,3121455
+2006,TX,Texas,Cervix,3,342,11771243
+2006,United States,United States,Cervix,2.4,3976,151732647
+2006,UT,Utah,Cervix,1.6,16,1257991
+2006,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,316290
+2006,VA,Virginia,Cervix,1.9,78,3908475
+2006,WA,Washington,Cervix,2.1,70,3200695
+2006,WV,West Virginia,Cervix,2.2,23,930605
+2006,WI,Wisconsin,Cervix,1.8,56,2812276
+2006,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,257361
+2007,AL,Alabama,Cervix,3,83,2407275
+2007,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,327138
+2007,AZ,Arizona,Cervix,2,64,3096998
+2007,AR,Arkansas,Cervix,3.2,53,1451358
+2007,CA,California,Cervix,2.4,440,18214926
+2007,CO,Colorado,Cervix,1.9,46,2396433
+2007,CT,Connecticut,Cervix,1.3,29,1811617
+2007,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,449398
+2007,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,302949
+2007,FL,Florida,Cervix,2.4,265,9378587
+2007,GA,Georgia,Cervix,3,147,4777572
+2007,HI,Hawaii,Cervix,2,16,657185
+2007,ID,Idaho,Cervix,2.5,18,750127
+2007,IL,Illinois,Cervix,2.7,189,6467577
+2007,IN,Indiana,Cervix,2.6,94,3241454
+2007,IA,Iowa,Cervix,2.1,38,1518023
+2007,KS,Kansas,Cervix,1.9,30,1405705
+2007,KY,Kentucky,Cervix,3.2,75,2164210
+2007,LA,Louisiana,Cervix,3.2,77,2239125
+2007,ME,Maine,Cervix,2.2,19,677797
+2007,MD,Maryland,Cervix,2.4,75,2920109
+2007,MA,Massachusetts,Cervix,1.1,46,3321653
+2007,MI,Michigan,Cervix,2,108,5091035
+2007,MN,Minnesota,Cervix,1,28,2622551
+2007,MS,Mississippi,Cervix,4.2,67,1507071
+2007,MO,Missouri,Cervix,2.6,89,3007493
+2007,MT,Montana,Cervix,Data Suppressed,Data Suppressed,480939
+2007,NE,Nebraska,Cervix,Data Suppressed,Data Suppressed,900106
+2007,NV,Nevada,Cervix,1.8,26,1284052
+2007,NH,New Hampshire,Cervix,2.4,18,664987
+2007,NJ,New Jersey,Cervix,2.1,103,4455148
+2007,NM,New Mexico,Cervix,2.4,26,1007922
+2007,NY,New York,Cervix,2.6,295,9881510
+2007,NC,North Carolina,Cervix,2.3,120,4677313
+2007,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,324066
+2007,OH,Ohio,Cervix,2.8,183,5890965
+2007,OK,Oklahoma,Cervix,2.6,53,1837175
+2007,OR,Oregon,Cervix,1.6,31,1879347
+2007,PA,Pennsylvania,Cervix,2,157,6452087
+2007,PR,Puerto Rico,Cervix,2.2,43,1968707
+2007,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,546859
+2007,SC,South Carolina,Cervix,3,73,2280792
+2007,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,396650
+2007,TN,Tennessee,Cervix,2.8,98,3162280
+2007,TX,Texas,Cervix,3,348,12010572
+2007,United States,United States,Cervix,2.4,4021,153166353
+2007,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1292672
+2007,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,316538
+2007,VA,Virginia,Cervix,2.7,115,3947966
+2007,WA,Washington,Cervix,2.2,79,3247800
+2007,WV,West Virginia,Cervix,3.3,37,932683
+2007,WI,Wisconsin,Cervix,1.7,54,2827782
+2007,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,262776
+2008,AL,Alabama,Cervix,3.2,82,2430257
+2008,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,329412
+2008,AZ,Arizona,Cervix,1.8,60,3155278
+2008,AR,Arkansas,Cervix,3.2,49,1464220
+2008,CA,California,Cervix,2.2,425,18396972
+2008,CO,Colorado,Cervix,1.9,48,2439060
+2008,CT,Connecticut,Cervix,1.7,36,1820749
+2008,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,455481
+2008,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,306265
+2008,FL,Florida,Cervix,2.7,297,9465279
+2008,GA,Georgia,Cervix,2.7,132,4856984
+2008,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,665313
+2008,ID,Idaho,Cervix,2.7,21,764792
+2008,IL,Illinois,Cervix,2.8,200,6493537
+2008,IN,Indiana,Cervix,2,72,3263963
+2008,IA,Iowa,Cervix,2,35,1525539
+2008,KS,Kansas,Cervix,1.8,25,1415563
+2008,KY,Kentucky,Cervix,2.7,65,2183532
+2008,LA,Louisiana,Cervix,3.8,90,2269630
+2008,ME,Maine,Cervix,2,17,679413
+2008,MD,Maryland,Cervix,2.5,79,2935788
+2008,MA,Massachusetts,Cervix,1.3,49,3340730
+2008,MI,Michigan,Cervix,2,116,5065899
+2008,MN,Minnesota,Cervix,1.7,49,2642672
+2008,MS,Mississippi,Cervix,3.7,61,1516955
+2008,MO,Missouri,Cervix,2.6,84,3024837
+2008,MT,Montana,Cervix,Data Suppressed,Data Suppressed,486477
+2008,NE,Nebraska,Cervix,2,20,905814
+2008,NV,Nevada,Cervix,2.7,36,1310601
+2008,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,666576
+2008,NJ,New Jersey,Cervix,2.1,104,4469901
+2008,NM,New Mexico,Cervix,2.4,25,1018578
+2008,NY,New York,Cervix,2.2,250,9918841
+2008,NC,North Carolina,Cervix,2.1,112,4771376
+2008,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,326131
+2008,OH,Ohio,Cervix,2.8,181,5896594
+2008,OK,Oklahoma,Cervix,3.7,75,1854771
+2008,OR,Oregon,Cervix,2.4,52,1903535
+2008,PA,Pennsylvania,Cervix,2.2,166,6473295
+2008,PR,Puerto Rico,Cervix,2.1,44,1957525
+2008,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,545412
+2008,SC,South Carolina,Cervix,3,78,2325047
+2008,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,400236
+2008,TN,Tennessee,Cervix,3,105,3203115
+2008,TX,Texas,Cervix,2.9,347,12249936
+2008,United States,United States,Cervix,2.4,4008,154604015
+2008,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1325631
+2008,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,316722
+2008,VA,Virginia,Cervix,2.3,99,3988983
+2008,WA,Washington,Cervix,2.1,77,3293162
+2008,WV,West Virginia,Cervix,2.4,26,934911
+2008,WI,Wisconsin,Cervix,1.6,49,2842268
+2008,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,267982
+2009,AL,Alabama,Cervix,2.8,76,2448159
+2009,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,337002
+2009,AZ,Arizona,Cervix,1.9,64,3189908
+2009,AR,Arkansas,Cervix,3.9,63,1475013
+2009,CA,California,Cervix,2.3,441,18583075
+2009,CO,Colorado,Cervix,1.1,30,2480710
+2009,CT,Connecticut,Cervix,1.5,33,1828779
+2009,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,459795
+2009,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,311828
+2009,FL,Florida,Cervix,2.5,279,9534289
+2009,GA,Georgia,Cervix,2.6,131,4917756
+2009,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,673075
+2009,ID,Idaho,Cervix,2,16,775398
+2009,IL,Illinois,Cervix,2.5,178,6520723
+2009,IN,Indiana,Cervix,2.2,78,3281477
+2009,IA,Iowa,Cervix,2.1,37,1532739
+2009,KS,Kansas,Cervix,2,29,1428139
+2009,KY,Kentucky,Cervix,3.4,84,2193136
+2009,LA,Louisiana,Cervix,2.9,71,2295199
+2009,ME,Maine,Cervix,Data Suppressed,Data Suppressed,678694
+2009,MD,Maryland,Cervix,2.3,77,2960001
+2009,MA,Massachusetts,Cervix,1.7,67,3365859
+2009,MI,Michigan,Cervix,2,111,5044338
+2009,MN,Minnesota,Cervix,1.5,41,2659958
+2009,MS,Mississippi,Cervix,3,50,1522000
+2009,MO,Missouri,Cervix,2.5,83,3042021
+2009,MT,Montana,Cervix,Data Suppressed,Data Suppressed,490122
+2009,NE,Nebraska,Cervix,Data Suppressed,Data Suppressed,913619
+2009,NV,Nevada,Cervix,2.6,36,1327618
+2009,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,666875
+2009,NJ,New Jersey,Cervix,2.5,130,4493506
+2009,NM,New Mexico,Cervix,2.7,28,1031238
+2009,NY,New York,Cervix,2.2,255,9966620
+2009,NC,North Carolina,Cervix,2.2,120,4846501
+2009,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,329674
+2009,OH,Ohio,Cervix,2.8,186,5902018
+2009,OK,Oklahoma,Cervix,2.7,53,1878034
+2009,OR,Oregon,Cervix,1.9,40,1923209
+2009,PA,Pennsylvania,Cervix,2.3,174,6497024
+2009,PR,Puerto Rico,Cervix,2.7,59,1947361
+2009,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,544764
+2009,SC,South Carolina,Cervix,3,76,2357030
+2009,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,403198
+2009,TN,Tennessee,Cervix,2.6,94,3231769
+2009,TX,Texas,Cervix,2.6,321,12500150
+2009,United States,United States,Cervix,2.3,3909,155964075
+2009,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1355509
+2009,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,317128
+2009,VA,Virginia,Cervix,2.1,91,4037895
+2009,WA,Washington,Cervix,1.5,54,3343920
+2009,WV,West Virginia,Cervix,2.9,32,937434
+2009,WI,Wisconsin,Cervix,1.4,45,2856103
+2009,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,274046
+2010,AL,Alabama,Cervix,2.9,77,2462501
+2010,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,342348
+2010,AZ,Arizona,Cervix,2,69,3223331
+2010,AR,Arkansas,Cervix,3.7,60,1487273
+2010,CA,California,Cervix,2.4,476,18773276
+2010,CO,Colorado,Cervix,1.8,50,2517949
+2010,CT,Connecticut,Cervix,1.6,35,1836823
+2010,DE,Delaware,Cervix,4.3,21,463974
+2010,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,319308
+2010,FL,Florida,Cervix,2.8,316,9633882
+2010,GA,Georgia,Cervix,2.7,137,4970859
+2010,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,680708
+2010,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,783970
+2010,IL,Illinois,Cervix,2.6,186,6543435
+2010,IN,Indiana,Cervix,2.5,92,3297382
+2010,IA,Iowa,Cervix,1.9,34,1539861
+2010,KS,Kansas,Cervix,1.6,24,1440121
+2010,KY,Kentucky,Cervix,2.5,64,2208920
+2010,LA,Louisiana,Cervix,2.9,68,2319925
+2010,ME,Maine,Cervix,Data Suppressed,Data Suppressed,677943
+2010,MD,Maryland,Cervix,1.9,64,2988816
+2010,MA,Massachusetts,Cervix,1.3,50,3390251
+2010,MI,Michigan,Cervix,2.2,126,5032392
+2010,MN,Minnesota,Cervix,1.6,47,2675292
+2010,MS,Mississippi,Cervix,3.5,58,1527379
+2010,MO,Missouri,Cervix,2.1,74,3058876
+2010,MT,Montana,Cervix,Data Suppressed,Data Suppressed,493472
+2010,NE,Nebraska,Cervix,2.6,24,921463
+2010,NV,Nevada,Cervix,1.8,27,1338331
+2010,NH,New Hampshire,Cervix,1.9,16,667248
+2010,NJ,New Jersey,Cervix,2.4,125,4515662
+2010,NM,New Mexico,Cervix,1.7,22,1044296
+2010,NY,New York,Cervix,2.1,253,10010724
+2010,NC,North Carolina,Cervix,2,113,4904404
+2010,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,333653
+2010,OH,Ohio,Cervix,2.4,159,5905286
+2010,OK,Oklahoma,Cervix,2.8,60,1899677
+2010,OR,Oregon,Cervix,1.7,37,1938491
+2010,PA,Pennsylvania,Cervix,1.9,150,6515318
+2010,PR,Puerto Rico,Cervix,2.9,62,1938743
+2010,RI,Rhode Island,Cervix,2.4,16,544718
+2010,SC,South Carolina,Cervix,2.8,76,2380930
+2010,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,407748
+2010,TN,Tennessee,Cervix,2.4,89,3257576
+2010,TX,Texas,Cervix,2.7,343,12721747
+2010,United States,United States,Cervix,2.3,3939,157249665
+2010,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1381267
+2010,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,317623
+2010,VA,Virginia,Cervix,1.6,72,4085723
+2010,WA,Washington,Cervix,1.6,60,3384508
+2010,WV,West Virginia,Cervix,3.1,32,939948
+2010,WI,Wisconsin,Cervix,1.3,44,2866332
+2010,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,276725
+2011,AL,Alabama,Cervix,3.4,89,2471124
+2011,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,346420
+2011,AZ,Arizona,Cervix,2.1,74,3255268
+2011,AR,Arkansas,Cervix,3.1,50,1496627
+2011,CA,California,Cervix,2.2,431,18941522
+2011,CO,Colorado,Cervix,1.4,38,2555122
+2011,CT,Connecticut,Cervix,1.7,36,1840904
+2011,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,468243
+2011,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,326595
+2011,FL,Florida,Cervix,2.7,324,9736576
+2011,GA,Georgia,Cervix,2.5,133,5016509
+2011,HI,Hawaii,Cervix,2.6,21,688528
+2011,ID,Idaho,Cervix,1.9,16,790969
+2011,IL,Illinois,Cervix,2.7,195,6555863
+2011,IN,Indiana,Cervix,2.6,96,3310293
+2011,IA,Iowa,Cervix,2.1,34,1546565
+2011,KS,Kansas,Cervix,2,31,1445451
+2011,KY,Kentucky,Cervix,3.5,87,2220604
+2011,LA,Louisiana,Cervix,3,72,2336558
+2011,ME,Maine,Cervix,Data Suppressed,Data Suppressed,678007
+2011,MD,Maryland,Cervix,2.1,69,3013514
+2011,MA,Massachusetts,Cervix,1.5,64,3412828
+2011,MI,Michigan,Cervix,2.1,121,5034506
+2011,MN,Minnesota,Cervix,1.2,39,2692147
+2011,MS,Mississippi,Cervix,2.8,45,1531631
+2011,MO,Missouri,Cervix,3,100,3065745
+2011,MT,Montana,Cervix,Data Suppressed,Data Suppressed,497009
+2011,NE,Nebraska,Cervix,2.1,21,926785
+2011,NV,Nevada,Cervix,1.8,25,1345187
+2011,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,668935
+2011,NJ,New Jersey,Cervix,2.6,137,4527643
+2011,NM,New Mexico,Cervix,1.3,16,1052390
+2011,NY,New York,Cervix,2.4,279,10056851
+2011,NC,North Carolina,Cervix,1.9,108,4952048
+2011,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,338166
+2011,OH,Ohio,Cervix,2.5,164,5906025
+2011,OK,Oklahoma,Cervix,2.3,47,1914243
+2011,OR,Oregon,Cervix,2.3,54,1956689
+2011,PA,Pennsylvania,Cervix,2.3,182,6528781
+2011,PR,Puerto Rico,Cervix,2.7,55,1915291
+2011,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,544091
+2011,SC,South Carolina,Cervix,2.5,65,2401300
+2011,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,410308
+2011,TN,Tennessee,Cervix,3.3,120,3281016
+2011,TX,Texas,Cervix,2.8,356,12925831
+2011,United States,United States,Cervix,2.3,4092,158370501
+2011,UT,Utah,Cervix,1.6,19,1400748
+2011,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,317948
+2011,VA,Virginia,Cervix,1.7,76,4123702
+2011,WA,Washington,Cervix,1.9,77,3424466
+2011,WV,West Virginia,Cervix,4.8,51,940485
+2011,WI,Wisconsin,Cervix,1.7,54,2873601
+2011,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,278134
+2012,AL,Alabama,Cervix,2.9,78,2480436
+2012,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,349778
+2012,AZ,Arizona,Cervix,2,73,3296646
+2012,AR,Arkansas,Cervix,3.2,52,1502409
+2012,CA,California,Cervix,2.1,424,19097277
+2012,CO,Colorado,Cervix,1.4,39,2590172
+2012,CT,Connecticut,Cervix,1.9,40,1843669
+2012,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,472124
+2012,DC,District of Columbia,Cervix,5.3,18,334714
+2012,FL,Florida,Cervix,2.8,337,9864969
+2012,GA,Georgia,Cervix,3,161,5068404
+2012,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,695606
+2012,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,796813
+2012,IL,Illinois,Cervix,2.2,167,6562818
+2012,IN,Indiana,Cervix,2.7,100,3319458
+2012,IA,Iowa,Cervix,1.6,27,1550836
+2012,KS,Kansas,Cervix,2.5,38,1451795
+2012,KY,Kentucky,Cervix,2.6,68,2227546
+2012,LA,Louisiana,Cervix,2.6,65,2350259
+2012,ME,Maine,Cervix,2.1,17,677831
+2012,MD,Maryland,Cervix,2,73,3036122
+2012,MA,Massachusetts,Cervix,1.2,53,3435460
+2012,MI,Michigan,Cervix,2,114,5038913
+2012,MN,Minnesota,Cervix,1.3,39,2706227
+2012,MS,Mississippi,Cervix,3.8,63,1534497
+2012,MO,Missouri,Cervix,2.7,96,3072496
+2012,MT,Montana,Cervix,Data Suppressed,Data Suppressed,499969
+2012,NE,Nebraska,Cervix,1.8,17,932548
+2012,NV,Nevada,Cervix,2.1,32,1361633
+2012,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,670911
+2012,NJ,New Jersey,Cervix,2.3,126,4534588
+2012,NM,New Mexico,Cervix,2.5,29,1054817
+2012,NY,New York,Cervix,2.6,296,10088624
+2012,NC,North Carolina,Cervix,2,117,5001181
+2012,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,345038
+2012,OH,Ohio,Cervix,2.4,162,5904138
+2012,OK,Oklahoma,Cervix,4.3,84,1928266
+2012,OR,Oregon,Cervix,1.1,25,1969955
+2012,PA,Pennsylvania,Cervix,2,157,6533444
+2012,PR,Puerto Rico,Cervix,2.3,49,1895416
+2012,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,544185
+2012,SC,South Carolina,Cervix,2.4,66,2425622
+2012,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,414663
+2012,TN,Tennessee,Cervix,2.2,81,3308185
+2012,TX,Texas,Cervix,2.8,367,13141745
+2012,United States,United States,Cervix,2.3,4074,159480635
+2012,UT,Utah,Cervix,1.8,22,1419345
+2012,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,317491
+2012,VA,Virginia,Cervix,1.8,83,4165263
+2012,WA,Washington,Cervix,1.9,70,3459044
+2012,WV,West Virginia,Cervix,3.4,37,940205
+2012,WI,Wisconsin,Cervix,1.6,55,2880310
+2012,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,282190
+2013,AL,Alabama,Cervix,3.6,102,2488451
+2013,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,351687
+2013,AZ,Arizona,Cervix,2.4,89,3337128
+2013,AR,Arkansas,Cervix,3.4,55,1506571
+2013,CA,California,Cervix,2.4,496,19257182
+2013,CO,Colorado,Cervix,2,55,2627451
+2013,CT,Connecticut,Cervix,1.4,33,1843190
+2013,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,476810
+2013,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,342422
+2013,FL,Florida,Cervix,2.9,352,9991577
+2013,GA,Georgia,Cervix,2.2,121,5109687
+2013,HI,Hawaii,Cervix,2.5,19,701564
+2013,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,804640
+2013,IL,Illinois,Cervix,2.2,171,6566512
+2013,IN,Indiana,Cervix,2.2,82,3334467
+2013,IA,Iowa,Cervix,2.3,41,1558562
+2013,KS,Kansas,Cervix,1.6,27,1454421
+2013,KY,Kentucky,Cervix,3,73,2235831
+2013,LA,Louisiana,Cervix,3.5,87,2362258
+2013,ME,Maine,Cervix,Data Suppressed,Data Suppressed,677601
+2013,MD,Maryland,Cervix,2,70,3054346
+2013,MA,Massachusetts,Cervix,1,40,3460982
+2013,MI,Michigan,Cervix,2.2,129,5045064
+2013,MN,Minnesota,Cervix,1.7,51,2724276
+2013,MS,Mississippi,Cervix,4,68,1536846
+2013,MO,Missouri,Cervix,2.9,98,3079277
+2013,MT,Montana,Cervix,3.4,19,504489
+2013,NE,Nebraska,Cervix,2.4,25,937543
+2013,NV,Nevada,Cervix,2.3,36,1379061
+2013,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,671812
+2013,NJ,New Jersey,Cervix,1.9,104,4538378
+2013,NM,New Mexico,Cervix,2,22,1056816
+2013,NY,New York,Cervix,2.4,288,10110966
+2013,NC,North Carolina,Cervix,2.2,128,5050911
+2013,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,353821
+2013,OH,Ohio,Cervix,2.5,171,5914624
+2013,OK,Oklahoma,Cervix,2.4,47,1944887
+2013,OR,Oregon,Cervix,1.9,41,1982002
+2013,PA,Pennsylvania,Cervix,2.2,170,6532794
+2013,PR,Puerto Rico,Cervix,3,60,1872797
+2013,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,544135
+2013,SC,South Carolina,Cervix,2.7,75,2450408
+2013,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,418793
+2013,TN,Tennessee,Cervix,2.8,111,3329087
+2013,TX,Texas,Cervix,2.7,365,13337529
+2013,United States,United States,Cervix,2.3,4217,160545893
+2013,UT,Utah,Cervix,1.7,22,1441058
+2013,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,317406
+2013,VA,Virginia,Cervix,1.8,83,4197755
+2013,WA,Washington,Cervix,2,77,3490939
+2013,WV,West Virginia,Cervix,3.2,34,938312
+2013,WI,Wisconsin,Cervix,1.2,42,2888446
+2013,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,285118
+2014,AL,Alabama,Cervix,3.8,107,2495725
+2014,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,351081
+2014,AZ,Arizona,Cervix,2.1,79,3385557
+2014,AR,Arkansas,Cervix,3.3,53,1510809
+2014,CA,California,Cervix,2.3,472,19422017
+2014,CO,Colorado,Cervix,1.8,53,2665581
+2014,CT,Connecticut,Cervix,1.8,40,1842252
+2014,DE,Delaware,Cervix,3,19,481448
+2014,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,348388
+2014,FL,Florida,Cervix,2.8,335,10146227
+2014,GA,Georgia,Cervix,2.2,122,5162257
+2014,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,704261
+2014,ID,Idaho,Cervix,2,17,814428
+2014,IL,Illinois,Cervix,2.4,184,6560509
+2014,IN,Indiana,Cervix,2.1,75,3346640
+2014,IA,Iowa,Cervix,2.1,37,1565894
+2014,KS,Kansas,Cervix,1.7,26,1456819
+2014,KY,Kentucky,Cervix,2.4,58,2241404
+2014,LA,Louisiana,Cervix,2.7,69,2372375
+2014,ME,Maine,Cervix,1.9,17,679271
+2014,MD,Maryland,Cervix,1.8,63,3072502
+2014,MA,Massachusetts,Cervix,1.3,52,3484994
+2014,MI,Michigan,Cervix,1.8,107,5050975
+2014,MN,Minnesota,Cervix,1.3,41,2742170
+2014,MS,Mississippi,Cervix,3.3,57,1538890
+2014,MO,Missouri,Cervix,2.5,91,3086784
+2014,MT,Montana,Cervix,Data Suppressed,Data Suppressed,508360
+2014,NE,Nebraska,Cervix,2.2,25,943774
+2014,NV,Nevada,Cervix,2.8,41,1401290
+2014,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,674573
+2014,NJ,New Jersey,Cervix,1.9,110,4541269
+2014,NM,New Mexico,Cervix,2,23,1055167
+2014,NY,New York,Cervix,2.4,292,10122684
+2014,NC,North Carolina,Cervix,2.2,127,5099723
+2014,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,360130
+2014,OH,Ohio,Cervix,2.5,169,5925788
+2014,OK,Oklahoma,Cervix,2.7,57,1957329
+2014,OR,Oregon,Cervix,2.2,51,2002391
+2014,PA,Pennsylvania,Cervix,2.2,175,6536769
+2014,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,544071
+2014,SC,South Carolina,Cervix,2.6,69,2482344
+2014,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,421923
+2014,TN,Tennessee,Cervix,2.7,106,3352533
+2014,TX,Texas,Cervix,2.9,401,13577164
+2014,United States,United States,Cervix,2.3,4115,161690519
+2014,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1460537
+2014,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,316922
+2014,VA,Virginia,Cervix,1.8,85,4226409
+2014,WA,Washington,Cervix,1,44,3533298
+2014,WV,West Virginia,Cervix,2.8,29,936287
+2014,WI,Wisconsin,Cervix,1.6,55,2895122
+2014,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,285404
+2015,AL,Alabama,Cervix,3.9,112,2501997
+2015,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,351714
+2015,AZ,Arizona,Cervix,2.3,87,3435368
+2015,AR,Arkansas,Cervix,3.6,57,1515816
+2015,CA,California,Cervix,2.3,498,19575981
+2015,CO,Colorado,Cervix,1.5,45,2713032
+2015,CT,Connecticut,Cervix,1,24,1838202
+2015,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,486044
+2015,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,355848
+2015,FL,Florida,Cervix,2.2,288,10330862
+2015,GA,Georgia,Cervix,2.4,133,5222914
+2015,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,707788
+2015,ID,Idaho,Cervix,1.8,17,824601
+2015,IL,Illinois,Cervix,2.5,184,6545496
+2015,IN,Indiana,Cervix,2.6,94,3353205
+2015,IA,Iowa,Cervix,1.7,32,1570465
+2015,KS,Kansas,Cervix,2.9,45,1460522
+2015,KY,Kentucky,Cervix,2.9,72,2246861
+2015,LA,Louisiana,Cervix,3.3,83,2383171
+2015,ME,Maine,Cervix,2,16,678342
+2015,MD,Maryland,Cervix,1.9,69,3086658
+2015,MA,Massachusetts,Cervix,1.1,44,3501089
+2015,MI,Michigan,Cervix,1.9,109,5048777
+2015,MN,Minnesota,Cervix,1.4,46,2755982
+2015,MS,Mississippi,Cervix,3.3,60,1539560
+2015,MO,Missouri,Cervix,2.6,90,3094077
+2015,MT,Montana,Cervix,Data Suppressed,Data Suppressed,512294
+2015,NE,Nebraska,Cervix,2.2,23,949042
+2015,NV,Nevada,Cervix,2.9,46,1427439
+2015,NH,New Hampshire,Cervix,1.8,17,675463
+2015,NJ,New Jersey,Cervix,2,114,4542433
+2015,NM,New Mexico,Cervix,2.2,24,1055341
+2015,NY,New York,Cervix,2,248,10121136
+2015,NC,North Carolina,Cervix,1.9,111,5150065
+2015,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,367405
+2015,OH,Ohio,Cervix,2.1,149,5931200
+2015,OK,Oklahoma,Cervix,3.2,65,1972948
+2015,OR,Oregon,Cervix,2.3,53,2028279
+2015,PA,Pennsylvania,Cervix,2.2,171,6531011
+2015,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,543623
+2015,SC,South Carolina,Cervix,2.3,68,2518205
+2015,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,424080
+2015,TN,Tennessee,Cervix,2.9,112,3378397
+2015,TX,Texas,Cervix,2.9,407,13825817
+2015,United States,United States,Cervix,2.3,4175,162832151
+2015,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1482384
+2015,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,316830
+2015,VA,Virginia,Cervix,2.1,101,4250855
+2015,WA,Washington,Cervix,1.5,61,3586587
+2015,WV,West Virginia,Cervix,2.4,28,931825
+2015,WI,Wisconsin,Cervix,2.1,69,2898414
+2015,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,286706
+2016,AL,Alabama,Cervix,3.1,87,2509613
+2016,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,353943
+2016,AZ,Arizona,Cervix,2.1,82,3492446
+2016,AR,Arkansas,Cervix,3.8,64,1521849
+2016,CA,California,Cervix,2.2,475,19696031
+2016,CO,Colorado,Cervix,1.3,42,2755067
+2016,CT,Connecticut,Cervix,1.4,34,1833898
+2016,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,490492
+2016,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,361065
+2016,FL,Florida,Cervix,2.6,330,10540185
+2016,GA,Georgia,Cervix,2.5,149,5290447
+2016,HI,Hawaii,Cervix,1.9,17,710710
+2016,ID,Idaho,Cervix,2.1,18,840378
+2016,IL,Illinois,Cervix,2.3,172,6523873
+2016,IN,Indiana,Cervix,2.4,91,3366051
+2016,IA,Iowa,Cervix,2.1,37,1575193
+2016,KS,Kansas,Cervix,2.2,33,1461643
+2016,KY,Kentucky,Cervix,2.6,67,2253107
+2016,LA,Louisiana,Cervix,2.5,65,2392011
+2016,ME,Maine,Cervix,Data Suppressed,Data Suppressed,680027
+2016,MD,Maryland,Cervix,2,76,3095485
+2016,MA,Massachusetts,Cervix,1.2,49,3515076
+2016,MI,Michigan,Cervix,2,114,5055467
+2016,MN,Minnesota,Cervix,1.2,41,2775344
+2016,MS,Mississippi,Cervix,3.2,55,1540132
+2016,MO,Missouri,Cervix,2.2,76,3101501
+2016,MT,Montana,Cervix,Data Suppressed,Data Suppressed,517417
+2016,NE,Nebraska,Cervix,1.7,19,955739
+2016,NV,Nevada,Cervix,2.2,38,1453771
+2016,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,678325
+2016,NJ,New Jersey,Cervix,2.4,136,4541709
+2016,NM,New Mexico,Cervix,2.3,25,1056516
+2016,NY,New York,Cervix,2.2,264,10104957
+2016,NC,North Carolina,Cervix,2,120,5215042
+2016,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,368008
+2016,OH,Ohio,Cervix,2.1,141,5937561
+2016,OK,Oklahoma,Cervix,2.5,55,1982104
+2016,OR,Oregon,Cervix,2,52,2065178
+2016,PA,Pennsylvania,Cervix,2,165,6527015
+2016,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,543662
+2016,SC,South Carolina,Cervix,3,89,2553825
+2016,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,428212
+2016,TN,Tennessee,Cervix,3.1,121,3406813
+2016,TX,Texas,Cervix,2.9,422,14048837
+2016,United States,United States,Cervix,2.2,4188,163986062
+2016,UT,Utah,Cervix,Data Suppressed,Data Suppressed,1511904
+2016,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,316042
+2016,VA,Virginia,Cervix,2.1,97,4276468
+2016,WA,Washington,Cervix,1.7,70,3650092
+2016,WV,West Virginia,Cervix,3.3,38,926025
+2016,WI,Wisconsin,Cervix,1.7,59,2903515
+2016,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,286291
+2017,AL,Alabama,Cervix,3.1,89,2517486
+2017,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,353997
+2017,AZ,Arizona,Cervix,2.1,78,3545316
+2017,AR,Arkansas,Cervix,3.3,55,1527948
+2017,CA,California,Cervix,2.3,490,19783962
+2017,CO,Colorado,Cervix,1.9,55,2789649
+2017,CT,Connecticut,Cervix,1.1,25,1831503
+2017,DE,Delaware,Cervix,3.1,20,494606
+2017,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,366336
+2017,FL,Florida,Cervix,2.8,355,10720663
+2017,GA,Georgia,Cervix,2.1,123,5349075
+2017,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,710227
+2017,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,858030
+2017,IL,Illinois,Cervix,2.1,157,6501339
+2017,IN,Indiana,Cervix,2.9,105,3378096
+2017,IA,Iowa,Cervix,1.5,25,1579862
+2017,KS,Kansas,Cervix,2.1,32,1460476
+2017,KY,Kentucky,Cervix,2.6,65,2260311
+2017,LA,Louisiana,Cervix,3.6,96,2390634
+2017,ME,Maine,Cervix,Data Suppressed,Data Suppressed,681559
+2017,MD,Maryland,Cervix,1.7,67,3106751
+2017,MA,Massachusetts,Cervix,1.1,46,3532606
+2017,MI,Michigan,Cervix,2.1,121,5064544
+2017,MN,Minnesota,Cervix,1.4,48,2796520
+2017,MS,Mississippi,Cervix,3.6,61,1539672
+2017,MO,Missouri,Cervix,2.4,87,3111381
+2017,MT,Montana,Cervix,Data Suppressed,Data Suppressed,523400
+2017,NE,Nebraska,Cervix,2.2,27,960422
+2017,NV,Nevada,Cervix,2.3,38,1480860
+2017,NH,New Hampshire,Cervix,Data Suppressed,Data Suppressed,681670
+2017,NJ,New Jersey,Cervix,2,114,4547537
+2017,NM,New Mexico,Cervix,2.4,27,1056754
+2017,NY,New York,Cervix,2.1,259,10080806
+2017,NC,North Carolina,Cervix,1.8,115,5274812
+2017,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,369032
+2017,OH,Ohio,Cervix,2.5,174,5949075
+2017,OK,Oklahoma,Cervix,4.1,86,1984912
+2017,OR,Oregon,Cervix,1.9,47,2091485
+2017,PA,Pennsylvania,Cervix,1.8,150,6528507
+2017,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,542884
+2017,SC,South Carolina,Cervix,2.3,66,2588374
+2017,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,432891
+2017,TN,Tennessee,Cervix,2.5,103,3438006
+2017,TX,Texas,Cervix,3,429,14238026
+2017,United States,United States,Cervix,2.2,4207,165008683
+2017,UT,Utah,Cervix,2,30,1540562
+2017,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,316438
+2017,VA,Virginia,Cervix,1.7,83,4302531
+2017,WA,Washington,Cervix,1.7,72,3712553
+2017,WV,West Virginia,Cervix,2.5,29,918498
+2017,WI,Wisconsin,Cervix,1.3,47,2911984
+2017,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,284115
+2018,AL,Alabama,Cervix,3.4,101,2526183
+2018,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,352320
+2018,AZ,Arizona,Cervix,1.9,78,3604059
+2018,AR,Arkansas,Cervix,3.1,59,1533071
+2018,CA,California,Cervix,2.1,471,19829641
+2018,CO,Colorado,Cervix,1.1,33,2828980
+2018,CT,Connecticut,Cervix,1.4,32,1831360
+2018,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,499426
+2018,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,369821
+2018,FL,Florida,Cervix,2.6,350,10863662
+2018,GA,Georgia,Cervix,2.3,136,5403773
+2018,HI,Hawaii,Cervix,1.8,16,709720
+2018,ID,Idaho,Cervix,Data Suppressed,Data Suppressed,873726
+2018,IL,Illinois,Cervix,2.2,170,6472590
+2018,IN,Indiana,Cervix,2.6,92,3395350
+2018,IA,Iowa,Cervix,2.2,37,1582600
+2018,KS,Kansas,Cervix,2.8,46,1461321
+2018,KY,Kentucky,Cervix,2.7,71,2265345
+2018,LA,Louisiana,Cervix,3.2,82,2387863
+2018,ME,Maine,Cervix,Data Suppressed,Data Suppressed,683920
+2018,MD,Maryland,Cervix,2.2,81,3115060
+2018,MA,Massachusetts,Cervix,0.8,39,3544419
+2018,MI,Michigan,Cervix,2,118,5068797
+2018,MN,Minnesota,Cervix,1.1,35,2815323
+2018,MS,Mississippi,Cervix,3,55,1536005
+2018,MO,Missouri,Cervix,2.3,81,3119006
+2018,MT,Montana,Cervix,Data Suppressed,Data Suppressed,527421
+2018,NE,Nebraska,Cervix,2.8,30,964575
+2018,NV,Nevada,Cervix,2.7,45,1510460
+2018,NH,New Hampshire,Cervix,1.8,16,683488
+2018,NJ,New Jersey,Cervix,2,112,4547534
+2018,NM,New Mexico,Cervix,2.4,25,1057418
+2018,NY,New York,Cervix,1.9,233,10053544
+2018,NC,North Carolina,Cervix,2.1,132,5336021
+2018,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,370951
+2018,OH,Ohio,Cervix,2.1,151,5956223
+2018,OK,Oklahoma,Cervix,3.5,76,1990175
+2018,OR,Oregon,Cervix,1.9,47,2109387
+2018,PA,Pennsylvania,Cervix,2,162,6532496
+2018,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,543905
+2018,SC,South Carolina,Cervix,2.3,70,2623668
+2018,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,435837
+2018,TN,Tennessee,Cervix,2.4,99,3470870
+2018,TX,Texas,Cervix,2.7,396,14409326
+2018,United States,United States,Cervix,2.2,4138,165877686
+2018,UT,Utah,Cervix,1.9,27,1566159
+2018,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,316353
+2018,VA,Virginia,Cervix,1.6,84,4323072
+2018,WA,Washington,Cervix,2,86,3760779
+2018,WV,West Virginia,Cervix,2.6,28,912019
+2018,WI,Wisconsin,Cervix,1.3,47,2918734
+2018,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,283930
+2019,AL,Alabama,Cervix,2.6,84,2536133
+2019,AK,Alaska,Cervix,Data Suppressed,Data Suppressed,350790
+2019,AZ,Arizona,Cervix,2,84,3669041
+2019,AR,Arkansas,Cervix,3.1,55,1538076
+2019,CA,California,Cervix,2.2,495,19829085
+2019,CO,Colorado,Cervix,1.6,53,2857610
+2019,CT,Connecticut,Cervix,1,26,1826990
+2019,DE,Delaware,Cervix,Data Suppressed,Data Suppressed,504571
+2019,DC,District of Columbia,Cervix,Data Suppressed,Data Suppressed,372393
+2019,FL,Florida,Cervix,2.6,362,10987074
+2019,GA,Georgia,Cervix,2.4,140,5462335
+2019,HI,Hawaii,Cervix,Data Suppressed,Data Suppressed,706419
+2019,ID,Idaho,Cervix,1.8,18,891995
+2019,IL,Illinois,Cervix,2,151,6443120
+2019,IN,Indiana,Cervix,2.8,106,3411571
+2019,IA,Iowa,Cervix,1.2,23,1586636
+2019,KS,Kansas,Cervix,2.4,37,1462080
+2019,KY,Kentucky,Cervix,2.9,72,2269036
+2019,LA,Louisiana,Cervix,3.3,80,2385969
+2019,ME,Maine,Cervix,Data Suppressed,Data Suppressed,686674
+2019,MD,Maryland,Cervix,2.2,82,3122480
+2019,MA,Massachusetts,Cervix,1.5,61,3548380
+2019,MI,Michigan,Cervix,1.7,103,5066743
+2019,MN,Minnesota,Cervix,0.9,33,2830663
+2019,MS,Mississippi,Cervix,3.7,62,1534587
+2019,MO,Missouri,Cervix,2.4,91,3127846
+2019,MT,Montana,Cervix,Data Suppressed,Data Suppressed,531486
+2019,NE,Nebraska,Cervix,1.7,17,967601
+2019,NV,Nevada,Cervix,2.7,51,1541266
+2019,NH,New Hampshire,Cervix,1.8,16,686814
+2019,NJ,New Jersey,Cervix,2,110,4545698
+2019,NM,New Mexico,Cervix,2.7,30,1060654
+2019,NY,New York,Cervix,1.8,216,10012065
+2019,NC,North Carolina,Cervix,1.8,115,5393755
+2019,ND,North Dakota,Cervix,Data Suppressed,Data Suppressed,372678
+2019,OH,Ohio,Cervix,2.3,169,5962634
+2019,OK,Oklahoma,Cervix,3.9,85,1999160
+2019,OR,Oregon,Cervix,1.6,39,2126006
+2019,PA,Pennsylvania,Cervix,1.8,146,6526489
+2019,RI,Rhode Island,Cervix,Data Suppressed,Data Suppressed,543197
+2019,SC,South Carolina,Cervix,2.2,71,2659704
+2019,SD,South Dakota,Cervix,Data Suppressed,Data Suppressed,439553
+2019,TN,Tennessee,Cervix,2.8,110,3498429
+2019,TX,Texas,Cervix,2.7,395,14591903
+2019,United States,United States,Cervix,2.2,4152,166637617
+2019,UT,Utah,Cervix,1.3,18,1589845
+2019,VT,Vermont,Cervix,Data Suppressed,Data Suppressed,315738
+2019,VA,Virginia,Cervix,1.6,86,4345858
+2019,WA,Washington,Cervix,1.6,66,3802546
+2019,WV,West Virginia,Cervix,3.8,39,906103
+2019,WI,Wisconsin,Cervix,1.6,58,2925732
+2019,WY,Wyoming,Cervix,Data Suppressed,Data Suppressed,284406
