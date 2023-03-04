@@ -317,39 +317,39 @@ with tab2:
         ax2.axis('equal')
         st.pyplot(fig2)
 
-    # fig3, ax3 = plt.subplots()
+    #fig4, ax4 = plt.subplots()
 
-    # chart1, chart2 = st.columns(2)
-    # colors = {1: 'red', 0: 'blue'}
+    chart1, chart2 = st.columns(2)
+    colors = {1: 'red', 0: 'blue'}
 
-    # with chart1:
-    #     fig3, ax3 = plt.subplots()
-    #
-    #     ax3.set_title("Age of First Sex vs. Current Age; Size is # of Sexual Partners")
-    #     ax3.set_xlabel("Age")
-    #     ax3.set_ylabel("Age of First Sex")
-    #     scatter = ax3.scatter(df['age'], df['first_sex'], s=df['num_sex_partners'], c=df['cancer'].map_fig(colors))
-    #     plt.legend((0, 1), ("No Cancer", "Cancer"))
-    #     st.pyplot(fig3)
-    #
-    # with chart2:
-    #     fig4, ax4 = plt.subplots()
-    #     ax4.set_title("Age vs. IUD Years")
-    #     ax4.set_xlabel("Age")
-    #     ax4.set_ylabel("IUD Years")
-    #     scatter1 = ax4.scatter(df['age'], df['iud_years'], c=df['cancer'].map_fig(colors))
-    #     ax4.legend(*scatter1.legend_elements())
-    #     st.pyplot(fig4)
+    with chart1:
+        fig3, ax3 = plt.subplots()
+        ax3.set_title("Age of First Sex vs. Current Age; Size is # of Sexual Partners")
+        ax3.set_xlabel("Age")
+        ax3.set_ylabel("Age of First Sex")
+        scatter = ax3.scatter(df['age'], df['first_sex'], s=df['num_sex_partners'], c=df['cancer'].map(colors))
+        plt.legend((0, 1), ("No Cancer", "Cancer"))
+        st.pyplot(fig3)
+
+    with chart2:
+        fig4, ax4 = plt.subplots()
+        ax4.set_title("Age vs. IUD Years")
+        ax4.set_xlabel("Age")
+        ax4.set_ylabel("IUD Years")
+        scatter1 = ax4.scatter(df['age'], df['iud_years'], c=df['cancer'].map(colors))
+        ax4.legend(*scatter1.legend_elements())
+        st.pyplot(fig4)
 
     st.subheader("Cervical Cancer Statistics Across the United States")
-    st.write("Overall number of cervical cancer cases and deaths from 1999 to 2019:")
+    st.write("In this section, you can talk a look at the overall cervical cancer cases and deaths in the United States. The visualizations below show the change from year to year"
+             "starting in 1999 through 2019.")
 
     df_cases = get_data('data/casestrends.csv')
     df_deaths = get_data('data/deathtrends.csv')
 
-    rate_number_filter = st.selectbox("Assess cervical cancer by rate or number of cases:", ['rate', 'number of cases'])
+    rate_number_filter = st.selectbox("Assess cervical cancer by number of cases or deaths:", ['Number of New Cases', 'Number of Deaths'])
 
-    if rate_number_filter == 'rate':
+    if rate_number_filter == 'Number of New Cases':
         col1, col2 = st.columns([4, 4])
         with col1:
             fig5 = px.line(df_cases, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Cases", markers=True)
@@ -359,19 +359,21 @@ with tab2:
             fig5.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig5, theme=None, use_container_width=True)
         with col2:
-            fig6 = px.line(df_deaths, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Deaths", markers=True)
-            fig6.update_traces(line_color="#22cbc7")
+            fig6 = px.bar(df_cases, x="Year", y="Case_Count",
+                          title="Annual Number of New Cervical Cancer Cases per Year")
+            fig6.update_traces(marker_color="#16c6e0")
             fig6.update_xaxes(showgrid=False)
-            fig6.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
+            fig6.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Case Count", range=[0, 14000])
             fig6.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig6, theme=None, use_container_width=True)
+
     else:
         col3, col4 = st.columns([4,4])
         with col3:
-            fig7 = px.bar(df_cases, x="Year", y="Case_Count", title="Annual Number of New Cervical Cancer Cases per Year")
-            fig7.update_traces(marker_color="#16c6e0")
+            fig7 = px.line(df_deaths, x="Year", y="per_100k", title="Annual Rate of New Cervical Cancer Deaths", markers=True)
+            fig7.update_traces(line_color="#22cbc7")
             fig7.update_xaxes(showgrid=False)
-            fig7.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Case Count", range=[0, 14000])
+            fig7.update_yaxes(showgrid=True, gridcolor='LightGrey', title_text="Rate per 100,000 Women", range=[0, 11])
             fig7.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig7, theme=None, use_container_width=True)
         with col4:
@@ -382,9 +384,12 @@ with tab2:
             fig8.update_layout(plot_bgcolor="white", title_x=0.5)
             st.plotly_chart(fig8, theme=None, use_container_width=True)
 
+    st.write("The visualization below shows the annual rate (per 100,000 women) of cervical cancer cases and deaths from 1999 to 2019 per state.")
+    # need to add deaths
     df_map = get_data('data/statemap.csv')
 
     year = 1999
+
     data_slider = []
     for year in df_map['Year'].unique():
         df_segmented = df_map[(df_map['Year'] == year)]
@@ -398,6 +403,7 @@ with tab2:
             z=df_segmented['per_100k'],
             locationmode='USA-states',
             colorscale='Blues',
+            # text=df_map[['Area','per_100k']],
             colorbar={'title': 'Number of Cases'})
 
         data_slider.append(data_each_yr)
@@ -412,9 +418,9 @@ with tab2:
 
     sliders = [dict(active=0, pad={"t": 1}, steps=steps)]
 
-    layout = dict(title='Nationwide Changes in Rates of New Cancers, 1999-2019', geo=dict(scope='usa', projection={'type': 'albers usa'}),sliders=sliders)
-
-    fig = dict(data=data_slider, layout=layout)
-    st.plotly_chart(fig, use_container_width=True)
+    layout = dict(
+                  geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
+    fig9 = dict(data=data_slider, layout=layout)
+    st.plotly_chart(fig9, use_container_width=True)
 
 
