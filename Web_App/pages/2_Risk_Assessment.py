@@ -231,7 +231,7 @@ with tab1:
 
         <strong>{comment}</strong></div>
         ''', unsafe_allow_html=True)
-        col1, col2, col3 = st.columns([1.5, 5, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col1:
             st.write("")
         with col2:
@@ -253,11 +253,11 @@ with tab2:
         '<p class = "dynamicfont">See how you compare to others in a similar or different age categories than you. For the age category you select, you will see others in that '
         'category exhibiting the following traits:', unsafe_allow_html=True)
     df = get_data('../cleaned.csv')
-    age_filter = st.selectbox("Select your age:", ['<18', '18-25', '26-35', '36-45', '46-55', '56+'])
-    if age_filter == '<18':
-        min = 0
-        max = 17
-    elif age_filter == '18-25':
+    age_filter = st.selectbox("Select your age:", [ '18-25', '26-35', '36-45', '46-55', '56+'])
+    # if age_filter == '<18':
+    #     min = 0
+    #     max = 17
+    if age_filter == '18-25':
         min = 18
         max = 25
     elif age_filter == '26-35':
@@ -454,5 +454,7 @@ with tab2:
                       geo=dict(scope='usa', projection=go.layout.geo.Projection(type='albers usa')), sliders=sliders)
         fig10 = dict(data=data_slider, layout=layout)
         st.plotly_chart(fig10, use_container_width=True)
+
+    st.write('<p style="font-size: 8px; font-size:calc(8px + 0.3vw);text-align: center;">https://gis.cdc.gov/Cancer/USCS/#/Trends/', unsafe_allow_html=True)
 
 
